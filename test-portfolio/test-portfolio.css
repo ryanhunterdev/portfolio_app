@@ -1,0 +1,166 @@
+.portfolio-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+/**********************************************************
+
+left-column
+
+*********************************************************/
+
+.left-section{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    color: red;
+}
+
+/************** about me row ******************/
+
+.about-me{
+    display: grid;
+}
+
+.user-name{
+
+}
+
+.user-location{
+
+}
+
+.user-welcome{
+
+}
+
+/************** contact row ******************/
+
+.contact{
+    display: flex;
+}
+
+.contact-pitch{
+
+}
+
+.user-links{
+    display: grid;
+}
+
+.user-links-left{
+
+}
+
+.email{
+
+}
+
+.copyright{
+
+}
+
+.user-links-right{
+    display: grid;
+}
+
+.github{
+
+}
+
+.socials{
+    display: flex;
+}
+
+.linkedin{
+
+}
+
+.instagram {
+
+}
+
+.twitter {
+
+}
+
+/**********************************************************
+
+right-column
+
+*********************************************************/
+
+.right-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+    display: flex;
+}
+
+.projects-heading {
+
+}
+
+.projects-grid {
+    /* ​display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr)); */
+}
+
+.project-row {
+
+}
+
+.project-title {
+
+}
+
+.project-year {
+
+}
+
+.project-heading {
+
+}
+
+.description-container {
+
+}
+
+.project-description {
+
+}
+
+.repo-link {
+
+}
+
+.skills {
+
+}
+
+.skills-heading {
+
+}
+
+.skills-grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.skills-container {
+
+}
+
+.skills-heading {
+
+}
+
+.skills-list {
+
+}
+
+.skills.item {
+    
+}
