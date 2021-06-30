@@ -11,7 +11,7 @@ CREATE TABLE placeTable (
   location TEXT,
   about_section TEXT,
   projects jsonb,
-  skills jsonb,
+  skills jsonb
 );
 
 
