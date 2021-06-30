@@ -19,6 +19,8 @@ app.use(logger)
 
 app.use(express.json())
 
+app.use(express.urlencoded({ extended: true }))
+
 // app.use('', apiController)
 
 app.use('/', pagesController)
