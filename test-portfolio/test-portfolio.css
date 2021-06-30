@@ -1,11 +1,18 @@
 :root {
-    --setup-border: 1px solid black;
+    --setup-border: none;
+    --heading: 2.5em;
+    --main-text: 1.7em;
 }
 
 .portfolio-wrapper {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr 1fr;
     border: var(--setup-border);
+    font-size: 10px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /**********************************************************
@@ -14,10 +21,11 @@ left-column
 
 *********************************************************/
 
-.left-section{
+.left-column {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
     border: var(--setup-border);
+    padding: 2.5em;
 }
 
 /************** about me row ******************/
@@ -26,18 +34,27 @@ left-column
     display: flex;
     border: var(--setup-border);
     flex-direction: column;
+    gap: 20%;
 }
 
-.user-name{
-    border: var(--setup-border);
+.name-location-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: normal;
 }
 
-.user-location{
+.user-name,
+.user-location {
     border: var(--setup-border);
+    font-size: var(--main-text);
+    font-weight: 100;
 }
 
 .user-welcome{
     border: var(--setup-border);
+    font-size: 5em;
+    width: 90%;
+    max-width: 600px;
 }
 
 /************** contact row ******************/
@@ -46,31 +63,53 @@ left-column
     display: flex;
     border: var(--setup-border);
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .contact-pitch{
     border: var(--setup-border);
+    font-size: var(--heading);
+    width: 90%;
+    max-width: 600px;
 }
 
 .user-links{
     display: grid;
     border: var(--setup-border);
     grid-template-columns: 1fr 1fr;
+    height: 50%;
 }
 
-.user-links-left{
+.user-links-left-column, 
+.user-links-right-column {
+    border: var(--setup-border);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.email-github-container {
+    
     border: var(--setup-border);
 }
 
-.email{
-    border: var(--setup-border);
+.links-heading, 
+.links-anchor {
+    font-size: var(--main-text)
 }
 
-.copyright{
+.copyright-container,
+.socials-container {
     border: var(--setup-border);
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.5em;
 }
 
-.user-links-right{
+.socials-container > a {
+    padding-right: 1.5em;
+}
+
+.user-links-right {
     display: grid;
     border: var(--setup-border);
 }
@@ -102,33 +141,52 @@ right-column
 
 *********************************************************/
 
-.right-side {
+.right-column {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1.5fr;
     border: var(--setup-border);
+    padding: 2.5em;
+    padding-top: 15%;
+    overflow: scroll;
+    background-color: rgb(235, 235, 234);
 }
 
 .projects {
     display: flex;
+    flex-direction: column;
     border: var(--setup-border);
 }
 
 .projects-heading {
     border: var(--setup-border);
+    font-size: var(--heading);
+    padding-bottom: 1em;
 }
 
 .projects-grid {
-    ​display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(1fr, 2fr));
+    grid-template-rows: auto;
     border: var(--setup-border);
+    gap: 5%;
+    height: 100%;
 }
 
 .project-row {
     border: var(--setup-border);
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
 }
 
 .project-title {
     border: var(--setup-border);
+}
+
+.project-heading, 
+.project-year,
+.project-description {
+    font-size: var(--main-text);
+    margin: 0;
 }
 
 .project-year {
@@ -141,6 +199,7 @@ right-column
 
 .description-container {
     border: var(--setup-border);
+    padding-top: 1.7em;
 }
 
 .project-description {
@@ -151,33 +210,42 @@ right-column
     border: var(--setup-border);
 }
 
+/************** skills ***************/
+
 .skills {
     border: var(--setup-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .skills-heading {
     border: var(--setup-border);
+    font-size: var(--heading);
+    padding-bottom: 1em;
 }
 
 .skills-grid {
     display: grid;
-    grid-gap: 1rem;
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    /* grid-gap: 1rem; */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     border: var(--setup-border);
 }
 
 .skills-container {
     border: var(--setup-border);
+    font-size: var(--main-text)
 }
 
-.skills-heading {
+.skill-heading {
     border: var(--setup-border);
+    padding-bottom: 1em;
 }
 
 .skills-list {
     border: var(--setup-border);
 }
 
-.skills.item {
+.skills-item {
     border: var(--setup-border);
 }
