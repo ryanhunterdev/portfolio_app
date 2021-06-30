@@ -3,8 +3,8 @@ const app = express();
 const port = 8080;
 
 const logger = require('./middlewares/logger');
-// const apiController = require()
 const pagesController = require('./controllers/pages-controller.js')
+const portfolioController = require('./controllers/portfolios-controller.js')
 
 app.set('view engine', 'ejs')
 app.set('views', './templates')
@@ -24,3 +24,5 @@ app.use(express.urlencoded({ extended: true }))
 // app.use('', apiController)
 
 app.use('/', pagesController)
+
+app.use('/', portfolioController)
