@@ -1,10 +1,12 @@
 :root {
-    --setup-border: 1px solid black;
+    --setup-border: none;
+    --heading: 2.5em;
+    --main-text: 1.7em;
 }
 
 .portfolio-wrapper {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1.2fr 1fr;
     border: var(--setup-border);
     font-size: 10px;
     width: 100%;
@@ -19,10 +21,11 @@ left-column
 
 *********************************************************/
 
-.left-section{
+.left-column {
     display: grid;
     grid-template-rows: 2fr 1fr;
     border: var(--setup-border);
+    padding: 2.5em;
 }
 
 /************** about me row ******************/
@@ -31,30 +34,27 @@ left-column
     display: flex;
     border: var(--setup-border);
     flex-direction: column;
-    padding: 2em;
     gap: 20%;
 }
 
 .name-location-wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: normal;
 }
 
-.user-name{
+.user-name,
+.user-location {
     border: var(--setup-border);
-    font-size: 2.5em;
-}
-
-.user-location{
-    border: var(--setup-border);
-    font-size: 2.5em;
+    font-size: var(--main-text);
+    font-weight: 100;
 }
 
 .user-welcome{
     border: var(--setup-border);
     font-size: 5em;
-    width: 50%;
-    max-width: 500px;
+    width: 60%;
+    max-width: 600px;
 }
 
 /************** contact row ******************/
@@ -64,13 +64,12 @@ left-column
     border: var(--setup-border);
     flex-direction: column;
     justify-content: space-between;
-    padding: 2em;
 }
 
 .contact-pitch{
     border: var(--setup-border);
-    font-size: 2.5em;
-    width: 50%;
+    font-size: var(--heading);
+    width: 60%;
 }
 
 .user-links{
@@ -94,7 +93,7 @@ left-column
 
 .links-heading, 
 .links-anchor {
-    font-size: 1.8em;
+    font-size: var(--main-text)
 }
 
 .copyright-container,
@@ -141,33 +140,51 @@ right-column
 
 *********************************************************/
 
-.right-side {
+.right-column {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1.5fr;
     border: var(--setup-border);
+    padding: 2.5em;
+    padding-top: 15%;
+    overflow: scroll;
 }
 
 .projects {
     display: flex;
+    flex-direction: column;
     border: var(--setup-border);
 }
 
 .projects-heading {
     border: var(--setup-border);
+    font-size: var(--heading);
+    padding-bottom: 1em;
 }
 
 .projects-grid {
-    ​display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(1fr, 2fr));
+    grid-template-rows: auto;
     border: var(--setup-border);
+    gap: 5%;
+    height: 100%;
 }
 
 .project-row {
     border: var(--setup-border);
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
 }
 
 .project-title {
     border: var(--setup-border);
+}
+
+.project-heading, 
+.project-year,
+.project-description {
+    font-size: var(--main-text);
+    margin: 0;
 }
 
 .project-year {
@@ -180,6 +197,7 @@ right-column
 
 .description-container {
     border: var(--setup-border);
+    padding-top: 1.7em;
 }
 
 .project-description {
@@ -200,7 +218,7 @@ right-column
 
 .skills-grid {
     display: grid;
-    grid-gap: 1rem;
+    /* grid-gap: 1rem; */
     grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
     border: var(--setup-border);
 }
