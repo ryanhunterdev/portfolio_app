@@ -6,6 +6,11 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     border: var(--setup-border);
+    font-size: 10px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /**********************************************************
@@ -16,7 +21,7 @@ left-column
 
 .left-section{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
     border: var(--setup-border);
 }
 
@@ -26,18 +31,30 @@ left-column
     display: flex;
     border: var(--setup-border);
     flex-direction: column;
+    padding: 2em;
+    gap: 20%;
+}
+
+.name-location-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .user-name{
     border: var(--setup-border);
+    font-size: 2.5em;
 }
 
 .user-location{
     border: var(--setup-border);
+    font-size: 2.5em;
 }
 
 .user-welcome{
     border: var(--setup-border);
+    font-size: 5em;
+    width: 50%;
+    max-width: 500px;
 }
 
 /************** contact row ******************/
@@ -46,31 +63,53 @@ left-column
     display: flex;
     border: var(--setup-border);
     flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
 }
 
 .contact-pitch{
     border: var(--setup-border);
+    font-size: 2.5em;
+    width: 50%;
 }
 
 .user-links{
     display: grid;
     border: var(--setup-border);
     grid-template-columns: 1fr 1fr;
+    height: 50%;
 }
 
-.user-links-left{
+.user-links-left-column, 
+.user-links-right-column {
+    border: var(--setup-border);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.email-github-container {
+    
     border: var(--setup-border);
 }
 
-.email{
-    border: var(--setup-border);
+.links-heading, 
+.links-anchor {
+    font-size: 1.8em;
 }
 
-.copyright{
+.copyright-container,
+.socials-container {
     border: var(--setup-border);
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.5em;
 }
 
-.user-links-right{
+.socials-container > a {
+    padding-right: 1.5em;
+}
+
+.user-links-right {
     display: grid;
     border: var(--setup-border);
 }
