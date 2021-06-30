@@ -1,6 +1,11 @@
+:root {
+    --setup-border: 1px solid black;
+}
+
 .portfolio-wrapper {
     display: grid;
     grid-template-columns: 3fr 2fr;
+    border: var(--setup-border);
 }
 
 /**********************************************************
@@ -12,75 +17,83 @@ left-column
 .left-section{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    color: red;
+    border: var(--setup-border);
 }
 
 /************** about me row ******************/
 
 .about-me{
-    display: grid;
+    display: flex;
+    border: var(--setup-border);
+    flex-direction: column;
 }
 
 .user-name{
-
+    border: var(--setup-border);
 }
 
 .user-location{
-
+    border: var(--setup-border);
 }
 
 .user-welcome{
-
+    border: var(--setup-border);
 }
 
 /************** contact row ******************/
 
 .contact{
     display: flex;
+    border: var(--setup-border);
+    flex-direction: column;
 }
 
 .contact-pitch{
-
+    border: var(--setup-border);
 }
 
 .user-links{
     display: grid;
+    border: var(--setup-border);
+    grid-template-columns: 1fr 1fr;
 }
 
 .user-links-left{
-
+    border: var(--setup-border);
 }
 
 .email{
-
+    border: var(--setup-border);
 }
 
 .copyright{
-
+    border: var(--setup-border);
 }
 
 .user-links-right{
     display: grid;
+    border: var(--setup-border);
 }
 
 .github{
-
+    border: var(--setup-border);
 }
 
 .socials{
     display: flex;
+    border: var(--setup-border);
 }
 
 .linkedin{
-
+    border: var(--setup-border);
 }
 
 .instagram {
-
+    border: var(--setup-border);
 }
 
 .twitter {
-
+    border: var(--setup-border);
 }
 
 /**********************************************************
@@ -92,75 +105,79 @@ right-column
 .right-side {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    border: var(--setup-border);
 }
 
 .projects {
     display: flex;
+    border: var(--setup-border);
 }
 
 .projects-heading {
-
+    border: var(--setup-border);
 }
 
 .projects-grid {
-    /* ​display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr)); */
+    ​display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    border: var(--setup-border);
 }
 
 .project-row {
-
+    border: var(--setup-border);
 }
 
 .project-title {
-
+    border: var(--setup-border);
 }
 
 .project-year {
-
+    border: var(--setup-border);
 }
 
 .project-heading {
-
+    border: var(--setup-border);
 }
 
 .description-container {
-
+    border: var(--setup-border);
 }
 
 .project-description {
-
+    border: var(--setup-border);
 }
 
 .repo-link {
-
+    border: var(--setup-border);
 }
 
 .skills {
-
+    border: var(--setup-border);
 }
 
 .skills-heading {
-
+    border: var(--setup-border);
 }
 
 .skills-grid {
     display: grid;
     grid-gap: 1rem;
     grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    border: var(--setup-border);
 }
 
 .skills-container {
-
+    border: var(--setup-border);
 }
 
 .skills-heading {
-
+    border: var(--setup-border);
 }
 
 .skills-list {
-
+    border: var(--setup-border);
 }
 
 .skills.item {
-    
+    border: var(--setup-border);
 }
