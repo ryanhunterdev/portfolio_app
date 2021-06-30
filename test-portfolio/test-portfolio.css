@@ -6,7 +6,7 @@
 
 .portfolio-wrapper {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     border: var(--setup-border);
     font-size: 10px;
     width: 100%;
@@ -53,7 +53,7 @@ left-column
 .user-welcome{
     border: var(--setup-border);
     font-size: 5em;
-    width: 60%;
+    width: 90%;
     max-width: 600px;
 }
 
@@ -69,7 +69,8 @@ left-column
 .contact-pitch{
     border: var(--setup-border);
     font-size: var(--heading);
-    width: 60%;
+    width: 90%;
+    max-width: 600px;
 }
 
 .user-links{
@@ -147,6 +148,7 @@ right-column
     padding: 2.5em;
     padding-top: 15%;
     overflow: scroll;
+    background-color: rgb(235, 235, 234);
 }
 
 .projects {
@@ -208,33 +210,42 @@ right-column
     border: var(--setup-border);
 }
 
+/************** skills ***************/
+
 .skills {
     border: var(--setup-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .skills-heading {
     border: var(--setup-border);
+    font-size: var(--heading);
+    padding-bottom: 1em;
 }
 
 .skills-grid {
     display: grid;
     /* grid-gap: 1rem; */
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     border: var(--setup-border);
 }
 
 .skills-container {
     border: var(--setup-border);
+    font-size: var(--main-text)
 }
 
-.skills-heading {
+.skill-heading {
     border: var(--setup-border);
+    padding-bottom: 1em;
 }
 
 .skills-list {
     border: var(--setup-border);
 }
 
-.skills.item {
+.skills-item {
     border: var(--setup-border);
 }
