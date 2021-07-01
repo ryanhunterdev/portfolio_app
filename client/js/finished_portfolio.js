@@ -10,9 +10,6 @@ const instagram = document.querySelector('.instagram');
 const twitter = document.querySelector('.twitter');
 const projectsGrid = document.querySelector('.projects-grid');
 const skillsGrid = document.querySelector('.skills-grid');
-const frontEnd = document.querySelector('.front-end')
-const backEnd = document.querySelector('.back-end')
-const other = document.querySelector('.other')
 
 axios.get(`/api/portfolios/1`).then(res => {
     let portfolio = res.data;
@@ -27,15 +24,15 @@ function populatePage(data) {
     addTextContent(content);
 
     let projectList = content.project_list;
-    console.log(projectList);
     projectList.forEach(project => {
         projectsGrid.appendChild(createProject(project))
     })
 
-    let skillList = content.skills[0]
-    frontEnd.appendChild(addSkills(skillList['front-end']));
-    backEnd.appendChild(addSkills(skillList['back-end']));
-    other.appendChild(addSkills(skillList.other));
+    let skills = content.skills
+    skills.forEach(skill => {
+        skillsGrid.appendChild(createSkill(skill))
+    })
+    
 
 }
 
@@ -85,16 +82,26 @@ function addProjectDescription(project) {
     return descriptionContainer;
 }
 
-function addSkills(skillList) {
+function createSkill(skill) {
+    let skillsContainer = document.createElement('div');
+    skillsContainer.className = 'skills-container';
+
+    let skillHeading = document.createElement('h3');
+    skillHeading.className = 'skill-heading';
+    skillHeading.textContent = skill.skills_heading;
+    skillsContainer.appendChild(skillHeading);
+
     let list = document.createElement('ul');
     list.className = 'skills-list';
-    skillList.forEach(skill => {
+    let skillList = skill.skills_list;
+    skillList.forEach(entry => {
         let item = document.createElement('li');
-        item.className = 'skills-item'
-        item.textContent= skill
-        list.appendChild(item)
+        item.className = 'skills-item';
+        item.textContent= entry;
+        list.appendChild(item);
     })
-    return list;
+    skillsContainer.appendChild(list);
+    return skillsContainer;
 }
 
 const addTextContent =  content => {
