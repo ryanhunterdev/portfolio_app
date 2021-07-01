@@ -117,25 +117,10 @@
             <input type="text" placeholder="Contact Pitch" class="user-pitch" name="user-pitch">
 
 
-            <button>Next</button>
+
+        </form>
 
 
-            <form action="/api/portfolio/about" method="put" class="about-form">
-
-                <h2 class="heading"> About You</h2>
-    
-                <input type="text" placeholder="Location" class="user_location" name="user-location">
-    
-                <input type="text" placeholder="Welcome Bio" class="user_welcome" name="user-welcome">
-    
-                <input type="text" placeholder="Contact Pitch" class="user-pitch" name="user-pitch">
-    
-    
-                <button>Update</button>
-    
-            </form>
-
-        <form action=""></form>
     </div>
 
     <!-- CONTACT -->
@@ -169,7 +154,7 @@
 
         <form action="/api/portfolio/project" method="put" class="project-form">
 
-            <h2 class="heading">Your Projects</h2>
+            <h2 class="heading">Edit Project</h2>
 
             <input type="text" placeholder="Project Heading" class="project_heading" name="project-heading">
 
@@ -183,6 +168,23 @@
             <button>Delete</button>
 
         </form>
+
+        <form action="/api/portfolio/project" method="put" class="project-form">
+
+            <h2 class="heading">Add Project</h2>
+
+            <input type="text" placeholder="Project Heading" class="project_heading" name="project-heading">
+
+            <input type="text" placeholder="Project Year" class="project_year" name="project-year">
+
+            <input type="text" placeholder="Project Description" class="project_description" name="project-description">
+
+            <input type="text" placeholder="Project URL" class="project-url" name="project-url">
+
+            <button>Add</button>
+
+        </form>
+
     </div>
 
     <!-- SKILLS -->
@@ -192,9 +194,8 @@
 
         <form action="/api/portfolio/skill" method="put" class="skill-form">
 
-            <h2 class="heading">Your Skills</h2>
+            <h2 class="heading">Edit Skills</h2>
 
-            <h3 class="heading">Front End</h3>
             <input type="text" placeholder="Skill Heading" class="skills" name="skills">
             <h3>enter your skills seperated by commas</h3>
             <input type="text" placeholder="Skills" class="skills" name="skills">
@@ -205,9 +206,8 @@
 
         <form action="/api/portfolio/skill" method="post" class="skill-form">
 
-            <h2 class="heading">Your Skills</h2>
+            <h2 class="heading">Add Skills</h2>
 
-            <h3 class="heading">Front End</h3>
             <input type="text" placeholder="Skill Heading" class="skills" name="skills">
             <h3>enter your skills seperated by commas</h3>
             <input type="text" placeholder="Skills" class="skills" name="skills">
@@ -215,7 +215,53 @@
             <button>Add</button>
         </form>
     </div>
+
+    <div class="font-color-modal">
+    
+    <form action="/api/portfolio/skill" method="patch" class="">
+
+            <h2 class="heading">color and fonts</h2>
+
+            <label for="heading-font">Heading Fonts</label>
+            <select name="heading-font" class="modal-dropDown dropDown-hf">
+            
+            </select>
+
+            <label for="paragraph-font">Paragraph Font</label>
+
+            <select name="paragraph-font" class="modal-dropDown dropDown-pf">
+
+
+            </select>
+
+            <h3>Heading Colour</h3>
+            <input type="color">
+            <h3>Paragraph Colour</h3>
+            <input type="color">
+
+
+            
+
+            <button>Add</button>
+        </form>
+    
+    
+    
+    </div>
 </div>
+
+back ground color left/right
+
+font color:
+headings
+para 
+links (stretch)
+
+font style:
+4 selection heading
+4 selection para
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="/js/edit_portfolio.js"></script>
