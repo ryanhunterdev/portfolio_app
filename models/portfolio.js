@@ -46,6 +46,8 @@ const Portfolio = {
       WHERE id=${user_id};`
       return db.query(sql)
     }
+
+    // addSkill(skill)
 }
 
 
