@@ -61,6 +61,14 @@ router.post('/api/portfolios/signup', (req, res) => {
 
 router.post('/api/portfolios/login', (req, res) => {
   Portfolio
+  .checkUser(req.body.email)
+  .then(dbRes => {
+    if (dbRes.rows[0].email === req.body.email) {
+      console.log('existing user');
+    } 
+  })
+
+  Portfolio
   .loginUser(req.body.email, req.body.password)
   .then(dbRes => {
       
