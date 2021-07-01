@@ -10,6 +10,9 @@ const instagram = document.querySelector('.instagram');
 const twitter = document.querySelector('.twitter');
 const projectsGrid = document.querySelector('.projects-grid');
 const skillsGrid = document.querySelector('.skills-grid');
+const frontEnd = document.querySelector('.front-end')
+const backEnd = document.querySelector('.back-end')
+const other = document.querySelector('.other')
 
 axios.get(`/api/portfolios/1`).then(res => {
     let portfolio = res.data;
@@ -30,7 +33,9 @@ function populatePage(data) {
     })
 
     let skillList = content.skills[0]
-    console.log(skillList);
+    frontEnd.appendChild(addSkills(skillList['front-end']));
+    backEnd.appendChild(addSkills(skillList['back-end']));
+    other.appendChild(addSkills(skillList.other));
 
 }
 
@@ -81,11 +86,15 @@ function addProjectDescription(project) {
 }
 
 function addSkills(skillList) {
-    let skillsList = document.createElement('ul');
-    skillsList.className = 'skills-list';
-    skillList.front-end.forEach(skill => {
-        
+    let list = document.createElement('ul');
+    list.className = 'skills-list';
+    skillList.forEach(skill => {
+        let item = document.createElement('li');
+        item.className = 'skills-item'
+        item.textContent= skill
+        list.appendChild(item)
     })
+    return list;
 }
 
 const addTextContent =  content => {
@@ -102,6 +111,3 @@ const addTextContent =  content => {
     instagram.href = content.instagram_url;
     twitter.href = content.twitter_url;
 }
-
-
-// window.addEventListener('load', populatePage)
