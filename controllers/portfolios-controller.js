@@ -46,7 +46,7 @@ router.put('/api/portfolios/:id', (req, res) =>{
 })
 
 // update according to the final db structure
-router.post('/', (req, res) => {
+router.post('/api/portfolios/signup', (req, res) => {
     Portfolio
     .createUser(req.body.email, req.body.name, req.body.password)
     .then(dbRes => {
@@ -57,7 +57,19 @@ router.post('/', (req, res) => {
         message: "new user created",
         user: dbRes.rows[0] })
     })
-    Portfolio.loginUser(req.body.email)
+})
+
+router.post('/api/portfolios/login', (req, res) => {
+  Portfolio
+  .loginUser(req.body.email, req.body.password)
+  .then(dbRes => {
+      
+    console.log(dbRes.rows);
+
+    res.status(201).json({ 
+      message: "user logged in",
+      user: dbRes.rows[0] })
+  })
 })
 
 module.exports = router
