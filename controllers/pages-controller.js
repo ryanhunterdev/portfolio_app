@@ -7,6 +7,9 @@ router.get('/', (req, res) => {
     res.render('index')
 })
 
+// router.get('/edit/:id' (req, res) => {
+//     res.render('')
+// })
 
 // router.post('/', (req, res) => {
 
