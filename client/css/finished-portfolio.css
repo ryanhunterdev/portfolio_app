@@ -209,7 +209,7 @@ right-column
     padding-top: 1.7em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .project-description {
