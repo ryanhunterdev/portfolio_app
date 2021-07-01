@@ -103,7 +103,7 @@ const addTextContent =  content => {
     userWelcome.textContent = content.user_welcome
     contactPitch.textContent = content.contact_pitch
     emailAnchor.textContent = content.email;
-    emailAnchor.href = content.email;
+    emailAnchor.href = `mailto:${content.email}?subject = Feedback&body = Message`;
     githubAnchor.textContent = content.github_url;
     githubAnchor.href = content.github_url;
     copyrightName.textContent = `- ${content.user_name}`;
