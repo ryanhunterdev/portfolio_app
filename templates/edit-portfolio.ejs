@@ -8,86 +8,211 @@
 </head>
 <body>
 
+<div class="portfolio-wrapper">
 
-// ABOUT
-<div class="create-about-div">
-    <form action="/api/portfolio/about" method="post" class="about-form">
-        <input type="text" placeholder="Location" class="user-location" name="user-location">
-        <input type="text" placeholder="Welcome Bio" class="user-welcome" name="user-welcome">
-        <input type="text" placeholder="Contact Pitch" class="user-pitch" name="user-pitch">
-        <button>Add About Details</button>
-    </form>
-</div>
+        <div class="left-column">
 
-<div class="edit-about-div">
-    <form action="/api/portfolio/about" method="put" class="about-form">
-        <input type="text" placeholder="Location" class="user-location" name="user-location">
-        <input type="text" placeholder="Welcome Bio" class="user-welcome" name="user-welcome">
-        <input type="text" placeholder="Contact Pitch" class="user-pitch" name="user-pitch">
-        <button>Update About Details</button>
-    </form>
-</div>
+            <section class="about-me">
 
-// CONTACT
-<div class="create-contact-div">
-    <form action="/api/portfolio/contact" method="post" class="contact-form">
-        <input type="text" placeholder="Git Hub URL" class="github-url" name="github-url">
-        <input type="text" placeholder="LinkedIn URL" class="linkedin-url" name="linkedin-url">
-        <input type="text" placeholder="Instagram URL" class="instagram-url" name="instagram-url">
-        <input type="text" placeholder="Twitter URL" class="twitter-url" name="twitter-url">
-        <button>Add Contact Details</button>
-    </form>
-</div>
+                <div class="name-location-wrapper">
+                    <h1 class="user-name">
+                        
+                    </h1>
+                    <h2 class="user-location">
+                        
+                    </h2>
+                </div>
 
-<div class="edit-contact-div">
-    <form action="/api/portfolio/contact" method="put" class="contact-form">
-        <input type="text" placeholder="Git Hub URL" class="github-url" name="github-url">
-        <input type="text" placeholder="LinkedIn URL" class="linkedin-url" name="linkedin-url">
-        <input type="text" placeholder="Instagram URL" class="instagram-url" name="instagram-url">
-        <input type="text" placeholder="Twitter URL" class="twitter-url" name="twitter-url">
-        <button>Update Contact Details</button>
-    </form>
-</div>
+                <h2 class="user-welcome">
+                    
+                </h2>
+            </section>
+            <section class="contact">
+                <h2 class="contact-pitch"></h2>
+                <div class="user-links">
+                    <div class="user-links-left-column">
+                        <div class="email-github-container">
+                            <h3 class="links-heading">email:</h3>
+                            <a href="#" class="links-anchor email-anchor">
+                                
+                            </a>
+                            
+                        </div>
+                        <div class="copyright-container">
+                            &copy 2021 <span class="copyright-name"></span> 
+                        </div>
+                    </div>       
+                    <div class="user-links-right-column">
+                        <div class="email-github-container">
+                            <h2 class="links-heading">github:</h2>
+                            <a href="#" class="links-anchor github-anchor"></a> 
+                        </div>
+                        <div class="socials-container">
+                            <a href="#" class="linkedin">LinkedIn</a>
+                            <a href="#" class="instagram">Instagram</a>
+                            <a href="#" class="twitter">Twitter</a>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+        </div>
 
-// PROJECT
-<div class="create-project-div">
-    <form action="/api/portfolio/project" method="post" class="project-form">
-        <input type="text" placeholder="Project Heading" class="project-heading" name="project-heading">
-        <input type="text" placeholder="Project Year" class="project-year" name="project-year">
-        <input type="text" placeholder="Project Description" class="project-description" name="project-description">
-        <input type="text" placeholder="Project URL" class="project-url" name="project-url">
+        <div class="right-column">
+            <section class="projects">
+                <h2 class="projects-heading">Projects</h2>
+                <div class="projects-grid">
 
-        <button>Add Project</button>
-    </form>
-        <button>Close and Save</button>
-</div>
+                    <!-- projects generate here -->
 
-<div class="edit-project-div">
-    <form action="/api/portfolio/project" method="put" class="project-form">
-        <input type="text" placeholder="Project Heading" class="project-heading" name="project-heading">
-        <input type="text" placeholder="Project Year" class="project-year" name="project-year">
-        <input type="text" placeholder="Project Description" class="project-description" name="project-description">
-        <input type="text" placeholder="Project URL" class="project-url" name="project-url">
-        <button>Update Project Details</button>
-    </form>
-</div>
+                </div>
+            </section>
+            <section class="skills">
+                <h2 class="skills-heading">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skills-container front-end">
+                        <h3 class="skill-heading">Front-End</h3>
 
-// SKILLS
-<div class="create-skills-div">
-    <form action="/api/portfolio/skills" method="post" class="skills-form">
-        <input type="text" placeholder="Skills" class="skills" name="skills">
-        <button>Add Skill</button>
-    </form>
-        <button>Close and Save</button>
-</div>
+                        <!-- front end list generates here -->
 
-<div class="edit-skill-div">
-    <form action="/api/portfolio/skill" method="put" class="skill-form">
-        <input type="text" placeholder="Skills" class="skills" name="skills">
-        <button>Update Skill</button>
-    </form>
-</div>
+                    </div>
+                    <div class="skills-container back-end">
+                        <h3 class="skill-heading">Back-End</h3>
+                        
+                        <!-- back end list generates here -->
 
+                    </div>
+                    <div class="skills-container other">
+                        <h3 class="skill-heading">Other</h3>
+
+                        <!-- other list generates here -->
+                        
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+
+<div class="pop-up">
+    <!-- ABOUT -->
+
+    <div class="edit-about-div">
+
+        <form action="/api/portfolio/about" method="put" class="about-form">
+
+            <h2 class="heading"> About You</h2>
+
+            <input type="text" placeholder="Location" class="user_location" name="user-location">
+
+            <input type="text" placeholder="Welcome Bio" class="user_welcome" name="user-welcome">
+
+            <input type="text" placeholder="Contact Pitch" class="user-pitch" name="user-pitch">
+
+
+            <button>Next</button>
+
+
+            <form action="/api/portfolio/about" method="put" class="about-form">
+
+                <h2 class="heading"> About You</h2>
     
+                <input type="text" placeholder="Location" class="user_location" name="user-location">
+    
+                <input type="text" placeholder="Welcome Bio" class="user_welcome" name="user-welcome">
+    
+                <input type="text" placeholder="Contact Pitch" class="user-pitch" name="user-pitch">
+    
+    
+                <button>Update</button>
+    
+            </form>
+
+        <form action=""></form>
+    </div>
+
+    <!-- CONTACT -->
+    
+
+    <div class="edit-contact-div">
+
+        <form action="/api/portfolio/contact" method="put" class="contact-form">
+
+            <h2 class="heading">Your Contacts</h2>
+
+            <input type="text" placeholder="Git Hub URL" class="github-url" name="github-url">
+
+            <input type="text" placeholder="LinkedIn URL" class="linkedin-url" name="linkedin-url">
+
+            <input type="text" placeholder="Instagram URL" class="instagram-url" name="instagram-url">
+
+            <input type="text" placeholder="Twitter URL" class="twitter-url" name="twitter-url">
+
+
+            <button>Update</button>
+
+        </form> 
+    </div> 
+
+    <!-- PROJECT -->
+    
+
+    <div class="edit-project-div">
+
+
+        <form action="/api/portfolio/project" method="put" class="project-form">
+
+            <h2 class="heading">Your Projects</h2>
+
+            <input type="text" placeholder="Project Heading" class="project_heading" name="project-heading">
+
+            <input type="text" placeholder="Project Year" class="project_year" name="project-year">
+
+            <input type="text" placeholder="Project Description" class="project_description" name="project-description">
+
+            <input type="text" placeholder="Project URL" class="project-url" name="project-url">
+
+            <button>Add</button>
+            <button>Delete</button>
+            <button>Update</button>
+
+        </form>
+    </div>
+
+    <!-- SKILLS -->
+    
+
+    <div class="edit-skill-div">
+
+        <form action="/api/portfolio/skill" method="put" class="skill-form">
+
+            <h2 class="heading">Your Skills</h2>
+
+            <h3 class="heading">Front End</h3>
+            <input type="text" placeholder="Skills" class="skills" name="skills">
+            <button>Add</button>
+            <button>Delete</button>
+
+            <h3 class="heading">Back End</h3>
+            <input type="text" placeholder="Skills" class="skills" name="skills">
+            <button>Add</button>
+            <button>Delete</button>
+            
+
+            <h3 class="heading">Other</h3>
+            <input type="text" placeholder="Skills" class="skills" name="skills">
+            <button>Add</button>
+            <button>Delete</button>
+
+            <button>Update</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/edit_portfolio.js"></script>
+
 </body>
 </html>
