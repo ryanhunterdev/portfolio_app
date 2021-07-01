@@ -4,6 +4,7 @@ const Portfolio = require('../models/portfolio.js');
 
 
 router.get('/', (req, res) => {
+    console.log(req.session.email)
     res.render('index')
 })
 
