@@ -4,29 +4,18 @@ const Portfolio = require('../models/portfolio.js');
 
 
 router.get('/', (req, res) => {
-    res.render('test-index')
+    res.render('index')
 })
 
-// router.get('/edit/:id' (req, res) => {
-//     res.render('')
-// })
+router.get('/edit-portfolio/:id', (req, res) => {
+    let user_id = Number(req.params.id)
+    res.render('edit-portfolio', { user_id: user_id})
+})
 
-// router.post('/', (req, res) => {
-
-//     Portfolio
-//     .create(req.body.email, req.body.name, req.body.password)
-//     .then(dbRes => {
-      
-//       console.log(dbRes.rows);
-
-//       res.status(201).json({ 
-//         message: "new user created",
-//         user: dbRes.rows[0] })
-//     })
-
-//     console.log('clicked');
-//     console.log(req.body);
-// })
+router.get('/portfolio/:id', (req, res) => {
+    let user_id = Number(req.params.id)
+    res.render('finished-portfolio', { user_id: user_id})
+})
 
 
 module.exports = router
