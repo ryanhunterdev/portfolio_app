@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+var session = require('express-session')
 const port = 8080;
 
 const logger = require('./middlewares/logger');
@@ -13,6 +14,8 @@ app.listen(port, ()=>{
     console.log(`listening on port ${port}`);
 })
 
+app.use(session({secret: 'ssshhhhh',saveUninitialized: true,resave: true}));
+
 app.use(logger)
 
 app.use(express.static('client'))
@@ -20,8 +23,6 @@ app.use(express.static('client'))
 app.use(express.json())
 
 app.use(express.urlencoded({ extended: true }))
-
-// app.use('', apiController)
 
 app.use('/', pagesController)
 
