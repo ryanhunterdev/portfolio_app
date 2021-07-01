@@ -24,8 +24,9 @@ const Portfolio = {
     },
 
     loginUser(email, password) {
-      // const sql = `SELECT * FROM users WHERE email = $1`
-      console.log(`login ${email}`);
+      const sql = `SELECT * FROM users WHERE email = '${email}';`
+      console.log(`login, email: ${email}, PW: ${password}`);
+      return db.query(sql)
     },
 
     addProject(projectYear, projectHeading, projectDescription, projectURL, user_id){
