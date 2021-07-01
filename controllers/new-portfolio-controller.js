@@ -19,13 +19,14 @@ router.patch('/api/portfolios/add/projects/:id', (req, res) =>{
 
 router.patch('/api/portfolios/add/skill/:id', (req, res) =>{
   let user_id = Number(req.params.id)
+  let skill_array = req.body.skills_list.split(", ")
   Portfolio
-    .addProject(req.body.skills_heading, req.body.skills_heading, user_id)
+    .addProject(req.body.skills_heading, skill_array, user_id)
     .then(dbRes => {
       console.log(dbRes)
 
       res.status(201).json({
-        message: "project was successfully added",
+        message: "skill set was successfully added",
       })
     })
 })
