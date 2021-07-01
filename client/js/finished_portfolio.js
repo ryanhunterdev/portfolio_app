@@ -21,9 +21,58 @@ axios.get(`/api/portfolios/1`).then(res => {
 function populatePage(data) {
     console.log(data.message);
     let content = data.results[0]
-    console.log(content);
     addTextContent(content);
+    let projectList = content.project_list;
+    console.log(projectList);
+    projectList.forEach(project => {
+        projectsGrid.appendChild(createProject(project))
+    })
+}
 
+function createProject(project) {
+    
+    let projectRow = document.createElement('div');
+    projectRow.className = 'project-row';
+
+    projectRow.appendChild(createTitle(project));
+    projectRow.appendChild(createDescription(project));
+
+    return projectRow;
+}
+
+function createTitle(project) {
+    let projectTitle = document.createElement('div')
+    projectTitle.className = 'project-title'
+
+    let year = document.createElement('p');
+    year.className = 'project-year';
+    year.textContent = project.project_year
+    projectTitle.appendChild(year)
+
+    let heading = document.createElement('h3');
+    heading.className = 'project-heading';
+    heading.textContent = project.project_heading;
+    projectTitle.appendChild(heading);
+
+    return projectTitle;
+}
+
+function createDescription(project) {
+    let descriptionContainer = document.createElement('div');
+    descriptionContainer.className = 'description-container';
+
+    let projectDescription = document.createElement('p');
+    projectDescription.className = 'project-description';
+    projectDescription.textContent = project.project_description;
+    descriptionContainer.appendChild(projectDescription);
+
+    let repoLink = document.createElement('a');
+    repoLink.className = 'repo-link';
+    repoLink.textContent = 'github';
+    repoLink.href = project.project_url;
+    descriptionContainer.appendChild(repoLink);
+
+    return descriptionContainer;
 }
 
 const addTextContent =  content => {
@@ -31,12 +80,14 @@ const addTextContent =  content => {
     userLocation.textContent = content.user_location
     userWelcome.textContent = content.user_welcome
     contactPitch.textContent = content.contact_pitch
-    emailAnchor.textContent = content.email
-    githubAnchor.textContent = content.github_url 
-    copyrightName.textContent = `- ${content.user_name}`
-    linkedin.href = content.linkedin_url
-    instagram.href = content.instagram_url
-    twitter.href = content.twitter_url
+    emailAnchor.textContent = content.email;
+    emailAnchor.href = content.email;
+    githubAnchor.textContent = content.github_url;
+    githubAnchor.href = content.github_url;
+    copyrightName.textContent = `- ${content.user_name}`;
+    linkedin.href = content.linkedin_url;
+    instagram.href = content.instagram_url;
+    twitter.href = content.twitter_url;
 }
 
 
