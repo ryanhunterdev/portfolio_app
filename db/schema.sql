@@ -1,39 +1,4 @@
-CREATE DATABASE placeBase;
-
-
-CREATE TABLE placeTable (
-  id SERIAL PRIMARY KEY,
-  email TEXT,
-  password VARCHAR(50),
-  first_name TEXT,
-  last_name TEXT,
-  user_img_url TEXT,
-  location TEXT,
-  about_section TEXT,
-  projects jsonb,
-  skills jsonb
-);
-
-
-INSERT INTO placeTable(email, password, first_name, last_name, projects)
-VALUES ('beastheart@gmail.com', 'pw', 'Beast', 'Heart', '[{
-  "project_name": "TicTacToe",
-  "Description": "Its TicTacToe, what else do you want from me",
-  "tech_stack": "HTML, CSS, JavaScript",
-  "github": "git@gitgit.fornow",
-  "url": "ticcyTac.com"
-},
- {
-    "project_name": "bigDogs",
-  "Description": "Lots of photos of big dogs, with comments, and likes and stuff",
-  "tech_stack": "HTML, CSS, Ruby on Rails",
-  "github": "dog@dogdog.fornow",
-  "url": "bigDogs.com"
-}
-]');
-
-
--- CREATE DATABASE jgrs_portfolios
+CREATE DATABASE jgrs_portfolios
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -43,7 +8,6 @@ CREATE TABLE users (
   user_location TEXT,
   user_welcome TEXT,
   contact_pitch TEXT,
-  user_copy_right TEXT,
   github_url TEXT,
   linkedin_url TEXT,
   instagram_url TEXT,
@@ -59,7 +23,6 @@ INSERT INTO users(
   user_location,
   user_welcome, 
   contact_pitch, 
-  user_copy_right,
   github_url,
   linkedin_url,
   instagram_url,
@@ -74,7 +37,6 @@ VALUES (
   'sydney',
   'hi i am sophie, a full stacks dev',
   'i am studing dev now so if you want some great code let me know!',
-  '&copy sophie townsend',
   'https://github.com/stow31',
   'https://linkedin.com/stow31',
   'https://instagram.com/stow31',
@@ -101,16 +63,3 @@ VALUES (
       }
     ]'
 );
-
-
-
-
-
-
-
-,
-
-
-
-  ,
-
