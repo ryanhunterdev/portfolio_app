@@ -23,7 +23,7 @@ const Portfolio = {
       return db.query(sql, [email, name, password])
     },
 
-    checkUser(email) {
+    checkUser(email, password) {
       const sql = `SELECT * FROM users WHERE email = '${email}';`
       return db.query(sql)
     },
