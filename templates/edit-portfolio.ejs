@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/finished-portfolio.css">
-    
+    <link rel="stylesheet" href="/css/modals.css">
+
     <title>Testing</title>
 </head>
 <body>
@@ -178,9 +179,8 @@
 
             <input type="text" placeholder="Project URL" class="project-url" name="project-url">
 
-            <button>Add</button>
-            <button>Delete</button>
             <button>Update</button>
+            <button>Delete</button>
 
         </form>
     </div>
@@ -195,22 +195,24 @@
             <h2 class="heading">Your Skills</h2>
 
             <h3 class="heading">Front End</h3>
+            <input type="text" placeholder="Skill Heading" class="skills" name="skills">
+            <h3>enter your skills seperated by commas</h3>
             <input type="text" placeholder="Skills" class="skills" name="skills">
-            <button>Add</button>
-            <button>Delete</button>
 
-            <h3 class="heading">Back End</h3>
-            <input type="text" placeholder="Skills" class="skills" name="skills">
-            <button>Add</button>
             <button>Delete</button>
-            
-
-            <h3 class="heading">Other</h3>
-            <input type="text" placeholder="Skills" class="skills" name="skills">
-            <button>Add</button>
-            <button>Delete</button>
-
             <button>Update</button>
+        </form>
+
+        <form action="/api/portfolio/skill" method="post" class="skill-form">
+
+            <h2 class="heading">Your Skills</h2>
+
+            <h3 class="heading">Front End</h3>
+            <input type="text" placeholder="Skill Heading" class="skills" name="skills">
+            <h3>enter your skills seperated by commas</h3>
+            <input type="text" placeholder="Skills" class="skills" name="skills">
+
+            <button>Add</button>
         </form>
     </div>
 </div>
