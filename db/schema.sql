@@ -57,9 +57,12 @@ VALUES (
     ]',
     '[
       {
-        "front-end": ["html", "css", "javascript", "react"],
-        "back-end": ["sinatra", "node", "express", "ruby"],
-        "other": ["swimming", "reading", "wine"]
+        "skills_heading": "back end",
+        "skills_list": ["sinatra", "node", "express", "ruby"]
+      },
+      {
+        "skills_heading": "front-end",
+        "skills_list": ["sinatra", "node", "express", "ruby"]
       }
     ]'
 );
