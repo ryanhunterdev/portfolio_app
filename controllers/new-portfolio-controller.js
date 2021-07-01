@@ -24,7 +24,7 @@ router.patch('/api/portfolios/add/skills/:id', (req, res) =>{
     .then(dbRes => {
       res.status(201).json({
         message: "skills set was successfully added",
-        skill: dbRes.rows
+        skill: dbRes.rows[0].skills[dbRes.rows[0].skills.length-1]
       })
     })
 })
