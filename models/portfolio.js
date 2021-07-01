@@ -1,7 +1,7 @@
 const { Pool } = require('pg')
 
 const db = new Pool({
-  database: 'placebase'
+  database: 'jgrs_portfolios'
 }) 
 
 const Portfolio = {
@@ -12,10 +12,14 @@ const Portfolio = {
     },
 
     createUser(email, name, password) {
-      const sql = `insert into placetable (email, name, password) 
+      const sql = `insert into users (email, name, password) 
       values ($1, $2, $3) returning *;`
 
     return db.query(sql, [email, name, password])
+    },
+
+    loginUser(email, password) {
+      const sql = `SELECT * FROM users WHERE email = $1`
     },
 
     addProject(projectYear, projectHeading, projectDescription, projectURL, user_id){
