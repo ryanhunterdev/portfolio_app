@@ -14,7 +14,7 @@ router.get('/edit-portfolio/:id', (req, res) => {
 
 router.get('/portfolio/:id', (req, res) => {
     let user_id = Number(req.params.id)
-    res.render('finished-portfolio', { user_id: user_id})
+    res.render('finished_portfolio', { user_id: user_id})
 })
 
 
