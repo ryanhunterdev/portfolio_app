@@ -15,7 +15,7 @@ app.listen(port, ()=>{
 
 app.use(logger)
 
-// app.use(express.static('client'))
+app.use(express.static('client'))
 
 app.use(express.json())
 
