@@ -57,11 +57,7 @@ router.post('/', (req, res) => {
         message: "new user created",
         user: dbRes.rows[0] })
     })
+    Portfolio.loginUser(req.body.email)
 })
-
-// router.post('/', (req, res) => {
-//   Portfolio
-
-// })
 
 module.exports = router

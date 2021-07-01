@@ -17,14 +17,15 @@ const Portfolio = {
     },
 
     createUser(email, name, password) {
-      const sql = `insert into users (email, name, password) 
+      const sql = `insert into users (email, user_name, password) 
       values ($1, $2, $3) returning *;`
 
       return db.query(sql, [email, name, password])
     },
 
     loginUser(email, password) {
-      const sql = `SELECT * FROM users WHERE email = $1`
+      // const sql = `SELECT * FROM users WHERE email = $1`
+      console.log(`login ${email}`);
     },
 
     addProject(projectYear, projectHeading, projectDescription, projectURL, user_id){
