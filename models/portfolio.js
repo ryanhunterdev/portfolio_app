@@ -51,7 +51,7 @@ const Portfolio = {
       const sql = `UPDATE users SET skills = skills || 
       '{
         "skills_heading": "${skillHeading}",
-        "skills_list": "${skillList}",
+        "skills_list": ${skillList}
       }'::jsonb
       WHERE id=${user_id};`
       return db.query(sql)

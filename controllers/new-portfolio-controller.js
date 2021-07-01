@@ -9,24 +9,22 @@ router.patch('/api/portfolios/add/projects/:id', (req, res) =>{
   Portfolio
     .addProject(req.body.project_year, req.body.project_heading, req.body.project_description, req.body.project_url, user_id)
     .then(dbRes => {
-      console.log(dbRes)
-
       res.status(201).json({
         message: "project was successfully added",
       })
     })
 })
 
-router.patch('/api/portfolios/add/skill/:id', (req, res) =>{
+router.patch('/api/portfolios/add/skills/:id', (req, res) =>{
   let user_id = Number(req.params.id)
-  let skill_array = req.body.skills_list.split(", ")
+  let skills_array = req.body.skills_list.split(", ")
+  let JSONskills = JSON.stringify(skills_array)
   Portfolio
-    .addProject(req.body.skills_heading, skill_array, user_id)
+    .addSkill(req.body.skills_heading, JSONskills, user_id)
     .then(dbRes => {
-      console.log(dbRes)
-
       res.status(201).json({
-        message: "skill set was successfully added",
+        message: "skills set was successfully added",
+        skill: dbRes.rows[0]
       })
     })
 })
