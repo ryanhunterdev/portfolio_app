@@ -16,7 +16,7 @@ const skillsGrid = document.querySelector('.skills-grid');
 axios.get(`/api/portfolios/1`).then(res => {
     let portfolio = res.data;
 
-    populatPage(data);
+    populatPage(portfolio);
 
 })
 
