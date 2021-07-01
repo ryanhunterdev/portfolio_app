@@ -34,9 +34,7 @@ router.post('/api/portfolios/login', (req, res) => {
       
     console.log(dbRes.rows);
 
-    res.status(201).json({ 
-      message: "user logged in",
-      user: dbRes.rows[0] })
+    res.status(201).redirect(`/edit-portfolio/${dbRes.rows[0].id}`)
   })
 })
 
