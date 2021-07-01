@@ -9,6 +9,7 @@
 <body>
 
 
+// ABOUT
 <div class="create-about-div">
     <form action="/api/portfolio/about" method="post" class="about-form">
         <input type="text" placeholder="Location" class="user-location" name="user-location">
@@ -27,6 +28,7 @@
     </form>
 </div>
 
+// CONTACT
 <div class="create-contact-div">
     <form action="/api/portfolio/contact" method="post" class="contact-form">
         <input type="text" placeholder="Git Hub URL" class="github-url" name="github-url">
@@ -47,23 +49,42 @@
     </form>
 </div>
 
+// PROJECT
 <div class="create-project-div">
     <form action="/api/portfolio/project" method="post" class="project-form">
-        <input type="text" placeholder="Git Hub URL" class="github-url" name="github-url">
-        <input type="text" placeholder="LinkedIn URL" class="linkedin-url" name="linkedin-url">
-        <input type="text" placeholder="Instagram URL" class="instagram-url" name="instagram-url">
-        <input type="text" placeholder="Twitter URL" class="twitter-url" name="twitter-url">
-        <button>Add Contact Details</button>
+        <input type="text" placeholder="Project Heading" class="project-heading" name="project-heading">
+        <input type="text" placeholder="Project Year" class="project-year" name="project-year">
+        <input type="text" placeholder="Project Description" class="project-description" name="project-description">
+        <input type="text" placeholder="Project URL" class="project-url" name="project-url">
+
+        <button>Add Project</button>
+    </form>
+        <button>Close and Save</button>
+</div>
+
+<div class="edit-project-div">
+    <form action="/api/portfolio/project" method="put" class="project-form">
+        <input type="text" placeholder="Project Heading" class="project-heading" name="project-heading">
+        <input type="text" placeholder="Project Year" class="project-year" name="project-year">
+        <input type="text" placeholder="Project Description" class="project-description" name="project-description">
+        <input type="text" placeholder="Project URL" class="project-url" name="project-url">
+        <button>Update Project Details</button>
     </form>
 </div>
 
-<div class="edit-contact-div">
-    <form action="/api/portfolio/contact" method="put" class="contact-form">
-        <input type="text" placeholder="Git Hub URL" class="github-url" name="github-url">
-        <input type="text" placeholder="LinkedIn URL" class="linkedin-url" name="linkedin-url">
-        <input type="text" placeholder="Instagram URL" class="instagram-url" name="instagram-url">
-        <input type="text" placeholder="Twitter URL" class="twitter-url" name="twitter-url">
-        <button>Update Contact Details</button>
+// SKILLS
+<div class="create-skills-div">
+    <form action="/api/portfolio/skills" method="post" class="skills-form">
+        <input type="text" placeholder="Skills" class="skills" name="skills">
+        <button>Add Skill</button>
+    </form>
+        <button>Close and Save</button>
+</div>
+
+<div class="edit-skill-div">
+    <form action="/api/portfolio/skill" method="put" class="skill-form">
+        <input type="text" placeholder="Skills" class="skills" name="skills">
+        <button>Update Skill</button>
     </form>
 </div>
 
