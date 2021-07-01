@@ -11,11 +11,16 @@ const Portfolio = {
       return db.query(sql)
     },
 
+    findOne(id) {
+      const sql = 'select * from users where id = $1;'
+      return db.query(sql, [id])
+    },
+
     createUser(email, name, password) {
       const sql = `insert into users (email, name, password) 
       values ($1, $2, $3) returning *;`
 
-    return db.query(sql, [email, name, password])
+      return db.query(sql, [email, name, password])
     },
 
     loginUser(email, password) {

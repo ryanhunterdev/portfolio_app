@@ -16,6 +16,22 @@ router.get('/api/portfolios', (req, res) => {
     })
 })
 
+router.get('/api/portfolios/:id', (req, res) => {
+  let user_id = Number(req.params.id)
+
+  Portfolio
+    .findOne(user_id)
+    .then(dbRes => {
+      console.log(dbRes.rows);
+
+      res.status(201).json({
+        message: `Successfully gotten one user`,
+        results: dbRes.rows
+      })
+      
+    })
+})
+
 router.put('/api/portfolios/:id', (req, res) =>{
   let user_id = Number(req.params.id)
   Portfolio
