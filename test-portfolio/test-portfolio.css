@@ -1,6 +1,6 @@
 :root {
     --setup-border: none;
-    --heading: 2.5em;
+    --heading: clamp(1.5em, 2vw, 2.5em);
     --main-text: 1.7em;
 }
 
@@ -52,7 +52,7 @@ left-column
 
 .user-welcome{
     border: var(--setup-border);
-    font-size: 5em;
+    font-size: clamp(1.5rem, 2.5vw, 5rem);
     width: 90%;
     max-width: 600px;
 }
@@ -165,7 +165,6 @@ right-column
 
 .projects-grid {
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(1fr, 2fr));
     grid-template-rows: auto;
     border: var(--setup-border);
     gap: 5%;
@@ -176,6 +175,14 @@ right-column
     border: var(--setup-border);
     display: grid;
     grid-template-columns: 1.5fr 2fr;
+    gap: 3%;
+}
+
+@media (max-width: 900px) {
+    .project-row {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .project-title {
@@ -200,6 +207,9 @@ right-column
 .description-container {
     border: var(--setup-border);
     padding-top: 1.7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .project-description {
@@ -208,6 +218,8 @@ right-column
 
 .repo-link {
     border: var(--setup-border);
+    font-size: var(--main-text);
+
 }
 
 /************** skills ***************/
