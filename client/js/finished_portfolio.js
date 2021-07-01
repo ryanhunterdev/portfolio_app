@@ -22,11 +22,16 @@ function populatePage(data) {
     console.log(data.message);
     let content = data.results[0]
     addTextContent(content);
+
     let projectList = content.project_list;
     console.log(projectList);
     projectList.forEach(project => {
         projectsGrid.appendChild(createProject(project))
     })
+
+    let skillList = content.skills[0]
+    console.log(skillList);
+
 }
 
 function createProject(project) {
@@ -34,13 +39,13 @@ function createProject(project) {
     let projectRow = document.createElement('div');
     projectRow.className = 'project-row';
 
-    projectRow.appendChild(createTitle(project));
-    projectRow.appendChild(createDescription(project));
+    projectRow.appendChild(addProjectTitle(project));
+    projectRow.appendChild(addProjectDescription(project));
 
     return projectRow;
 }
 
-function createTitle(project) {
+function addProjectTitle(project) {
     let projectTitle = document.createElement('div')
     projectTitle.className = 'project-title'
 
@@ -57,7 +62,7 @@ function createTitle(project) {
     return projectTitle;
 }
 
-function createDescription(project) {
+function addProjectDescription(project) {
     let descriptionContainer = document.createElement('div');
     descriptionContainer.className = 'description-container';
 
@@ -73,6 +78,14 @@ function createDescription(project) {
     descriptionContainer.appendChild(repoLink);
 
     return descriptionContainer;
+}
+
+function addSkills(skillList) {
+    let skillsList = document.createElement('ul');
+    skillsList.className = 'skills-list';
+    skillList.front-end.forEach(skill => {
+        
+    })
 }
 
 const addTextContent =  content => {
