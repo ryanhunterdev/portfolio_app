@@ -6,6 +6,9 @@ const port = 8080;
 const logger = require('./middlewares/logger');
 const pagesController = require('./controllers/pages-controller.js')
 const portfolioController = require('./controllers/portfolios-controller.js')
+const editPortfolioController = require('./controllers/edit-portfolio-controller.js')
+const newPortfolioController = require('./controllers/new-portfolio-controller.js')
+const usersController = require('./controllers/users-controller.js')
 
 app.set('view engine', 'ejs')
 app.set('views', './templates')
@@ -27,3 +30,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/', pagesController)
 
 app.use('/', portfolioController)
+
+app.use('/', editPortfolioController)
+
+app.use('/', newPortfolioController)
+
+app.use('/', usersController)
