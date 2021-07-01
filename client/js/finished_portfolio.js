@@ -27,4 +27,4 @@ function populatePage() {
 
 
 
-window.addEventListener('load', populatePage)
+// window.addEventListener('load', populatePage)
