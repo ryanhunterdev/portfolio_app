@@ -47,7 +47,7 @@ const Portfolio = {
       return db.query(sql)
     }
 
-    // addSkill(skill)
+    addSkill(skill)
 }
 
 
