@@ -53,7 +53,7 @@ const Portfolio = {
         "skills_heading": "${skillHeading}",
         "skills_list": ${skillList}
       }'::jsonb
-      WHERE id=${user_id};`
+      WHERE id=${user_id} returning *;`
       return db.query(sql)
     }
 }
