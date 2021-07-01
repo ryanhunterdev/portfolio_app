@@ -29,7 +29,7 @@ router.post('/api/portfolios/login', (req, res) => {
   .then(dbRes => {
 
     sess = req.session;
-    sess.email = req.body.email;
+    sess.userID = dbRes.rows[0].id
     console.log(req.session)
       
     console.log(dbRes.rows);

@@ -17,7 +17,13 @@ app.listen(port, ()=>{
     console.log(`listening on port ${port}`);
 })
 
-app.use(session({secret: 'ssshhhhh',saveUninitialized: true,resave: true}));
+const oneDay = 1000 * 60 * 60 * 24;
+app.use(session({
+    secret: 'ssshhhhh',
+    saveUninitialized: true,
+    cookie: {maxAge: oneDay},
+    resave: true
+}));
 
 app.use(logger)
 
