@@ -4,7 +4,7 @@ const Portfolio = require('../models/portfolio.js');
 
 
 router.get('/', (req, res) => {
-    res.render('index')
+    res.render('test-index')
 })
 
 // router.get('/edit/:id' (req, res) => {
