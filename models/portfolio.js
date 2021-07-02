@@ -17,8 +17,42 @@ const Portfolio = {
     },
 
     createUser(email, name, password) {
-      const sql = `insert into users (email, user_name, password) 
-      values ($1, $2, $3) returning *;`
+      const sql = `insert into users (email, user_name, password, user_location, user_welcome, contact_pitch, github_url, linkedin_url, instagram_url, twitter_url, project_list, skills) 
+      values (
+        $1,
+        $2, 
+        $3, 
+        'Your Location', 
+        'Say Hi and tell us the role you fill', 
+        'Tell us about yourself, where are you coming from, where are you aiming to go?', 'Link your github here', 
+        'Link your linkedin here', 
+        'Link your insta or other socials here', 
+        'Link your twitter or other socials here', 
+        '[
+          {
+            "project_year": "Project Year",
+            "project_heading": "Project Name",
+            "project_description": "About the project, challenges, lessons learned etc.",
+            "project_url": "Link to projects github repo"
+          },
+          {
+            "project_year": "Project Year",
+            "project_heading": "Project Name",
+            "project_description": "About the project, challenges, lessons learned etc.",
+            "project_url": "Link to projects github repo"
+          }
+        ]',
+        '[
+          {
+            "skills_heading": "(back end)",
+            "skills_list": ["sinatra", "node", "express", "ruby"]
+          },
+          {
+            "skills_heading": "(front-end)",
+            "skills_list": ["sinatra", "node", "express", "ruby"]
+          }
+        ]'
+        ) returning *;`
 
       return db.query(sql, [email, name, password])
     },

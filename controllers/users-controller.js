@@ -8,12 +8,12 @@ router.post('/api/portfolios/signup', (req, res) => {
   .checkUser(req.body.email)
   .then(dbRes => {
     if (dbRes.rows.length && dbRes.rows[0].email === req.body.email) {
-      prompt(`${req.body.email} is already being used`)
+      res.render('index', { error: invalidEmail })
     } else {
       Portfolio
       .createUser(req.body.email, req.body.name, req.body.password)
       .then(dbRes => {
-        res.render('index', { error: invalidEmail })
+        res.status(201).redirect(`/edit-portfolio/${dbRes.rows[0].id}`)
       })
     }
   })
