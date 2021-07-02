@@ -83,6 +83,22 @@ const Portfolio = {
         )
     WHERE id=${userID} returning project_list;`
       return db.query(sql)
+    },
+
+    updateSkills(skillsHeading, skillsList, userID, index){
+      const sql = `UPDATE users SET
+      skills = 
+        jsonb_set(
+          skills,
+          '{${index}}',  
+          '{
+              "skills_list": ${skillsList},
+              "skills_heading": "${skillsHeading}"
+          }',
+          false
+        )
+    WHERE id=${userID} returning skills;`
+      return db.query(sql)
     }
 }
 
