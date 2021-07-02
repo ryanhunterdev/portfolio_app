@@ -16,48 +16,32 @@
     <title>Testing</title>
 </head>
 <body>
- <div class='main'>
-    <form action="/api/portfolios/signup" method="post" class="signup-form">
+    <div class='main'>
 
-        <h1>JGRS Portfolios</h1>
-        
+        <form action="/portfolios/login" method= "post" class="login-form">
 
-        <input type="text" placeholder="full name" class="name" name="name">
-        
-        <input type="text" placeholder="email" class="email" name="email">
-        
-        <input type="text" placeholder="set password" class="password" name="password">
+                <h1>JGRS Portfolios</h1>
+                
+                <input type="email" name="email" placeholder="email">
 
-        
-        <button>Sign Up</button>
-        
-        <button>Login</button>
-        
-        
-
-    </form>
+                <input type="password" name="password" placeholder="password"> 
 
 
-    <form action="/portfolios/login" method= "post" class="login-form">
+                <button class="login-btn">Login</button> 
 
-            <h1>JGRS Portfolios</h1>
-            
-            <input type="email" name="email" placeholder="email">
+                
+                <h4 class="login-error"><%= loginEmailError %></h4>
+                
+        </form>
+        <form action="/signup" method="get" class="signup-form">
 
-            <input type="password" name="password" placeholder="password"> 
-
-
-            <button class="login-btn">Login</button> 
-            
             <button class="signUp-btn">Sign Up</button> 
-            
-            <h4 class="login-error"><%= loginEmailError %></h4>
-            
-            <h4 class="sign-up-error"><%= signupEmailError %></h4>
-    </form>
-</div>
+
+        </form>
+    </div>
 
 
- <script src="/js/index.js"></script>
+    <script src="/js/index.js"></script>
+
 </body>
 </html>

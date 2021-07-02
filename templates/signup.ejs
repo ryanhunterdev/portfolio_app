@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600"
+        rel="stylesheet"
+        type="text/css"
+    />
+    <link rel="stylesheet" href="/css/index.css">
+
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="main">
+        <form action="/api/portfolios/signup" method="post" class="signup-form">
+
+            <h1>JGRS Portfolios</h1>
+            
+
+            <input type="text" placeholder="full name" class="name" name="name">
+            
+            <input type="text" placeholder="email" class="email" name="email">
+            
+            <input type="text" placeholder="set password" class="password" name="password">
+
+            
+            <button>Sign Up</button>
+
+        </form>
+
+        <h4 class="sign-up-error"><%= signupEmailError %></h4>
+    </div>
+
+
+    <script src="/js/signup.js"></script>
+</body>
+</html>

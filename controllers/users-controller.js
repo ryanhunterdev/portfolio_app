@@ -9,7 +9,7 @@ router.post('/api/portfolios/signup', (req, res) => {
   .checkUser(req.body.email)
   .then(dbRes => {
     if (dbRes.rows.length && dbRes.rows[0].email === req.body.email) {
-      res.render('index', { loginEmailError: "", signupEmailError: invalidEmail, passwordError: ""})
+      res.render('signup', { loginEmailError: "", signupEmailError: invalidEmail, passwordError: ""})
     } else {
       Portfolio
       .createUser(req.body.email, req.body.password)
