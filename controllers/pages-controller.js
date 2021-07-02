@@ -8,13 +8,13 @@ router.get('/', (req, res) => {
     console.log(req.session)
 })
 
-router.get('/edit-portfolio/:id', (req, res) => {
+router.get('/portfolios/edit/:id', (req, res) => {
     let user_id = Number(req.params.id)
     console.log(req.session)
     res.render('edit-portfolio', { user_id: user_id})
 })
 
-router.get('/portfolio/:id', (req, res) => {
+router.get('/portfolios/:id', (req, res) => {
     let user_id = Number(req.params.id)
     console.log(req.session)
     res.render('finished_portfolio', { user_id: user_id})
