@@ -12,7 +12,7 @@ router.post('/api/portfolios/signup', (req, res) => {
       res.render('index', { loginEmailError: "", signupEmailError: invalidEmail, passwordError: ""})
     } else {
       Portfolio
-      .createUser(req.body.email, req.body.name, req.body.password)
+      .createUser(req.body.email, req.body.password)
       .then(dbRes => {
         
         res.status(201).redirect(`/portfolios/edit/${dbRes.rows[0].id}`)

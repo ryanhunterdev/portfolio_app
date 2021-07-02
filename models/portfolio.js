@@ -16,12 +16,12 @@ const Portfolio = {
       return db.query(sql, [id])
     },
 
-    createUser(email, name, password) {
-      const sql = `insert into users (email, user_name, password, user_location, user_welcome, contact_pitch, github_url, linkedin_url, instagram_url, twitter_url, project_list, skills) 
+    createUser(email, password) {
+      const sql = `insert into users (email, password, user_name, user_location, user_welcome, contact_pitch, github_url, linkedin_url, instagram_url, twitter_url, project_list, skills) 
       values (
         $1,
         $2, 
-        $3, 
+        'your name here', 
         'Your Location', 
         'Say Hi and tell us the role you fill', 
         'Tell us about yourself, where are you coming from, where are you aiming to go?', 'Link your github here', 
@@ -54,7 +54,7 @@ const Portfolio = {
         ]'
         ) returning *;`
 
-      return db.query(sql, [email, name, password])
+      return db.query(sql, [email, password])
     },
 
     checkUser(email, password) {

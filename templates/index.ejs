@@ -16,10 +16,10 @@
     <title>Testing</title>
 </head>
 <body>
-
+ <div class='main'>
     <form action="/api/portfolios/signup" method="post" class="signup-form">
 
-        <h1>JGRS Portfolio</h1>
+        <h1>JGRS Portfolios</h1>
         
 
         <input type="text" placeholder="full name" class="name" name="name">
@@ -40,7 +40,7 @@
 
     <form action="/portfolios/login" method= "post" class="login-form">
 
-            <h1>JGRS Portfolio</h1>
+            <h1>JGRS Portfolios</h1>
             
             <input type="email" name="email" placeholder="email">
 
@@ -55,7 +55,7 @@
             
             <h4 class="sign-up-error"><%= signupEmailError %></h4>
     </form>
-
+</div>
 
 
  <script src="/js/index.js"></script>
