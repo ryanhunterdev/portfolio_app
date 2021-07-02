@@ -15,7 +15,7 @@ const backEnd = document.querySelector('.back-end')
 const other = document.querySelector('.other')
 const url = window.location.pathname;
 
-portfolioId = url.slice(url.indexOf('o/') + 2)
+portfolioId = url.slice(url.indexOf('t/') + 2)
 
 axios.get(`/api/portfolios/${portfolioId}`).then(res => {
     let portfolio = res.data;

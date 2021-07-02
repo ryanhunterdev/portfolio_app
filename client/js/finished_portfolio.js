@@ -12,7 +12,7 @@ const projectsGrid = document.querySelector('.projects-grid');
 const skillsGrid = document.querySelector('.skills-grid');
 const url = window.location.pathname;
 
-portfolioId = url.slice(url.indexOf('o/') + 2)
+portfolioId = url.slice(url.indexOf('s/') + 2)
 
 axios.get(`/api/portfolios/${portfolioId}`).then(res => {
     let portfolio = res.data;
