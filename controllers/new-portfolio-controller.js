@@ -2,8 +2,6 @@ const express = require('express')
 const router = express.Router();
 const Portfolio = require('../models/portfolio.js');
 
-// for adding new  parts of the portfolio - only projects and skills in here
-
 router.patch('/api/portfolios/add/projects/:id', (req, res) =>{
   let user_id = Number(req.params.id)
   Portfolio
@@ -11,6 +9,7 @@ router.patch('/api/portfolios/add/projects/:id', (req, res) =>{
     .then(dbRes => {
       res.status(201).json({
         message: "project was successfully added",
+        project: dbRes.rows[0].project_list[dbRes.rows[0].project_list.length-1]
       })
     })
 })
