@@ -2,7 +2,9 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
+console.log('file is connected')
 
+const projectGridDiv = document.querySelector('.projects-grid')
 
 //edit   
 const editAboutDiv = document.querySelector('.edit_about_div')
@@ -25,11 +27,9 @@ const editLeftColorBtn = document.querySelector('.colorLeftBtn')
 const editColorDiv = document.querySelector('.edit_fontsColors_div')
 const editRightColorBtn = document.querySelector('.colorRightBtn')
 
-
-
+const exitBtn = document.querySelector('.exit')
 
 function editAboutMe() {
-
     return editAboutDiv.style.display = "block";
 }
 
@@ -64,32 +64,29 @@ function editColorFont() {
 }
 
 
-const editDiv = document.querySelectorAll('.edit_div')
-const popUp = document.querySelectorAll('.pop-up')
-
-// window.onclick = function(event){
-        
-//     editDiv.forEach(div => {
-//         if (!event.target == div) {
-//             div.style.display = "none";
-//         }
+// const editDivs = document.querySelectorAll('.edit_div')
+// const popUp = document.querySelectorAll('.pop-up')
+// if ( editAboutDiv.style.display === 'block' ){
+//     window.addEventListener('click', (e)=>{
+//         console.log(e.target.parentNode)
+//         if (e.target.parentNode !== editAboutDiv) {
+//             editAboutDiv.style.display = "none";
+//           }
 //     })
 // }
-
-window.onclick = function(event) {
-    if (editAboutDiv.style.display == 'block') {
-        editAboutDiv.style.display = "none";
-    }
-}
 
 
 
 // listeners for buttons
+// projectGridDiv.addEventListener('click', (e)=>{
+//     if(e.target.classList.contains('edit_projects')){
+//         editProject()
+//     }
+// })
 editLeftColorBtn.addEventListener('click', editColorFont);
 editRightColorBtn.addEventListener('click', editColorFont);
 editAboutMeBtn.addEventListener('click', editAboutMe);
 editContactBtn.addEventListener('click', editContact);
-editProjectsBtn.addEventListener('click', editProject);
 addProjectBtn.addEventListener('click', addProject);
 editSkillsBtn.addEventListener('click', editSkills);
 addSkillsBtn.addEventListener('click', addSkill);
