@@ -30,7 +30,6 @@ const editRightColorBtn = document.querySelector('.colorRightBtn')
 
 function editAboutMe() {
 
-    console.log('working');
     return editAboutDiv.style.display = "block";
 }
 
@@ -65,16 +64,36 @@ function editColorFont() {
 }
 
 
+const editDiv = document.querySelectorAll('.edit_div')
+const popUp = document.querySelectorAll('.pop-up')
+
+// window.onclick = function(event){
+        
+//     editDiv.forEach(div => {
+//         if (!event.target == div) {
+//             div.style.display = "none";
+//         }
+//     })
+// }
+
+window.onclick = function(event) {
+    if (editAboutDiv.style.display == 'block') {
+        editAboutDiv.style.display = "none";
+    }
+}
+
+
 
 // listeners for buttons
-editLeftColorBtn.addEventListener('click', editColorFont)
-editRightColorBtn.addEventListener('click', editColorFont)
+editLeftColorBtn.addEventListener('click', editColorFont);
+editRightColorBtn.addEventListener('click', editColorFont);
 editAboutMeBtn.addEventListener('click', editAboutMe);
 editContactBtn.addEventListener('click', editContact);
 editProjectsBtn.addEventListener('click', editProject);
 addProjectBtn.addEventListener('click', addProject);
 editSkillsBtn.addEventListener('click', editSkills);
 addSkillsBtn.addEventListener('click', addSkill);
+
 
 // -----------------------------------------------------
 //the toogle for the left or right side of the page
