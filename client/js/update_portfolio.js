@@ -49,6 +49,7 @@ function createProject(project) {
 
     projectRow.appendChild(addProjectTitle(project));
     projectRow.appendChild(addProjectDescription(project));
+    projectRow.appendChild(addEditButton())
 
     return projectRow;
 }
@@ -86,6 +87,13 @@ function addProjectDescription(project) {
     descriptionContainer.appendChild(repoLink);
 
     return descriptionContainer;
+}
+
+function addEditButton() {
+    const editBtn = document.createElement('button');
+    editBtn.className = 'edit_projects'
+    editBtn.textContent = 'edit'
+    return editBtn;
 }
 
 function createSkill(skill) {
