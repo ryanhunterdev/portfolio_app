@@ -14,8 +14,6 @@ const url = window.location.pathname;
 
 portfolioId = url.slice(url.indexOf('o/') + 2)
 
-console.log(portfolioId);
-
 axios.get(`/api/portfolios/${portfolioId}`).then(res => {
     let portfolio = res.data;
 
