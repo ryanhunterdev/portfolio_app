@@ -20,7 +20,7 @@
     <form action="/api/portfolios/signup" method="post" class="signup-form">
 
         <h1>JGRS Portfolio</h1>
-        <h2 class="sign-up-error"></h2>
+        <h2 class="sign-up-error"><%= error %></h2>
 
         <input type="text" placeholder="full name" class="name" name="name">
         <input type="text" placeholder="email" class="email" name="email">
@@ -34,7 +34,7 @@
     <form action="/portfolios/login" method= "post" class="login-form">
 
             <h1>JGRS Portfolio</h1>
-            <h2 class="login-error"></h2>
+            <h2 class="login-error"><%= error %></h2>
 
             <input type="email" name="email" placeholder="email">
 
@@ -51,6 +51,6 @@
 
 
 
- <script src="/js/finished_portfolio.js"></script>
+ <script src="/js/index.js"></script>
 </body>
 </html>
