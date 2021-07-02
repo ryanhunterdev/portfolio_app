@@ -60,7 +60,7 @@ function editColorFont() {
 
 window.onclick = function(event) {
     if (event.target !== editRightColorBtn && !event.target.closest('.edit_fontsColors_div') && editColorDiv.style.display === "block") {
-      editColorDiv.style.display = "none";
+        editColorDiv.style.display = "none";
     } else if (event.target !== editAboutMeBtn && !event.target.closest('.edit_about_div') && editAboutDiv.style.display === "block"){
         editAboutDiv.style.display = "none";
     } else if (event.target !== editContactBtn && !event.target.closest('.edit_contact_div') && editContactDiv.style.display === "block"){

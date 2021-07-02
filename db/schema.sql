@@ -1,4 +1,4 @@
-CREATE DATABASE jgrs_portfolios
+CREATE DATABASE jgrs_portfolios;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -29,7 +29,7 @@ INSERT INTO users(
   twitter_url,
   project_list,
   skills
-  )
+)
 VALUES (
   'sophie@gmail.com',
   'password123',

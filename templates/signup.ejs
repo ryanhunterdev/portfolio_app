@@ -15,27 +15,50 @@
     <title>Sign Up</title>
 </head>
 <body>
-    <div class="main">
-        <form action="/api/portfolios/signup" method="post" class="signup-form">
+    <div class='login-page'>
+        <div class="form">
 
-            <h1>JGRS Portfolios</h1>
-            
+            <form class="signup-form" action="/api/portfolios/signup" method="post" >
 
-            <input type="text" placeholder="full name" class="name" name="name">
-            
-            <input type="text" placeholder="email" class="email" name="email">
-            
-            <input type="text" placeholder="set password" class="password" name="password">
+                <h1 class="heading">JGRS Portfolios</h1>
+                <h2>Create Your Dream Portfolio</h2>
+                <h4 class="sign-up-error"><%= signupEmailError %></h4>
 
-            
-            <button>Sign Up</button>
+                <input type="text" placeholder="full name" name="name">
+                
+                <input type="text" placeholder="email" name="email">
+                
+                <input type="text" placeholder="set password" name="password">
 
-        </form>
+                
+                <button class="signUp-btn">Sign Up</button>
 
-        <h4 class="sign-up-error"><%= signupEmailError %></h4>
+            </form>
+
+        </div>
     </div>
-
 
     <script src="/js/signup.js"></script>
 </body>
 </html>
+
+    <!-- <section class='sign_up'>
+    
+        <form class="form" action="" method= "post">
+
+            <h2>Sign Up</h2>
+
+            <input type="text" name="first-name" placeholder="first name">
+
+            <input type="text" name="last-name" placeholder="last name">
+
+            <input type="text" name="email" placeholder="email">
+
+            <input type="password" name="password" placeholder="set password"> 
+    
+            <button class="signUp-btn">Sign Up</button> 
+            <button class="login-btn">Login</button> 
+    
+        </form>
+    
+    </section> -->
