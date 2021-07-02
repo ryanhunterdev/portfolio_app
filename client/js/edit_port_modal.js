@@ -61,8 +61,6 @@ function editRightColorFont() {
 }
 
 window.onclick = function(event) {
-    
-
         if (event.target !== editLeftColorBtn && !event.target.closest('.left-edit') && editLeftColorDiv.style.display === "block") {
             editLeftColorDiv.style.display = "none";
         } else if (event.target !== editRightColorBtn && !event.target.closest('.right-edit') && editRightColorDiv.style.display === "block") {
@@ -73,10 +71,8 @@ window.onclick = function(event) {
             editContactDiv.style.display = "none";
         } else if (event.target !== addProjectBtn && !event.target.closest('.add_project_div') && addProjectDiv.style.display === "block"){
             addProjectDiv.style.display = "none";
-        } 
-
-
-    }
+        }
+ }
 
 // listeners for buttons
 window.addEventListener('click', (e)=>{
