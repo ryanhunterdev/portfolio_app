@@ -30,7 +30,6 @@ const editRightColorBtn = document.querySelector('.colorRightBtn')
 const exitBtn = document.querySelector('.exit')
 
 function editAboutMe() {
-    console.log('clicked edit about div btn')
     return editAboutDiv.style.display = "block";
 }
 
@@ -79,11 +78,11 @@ function editColorFont() {
 
 
 // listeners for buttons
-projectGridDiv.addEventListener('click', (e)=>{
-    if(e.target.classList.contains('edit_projects')){
-        editProject()
-    }
-})
+// projectGridDiv.addEventListener('click', (e)=>{
+//     if(e.target.classList.contains('edit_projects')){
+//         editProject()
+//     }
+// })
 editLeftColorBtn.addEventListener('click', editColorFont);
 editRightColorBtn.addEventListener('click', editColorFont);
 editAboutMeBtn.addEventListener('click', editAboutMe);
