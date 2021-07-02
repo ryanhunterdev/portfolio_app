@@ -87,3 +87,14 @@ body {
 }
 
 
+
+
+h2 {
+    background-color: pink;
+    color: red;
+}
+
+.error {
+    border: solid red 2px;
+    background-color: rgb(150, 240, 128);
+}
