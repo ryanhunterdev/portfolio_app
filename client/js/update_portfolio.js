@@ -30,19 +30,17 @@ function populatePage(data) {
     addTextContent(content);
 
     let projectList = content.project_list;
-    projectList.forEach(project => {
-        projectsGrid.appendChild(createProject(project))
+    projectList.forEach((project, index) => {
+        projectsGrid.appendChild(createProject(project, index))
     })
 
     let skills = content.skills
     skills.forEach(skill => {
         skillsGrid.appendChild(createSkill(skill))
     })
-    
-
 }
 
-function createProject(project) {
+function createProject(project, index) {
     
     let projectRow = document.createElement('div');
     projectRow.className = 'project-row';
@@ -50,7 +48,7 @@ function createProject(project) {
     projectRow.appendChild(addProjectTitle(project));
     projectRow.appendChild(addProjectDescription(project));
     projectRow.appendChild(addEditButton())
-
+    projectRow.dataset.index = index;
     return projectRow;
 }
 

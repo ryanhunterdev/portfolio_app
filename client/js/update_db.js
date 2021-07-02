@@ -40,7 +40,7 @@ contactForm.addEventListener('submit', event => {
         updateContact(newData);
         editContactDiv.style.display = "none";
     })
-}); 
+});
 
 
 
