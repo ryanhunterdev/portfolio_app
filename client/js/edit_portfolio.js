@@ -142,7 +142,7 @@ const addSkillsDiv = document.querySelector('.add_skills_div')
 const editLeftColorBtn = document.querySelector('.colorLeftBtn')
 const editColorDiv = document.querySelector('.edit_fontsColors_div')
 const editRightColorBtn = document.querySelector('.colorRightBtn')
-const editColorDiv = document.querySelector('.edit_fontsColors_div')
+
 
 
 
@@ -185,14 +185,14 @@ function editColorFont() {
 
 
 // listeners for buttons
-editColorBtn.addEventListener('click', editColorFont)
-editColorBtn.addEventListener('click', editColorFont)
+editLeftColorBtn.addEventListener('click', editColorFont)
+editRightColorBtn.addEventListener('click', editColorFont)
 editAboutMeBtn.addEventListener('click', editAboutMe);
 editContactBtn.addEventListener('click', editContact);
 editProjectsBtn.addEventListener('click', editProject);
 addProjectBtn.addEventListener('click', addProject);
-editLeftSkillsBtn.addEventListener('click', editSkills);
-addRightSkillsBtn.addEventListener('click', addSkill);
+editSkillsBtn.addEventListener('click', editSkills);
+addSkillsBtn.addEventListener('click', addSkill);
 
 // -----------------------------------------------------
 //the toogle for the left or right side of the page
