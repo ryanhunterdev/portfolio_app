@@ -219,6 +219,7 @@ right-column
 .repo-link {
     border: var(--setup-border);
     font-size: var(--main-text);
+    padding-top: 1em;
 
 }
 

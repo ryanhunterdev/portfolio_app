@@ -1,7 +1,21 @@
+const { default: axios } = require("axios");
+
 const aboutForm = document.querySelector('.about-form');
 const contactForm = document.querySelector('.contact-form');
 const colorFontPicker = document.querySelector('.color-font-picker');
 const headingColorRight = document.querySelector('.heading-color-right');
+const editProjectForm = document.querySelector('.edit-project-form');
+const addProjectForm = document.querySelector('.add-project-form');
+
+function getFormData(form) {
+    return Object.fromEntries(new FormData(form));
+}
+
+/****************************
+
+about me - contact 
+
+*****************************/
 
 const updateAboutMe = newData => {
     userLocation.textContent = newData.user_location;
@@ -20,7 +34,7 @@ const updateContact = newData => {
 aboutForm.addEventListener('submit', event => {
     event.preventDefault();
 
-    let formData = Object.fromEntries(new FormData(aboutForm));
+    let formData = getFormData(aboutForm);
 
     axios.patch(`/api/portfolios/about/${portfolioId}`, formData).then(res => {
         console.log(res.data.message);
@@ -34,7 +48,7 @@ aboutForm.addEventListener('submit', event => {
 contactForm.addEventListener('submit', event => {
     event.preventDefault();
 
-    let formData = Object.fromEntries(new FormData(contactForm));
+    let formData = getFormData(contactForm);
     console.log(formData);
     axios.patch(`/api/portfolios/contact/${portfolioId}`, formData).then(res => {
         console.log(res.data.message);
@@ -45,6 +59,12 @@ contactForm.addEventListener('submit', event => {
     })
 });
 
+/****************************
+
+color - font changing
+
+*****************************/
+
 headingColorRight.addEventListener("input", handleColorChange, false)
 
 function handleColorChange(event) {
@@ -54,3 +74,62 @@ function handleColorChange(event) {
         heading.style.color = event.target.value;
     })
 }
+
+/****************************
+
+projects
+
+*****************************/
+
+let projectIndex;
+
+projectsGrid.addEventListener("click", event => {
+    projectIndex = event.target.parentElement.dataset.index;
+})
+
+
+editProjectForm.addEventListener("submit", event => {
+    event.preventDefault();
+  
+    
+    let formData = getFormData(editProjectForm);
+
+    
+    axios
+        .patch(`/api/portfolios/${portfolioId}/${projectIndex}`, formData)
+        .then(res => {
+       
+            editProjectsDiv.style.display = "none";
+            editProjectForm.reset();
+            let newData = res.data;
+            updateProject(newData);
+        })
+})
+
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
+function updateProject(newData) {
+    let allProjects = newData.allProjects.project_list;
+    removeAllChildNodes(projectsGrid);
+
+    allProjects.forEach((project, index) => {
+        projectsGrid.appendChild(createProject(project, index))
+    });
+}
+
+addProjectForm.addEventListener("click", event => {
+    event.preventDefault();
+    let formData = getFormData(editProjectForm);
+
+    axios
+        .post(`/api/portfolios/${portfolioId}/${projectIndex}`, formData)
+        .then(res => {
+            
+        })
+
+})
