@@ -57,18 +57,12 @@ function editColorFont() {
 }
 
 
-// const editDivs = document.querySelectorAll('.edit_div')
-// const popUp = document.querySelectorAll('.pop-up')
-// if ( editAboutDiv.style.display === 'block' ){
-//     window.addEventListener('click', (e)=>{
-//         console.log(e.target.parentNode)
-//         if (e.target.parentNode !== editAboutDiv) {
-//             editAboutDiv.style.display = "none";
-//           }
-//     })
-// }
 
-
+window.onclick = function(event) {
+    if (event.target !== editRightColorBtn && !event.target.closest('.edit_fontsColors_div')) {
+      editColorDiv.style.display = "none";
+    }
+}
 
 // listeners for buttons
 projectGridDiv.addEventListener('click', (e)=>{
@@ -80,10 +74,6 @@ editLeftColorBtn.addEventListener('click', editColorFont);
 editRightColorBtn.addEventListener('click', editColorFont);
 editAboutMeBtn.addEventListener('click', editAboutMe);
 editContactBtn.addEventListener('click', editContact);
-// addProjectBtn.addEventListener('click', addProject);
-// editSkillsBtn.addEventListener('click', editSkills);
-// addSkillsBtn.addEventListener('click', addSkill);
-
 
 // -----------------------------------------------------
 //the toogle for the left or right side of the page
