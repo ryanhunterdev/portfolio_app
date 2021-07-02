@@ -29,7 +29,7 @@ const editRightColorBtn = document.querySelector('.colorRightBtn')
 
 
 function editAboutMe() {
-
+    console.log('clicked edit about div btn')
     return editAboutDiv.style.display = "block";
 }
 
@@ -64,8 +64,18 @@ function editColorFont() {
 }
 
 
-const editDiv = document.querySelectorAll('.edit_div')
+const editDivs = document.querySelectorAll('.edit_div')
 const popUp = document.querySelectorAll('.pop-up')
+
+
+// editDivs.forEach( editDiv => {
+//     window.addEventListener('click', (e) => {
+//         if (!editDiv.contains(e.target)){
+//             console.log("true")
+//         }
+//     })
+// })
+
 
 // window.onclick = function(event){
         
@@ -76,11 +86,11 @@ const popUp = document.querySelectorAll('.pop-up')
 //     })
 // }
 
-window.onclick = function(event) {
-    if (editAboutDiv.style.display == 'block') {
-        editAboutDiv.style.display = "none";
-    }
-}
+// window.onclick = function(event) {
+//     if (popUp.style.display == 'block') {
+//         editAboutDiv.style.display = "none";
+//     }
+// }
 
 
 
@@ -116,4 +126,12 @@ function headingFonts() {
 
 function paragraphFonts() {
 
+}
+if ( editAboutDiv.style.display === 'block' ){
+    window.addEventListener('click', (e)=>{
+        console.log(e.target.parentNode)
+        if (e.target.parentNode !== editAboutDiv) {
+            editAboutDiv.style.display = "none";
+          }
+    })
 }
