@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/finished-portfolio.css">
     <link rel="stylesheet" href="/css/modals.css">
+    <link rel="stylesheet" href="/css/edit_portfolio.css">
 
     <title>Testing</title>
 </head>
@@ -18,17 +19,21 @@
         <div class="left-column">
 
             <section class="about-me">
-
-            <button class="edit_aboutMe">edit</button>
-            <button class="colorLeftBtn">color</button>
             
                 <div class="name-location-wrapper">
-                    <h1 class="user-name left-heading">
-                        
-                    </h1>
-                    <h2 class="user-location  left-heading">
-                        
-                    </h2>
+                    <div class="name-column">
+                        <h1 class="user-name left-heading">
+                            
+                        </h1>
+                        <button class="colorLeftBtn page-edit-btn">colors/fonts</button>
+                    </div>
+                    <div class="location-column">
+                        <h2 class="user-location  left-heading">
+                            
+                        </h2>
+                    <button class="edit_aboutMe page-edit-btn">edit section</button>
+                    
+                    </div>
                 </div>
 
                 <h2 class="user-welcome left-heading">
@@ -37,9 +42,11 @@
             </section>
             <section class="contact">
 
-            <button class="edit_contact">edit</button>
-
-                <h2 class="contact-pitch left-heading"></h2>
+            
+                <div class="pitch-container">
+                    <h2 class="contact-pitch left-heading"></h2>
+                    <button class="edit_contact page-edit-btn">edit section</button>
+                </div>
                 <div class="user-links">
                     <div class="user-links-left-column">
                         <div class="email-github-container">
@@ -70,7 +77,7 @@
 
         <div class="right-column">
             <section class="projects">
-                <button class="colorRightBtn">color</button>
+                <button class="colorRightBtn page-edit-btn">colors/fonts</button>
 
                 <h2 class="projects-heading right-heading">Projects</h2>
                 <div class="projects-grid">
@@ -78,7 +85,7 @@
                     <!-- projects generate here -->
 
                 </div>
-                <button class="add_projects">add project</button>
+                <button class="add_projects page-edit-btn">add project</button>
             </section>
             <section class="skills">
                 <h2 class="skills-heading right-heading">Skills</h2>

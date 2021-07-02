@@ -47,7 +47,6 @@ function createProject(project, index) {
 
     projectRow.appendChild(addProjectTitle(project));
     projectRow.appendChild(addProjectDescription(project));
-    projectRow.appendChild(addEditButton())
     projectRow.dataset.index = index;
     return projectRow;
 }
@@ -68,6 +67,7 @@ function addProjectTitle(project) {
     heading.classList.add('right-heading');
     heading.textContent = project.project_heading;
     projectTitle.appendChild(heading);
+    projectTitle.appendChild(addEditButton())
 
     return projectTitle;
 }
@@ -93,7 +93,8 @@ function addProjectDescription(project) {
 function addEditButton() {
     const editBtn = document.createElement('button');
     editBtn.className = 'edit_projects'
-    editBtn.textContent = 'edit'
+    editBtn.classList.add('page-edit-btn')
+    editBtn.textContent = 'edit project'
     return editBtn;
 }
 

@@ -1,0 +1,38 @@
+.page-edit-btn {
+    border: none;
+    background: none;
+    width: fit-content;
+    cursor: pointer;
+    float: right;
+    text-decoration: underline;
+}
+
+.page-edit-btn:hover {
+    color: red;
+}
+
+.name-column,
+.location-column,
+.pitch-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colorLeftBtn {
+    padding-right: 3em;
+}
+
+.colorRightBtn {
+    position: absolute;
+    top: 2em;
+    right: 25%;
+}
+
+.project-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit_projects {
+    padding-top: 1em;
+}
