@@ -22,8 +22,9 @@ const addSkillsDiv = document.querySelector('.add_skills_div')
 
 // edit color and fonts
 const editLeftColorBtn = document.querySelector('.colorLeftBtn')
-const editColorDiv = document.querySelector('.edit_fontsColors_div')
+const editLeftColorDiv = document.querySelector('.left-edit')
 const editRightColorBtn = document.querySelector('.colorRightBtn')
+const editRightColorDiv = document.querySelector('.right-edit')
 
 const exitBtn = document.querySelector('.exit')
 
@@ -51,15 +52,21 @@ function addSkill() {
     addSkillsDiv.style.display = "block";
 }
 
-function editColorFont() {
-    editColorDiv.style.display = 'block';
+function editLeftColorFont() {
+    editLeftColorDiv.style.display = 'block';
+}
+
+function editRightColorFont() {
+    editRightColorDiv.style.display = 'block';
 }
 
 window.onclick = function(event) {
-    const editProjectsBtns = document.querySelectorAll('.edit_projects')
+    
 
-        if (event.target !== editRightColorBtn && !event.target.closest('.edit_fontsColors_div') && editColorDiv.style.display === "block") {
-        editColorDiv.style.display = "none";
+        if (event.target !== editLeftColorBtn && !event.target.closest('.left-edit') && editLeftColorDiv.style.display === "block") {
+            editLeftColorDiv.style.display = "none";
+        } else if (event.target !== editRightColorBtn && !event.target.closest('.right-edit') && editRightColorDiv.style.display === "block") {
+            editRightColorDiv.style.display = "none";
         } else if (event.target !== editAboutMeBtn && !event.target.closest('.edit_about_div') && editAboutDiv.style.display === "block"){
             editAboutDiv.style.display = "none";
         } else if (event.target !== editContactBtn && !event.target.closest('.edit_contact_div') && editContactDiv.style.display === "block"){
@@ -68,61 +75,29 @@ window.onclick = function(event) {
             addProjectDiv.style.display = "none";
         } 
 
-        editProjectsBtns.forEach(prjBtn => { 
-            if (event.target === prjBtn){
-                console.log(`Enabling the popup ${event.target}`)
-                editProject()
-            }  
-            
-            // else if (event.target !== prjBtn && !event.target.closest('.edit_project_div') && editProjectsDiv.style.display === "block" ){
-            //     console.log(`Disabling the popup ${event.target}`)
-            //     editProjectsDiv.style.display = "none";
-            // } 
-        })
-}
-// && !event.target.closest('.edit_project_div') && editProjectsDiv.style.display === "block"
 
-// editProjectsBtns.forEach(prjBtn => { 
-//     prjBtn.addEventListener('click', (e)=>{
-//         if (e.target === prjBtn){
-//             console.log(`Enabling the popup ${e.target}`)
-//             editProject()
-//         }  
-//     })
-// })
-
-// editProjectsBtns.forEach(prjBtn => { 
-//     console.log("btn clicked")
-//     prjBtn.addEventListener('click', ()=>{
-//         editProject()
-//     })
-// })
+    }
 
 // listeners for buttons
-// projectGridDiv.addEventListener('click', (e)=>{
-//     if(e.target.classList.contains('edit_projects')){
-//         editProject()
-//     }
-// })
-editLeftColorBtn.addEventListener('click', editColorFont);
-editRightColorBtn.addEventListener('click', editColorFont);
+window.addEventListener('click', (e)=>{
+    const editProjectsBtns = document.querySelectorAll('.edit_projects')
+    if(e.target.classList.contains('edit_projects') && (editProjectsDiv.style.display === "" || editProjectsDiv.style.display === "none")){
+        console.log("updated")
+        editProject()
+    } else {
+        editProjectsBtns.forEach(prjBtn => { 
+            if (e.target !== prjBtn && !e.target.closest('.edit_project_div') && editProjectsDiv.style.display === "block" ){
+                console.log(`Disabling the popup ${e.target}`)
+                editProjectsDiv.style.display = "none";
+            } 
+        }) 
+    }
+})
+editLeftColorBtn.addEventListener('click', editLeftColorFont);
+editRightColorBtn.addEventListener('click', editRightColorFont);
 editAboutMeBtn.addEventListener('click', editAboutMe);
 editContactBtn.addEventListener('click', editContact);
 addProjectBtn.addEventListener('click', addProject);
-
-// -----------------------------------------------------
-//the toogle for the left or right side of the page
-
-const switchValue = document.querySelector('.switch input')
-
-    if (switchValue.checked){
-		//assign class to make it appear on the right
-    } else {
-		//assign class to make it appear on the left
-    }
-
-
-// ----------------------------------------------------
 
 
 function headingFonts() {
