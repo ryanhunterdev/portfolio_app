@@ -4,7 +4,7 @@ const Portfolio = require('../models/portfolio.js');
 
 
 router.get('/', (req, res) => {
-    res.render('index', { error: "" })
+    res.render('index', { loginEmailError: "", signupEmailError: "", passwordError: ""})
     console.log(req.session)
 })
 
