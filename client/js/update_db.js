@@ -1,7 +1,7 @@
 const aboutForm = document.querySelector('.about-form');
 const contactForm = document.querySelector('.contact-form');
 const colorFontPicker = document.querySelector('.color-font-picker');
-const headingColorPicker = document.querySelector('.heading-color');
+const headingColorRight = document.querySelector('.heading-color-right');
 
 const updateAboutMe = newData => {
     userLocation.textContent = newData.user_location;
@@ -24,7 +24,8 @@ aboutForm.addEventListener('submit', event => {
 
     axios.patch(`/api/portfolios/about/${portfolioId}`, formData).then(res => {
         console.log(res.data.message);
-        let newData = res.data.aboutUpdate[0];
+        let newData = res.data.aboutUpdate;
+        console.log(res.data.aboutUpdate);
         updateAboutMe(newData);
         editAboutDiv.style.display = "none";
     })
@@ -44,8 +45,12 @@ contactForm.addEventListener('submit', event => {
     })
 });
 
-headingColorPicker.addEventListener("input", handleColorChange, false)
+headingColorRight.addEventListener("input", handleColorChange, false)
 
 function handleColorChange(event) {
-    console.log(event.value);
+    console.log(event.target.value);
+    headings = document.querySelectorAll('.right-heading');
+    headings.forEach(heading => {
+        heading.style.color = event.target.value;
+    })
 }

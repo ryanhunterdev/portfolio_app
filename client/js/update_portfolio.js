@@ -52,6 +52,8 @@ function createProject(project, index) {
     return projectRow;
 }
 
+
+
 function addProjectTitle(project) {
     let projectTitle = document.createElement('div')
     projectTitle.className = 'project-title'
@@ -63,6 +65,7 @@ function addProjectTitle(project) {
 
     let heading = document.createElement('h3');
     heading.className = 'project-heading';
+    heading.classList.add('right-heading');
     heading.textContent = project.project_heading;
     projectTitle.appendChild(heading);
 
@@ -100,7 +103,9 @@ function createSkill(skill) {
 
     let skillHeading = document.createElement('h3');
     skillHeading.className = 'skill-heading';
+    skillHeading.classList.add('right-heading')
     skillHeading.textContent = skill.skills_heading;
+
     skillsContainer.appendChild(skillHeading);
 
     let list = document.createElement('ul');
