@@ -24,8 +24,8 @@ aboutForm.addEventListener('submit', event => {
 
     axios.patch(`/api/portfolios/about/${portfolioId}`, formData).then(res => {
         console.log(res.data.message);
-        let newData = res.data.aboutUpdate[0];
-        console.log(res.data);
+        let newData = res.data.aboutUpdate;
+        console.log(res.data.aboutUpdate);
         updateAboutMe(newData);
         editAboutDiv.style.display = "none";
     })
