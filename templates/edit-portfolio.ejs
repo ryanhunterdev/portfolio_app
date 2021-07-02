@@ -23,15 +23,15 @@
             <button class="colorLeftBtn">color</button>
             
                 <div class="name-location-wrapper">
-                    <h1 class="user-name">
+                    <h1 class="user-name left-heading">
                         
                     </h1>
-                    <h2 class="user-location">
+                    <h2 class="user-location  left-heading">
                         
                     </h2>
                 </div>
 
-                <h2 class="user-welcome">
+                <h2 class="user-welcome left-heading">
                     
                 </h2>
             </section>
@@ -39,11 +39,11 @@
 
             <button class="edit_contact">edit</button>
 
-                <h2 class="contact-pitch"></h2>
+                <h2 class="contact-pitch left-heading"></h2>
                 <div class="user-links">
                     <div class="user-links-left-column">
                         <div class="email-github-container">
-                            <h3 class="links-heading">email:</h3>
+                            <h3 class="links-heading left-heading">email:</h3>
                             <a href="#" class="links-anchor email-anchor">
                                 
                             </a>
@@ -55,7 +55,7 @@
                     </div>       
                     <div class="user-links-right-column">
                         <div class="email-github-container">
-                            <h2 class="links-heading">github:</h2>
+                            <h2 class="links-heading left-heading">github:</h2>
                             <a href="#" class="links-anchor github-anchor"></a> 
                         </div>
                         <div class="socials-container">
@@ -72,7 +72,7 @@
             <section class="projects">
                 <button class="colorRightBtn">color</button>
 
-                <h2 class="projects-heading">Projects</h2>
+                <h2 class="projects-heading right-heading">Projects</h2>
                 <div class="projects-grid">
 
                     <!-- projects generate here -->
@@ -81,7 +81,7 @@
                 <button class="add_projects">add project</button>
             </section>
             <section class="skills">
-                <h2 class="skills-heading">Skills</h2>
+                <h2 class="skills-heading right-heading">Skills</h2>
                 <div class="skills-grid">
                     
                 </div>
@@ -214,7 +214,7 @@
         </form>
     </div>
 
-    <div class="edit_fontsColors_div edit_div">
+    <div class="edit_fontsColors_div left-edit">
     
         <form method="patch" class="color-font-picker">
 
@@ -242,19 +242,52 @@
 
             </select>
             
-            <h3>Left / Right</h3>
-            <label class="switch">
-            <input type="checkbox">
-            <span class="slider"></span>
-            </label>
+            <h3>Heading Colour</h3>
+            <input type="color" class="heading-color-left">
+            <h3>Paragraph Colour</h3>
+            <input type="color" class="paragraph-color-left">
+            <h3>Background Colour</h3>
+            <input type="color" class="background-color-left">
+
+            <button>Add</button>
+        </form>
+
+    </div>
+
+    <div class="edit_fontsColors_div right-edit">
+    
+        <form method="patch" class="color-font-picker">
+
+            <h2 class="heading">Color and Fonts</h2>
+
+            <label for="heading-font">Heading Fonts</label>
+
+            <select name="heading-font" class="modal-dropDown dropDown-hf">
+
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
             
+            </select>
+
+            <label for="paragraph-font">Paragraph Font</label>
+
+            <select name="paragraph-font" class="modal-dropDown dropDown-pf">
+
+            <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
+
+            </select>
             
             <h3>Heading Colour</h3>
-            <input type="color" class="heading-color">
+            <input type="color" class="heading-color-right">
             <h3>Paragraph Colour</h3>
-            <input type="color" class="paragraph-color">
+            <input type="color" class="paragraph-color-right">
             <h3>Background Colour</h3>
-            <input type="color" class="background-color">
+            <input type="color" class="background-color-right">
 
             <button>Add</button>
         </form>
