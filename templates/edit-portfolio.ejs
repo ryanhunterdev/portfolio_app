@@ -121,15 +121,15 @@
 
     <div class="edit_about_div">
 
-        <form action="/api/portfolio/about" method="put" class="about-form">
+        <form method="patch" class="about-form">
 
             <h2 class="heading"> About You</h2>
 
-            <input type="text" placeholder="Location" class="user_location" name="user-location">
+            <input type="text" placeholder="Location" class="user_location" name="user_location">
 
-            <input type="text" placeholder="Welcome Bio" class="user_welcome" name="user-welcome">
+            <input type="text" placeholder="Welcome Bio" class="user_welcome" name="user_welcome">
 
-            <input type="text" placeholder="Contact Pitch" class="user-pitch" name="user-pitch">
+            <input type="text" placeholder="Contact Pitch" class="user-pitch" name="user_pitch">
 
             <button>Update</button>
 
@@ -145,7 +145,7 @@
 
     <div class="edit_contact_div">
 
-        <form action="/api/portfolio/contact" method="put" class="contact-form">
+        <form method="patch" class="contact-form">
 
             <h2 class="heading">Your Contacts</h2>
 
