@@ -59,10 +59,27 @@ VALUES (
       {
         "skills_heading": "back end",
         "skills_list": ["sinatra", "node", "express", "ruby"]
-      },
-      {
-        "skills_heading": "front-end",
-        "skills_list": ["sinatra", "node", "express", "ruby"]
       }
     ]'
 );
+
+UPDATE 
+users 
+SET skills = skills(value, '{0}', (value->'playersContainer'->'players')
+ - 
+ (select position-1 from testing, jsonb_array_elements(value->'playersContainer'->'players') with ordinality arr(elem, position) 
+ 
+ WHERE elem->>'id' = '2')::int );
+
+UPDATE users SET
+      skills = 
+        jsonb_set(
+          skills,
+          '{0}',  
+          skills - 1,
+          false
+        )
+WHERE id=5;
+
+UPDATE users SET skills = json_object_delete_keys(skills, 0);
+

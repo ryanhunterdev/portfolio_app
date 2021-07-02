@@ -9,7 +9,7 @@ router.patch('/api/portfolios/about/:id', (req, res) =>{
       .then(dbRes => {
         res.status(201).json({
           message: "about section was successfully edited",
-          aboutUpdate: dbRes.rows 
+          aboutUpdate: dbRes.rows[0] 
         })
       })
 })
@@ -21,7 +21,7 @@ router.patch('/api/portfolios/contact/:id', (req, res) =>{
       .then(dbRes => {
         res.status(201).json({
           message: "about section was successfully edited",
-          aboutUpdate: dbRes.rows 
+          aboutUpdate: dbRes.rows[0] 
         })
       })
 })
