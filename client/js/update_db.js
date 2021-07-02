@@ -1,5 +1,7 @@
 const aboutForm = document.querySelector('.about-form');
-const contactForm = document.querySelector('.contact-form')
+const contactForm = document.querySelector('.contact-form');
+const colorFontPicker = document.querySelector('.color-font-picker');
+const headingColorPicker = document.querySelector('.heading-color');
 
 const updateAboutMe = newData => {
     userLocation.textContent = newData.user_location;
@@ -42,5 +44,8 @@ contactForm.addEventListener('submit', event => {
     })
 });
 
+headingColorPicker.oninput = handleColorChange;
 
-
+function handleColorChange(event) {
+    console.log(event);
+}
