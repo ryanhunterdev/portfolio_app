@@ -35,9 +35,12 @@ contactForm.addEventListener('submit', event => {
     console.log(formData);
     axios.patch(`/api/portfolios/contact/${portfolioId}`, formData).then(res => {
         console.log(res.data.message);
-        let newData = res.data.aboutUpdate[0];
+        let newData = res.data.aboutUpdate
+        console.log(newData);
         updateContact(newData);
-        editAboutDiv.style.display = "none";
+        editContactDiv.style.display = "none";
     })
-});
+}); 
+
+
 

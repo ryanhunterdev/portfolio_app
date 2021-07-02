@@ -30,15 +30,15 @@ function populatePage(data) {
     addTextContent(content);
 
     let projectList = content.project_list;
-    console.log(projectList);
     projectList.forEach(project => {
         projectsGrid.appendChild(createProject(project))
     })
 
-    let skillList = content.skills[0]
-    frontEnd.appendChild(addSkills(skillList['front-end']));
-    backEnd.appendChild(addSkills(skillList['back-end']));
-    other.appendChild(addSkills(skillList.other));
+    let skills = content.skills
+    skills.forEach(skill => {
+        skillsGrid.appendChild(createSkill(skill))
+    })
+    
 
 }
 
@@ -49,6 +49,7 @@ function createProject(project) {
 
     projectRow.appendChild(addProjectTitle(project));
     projectRow.appendChild(addProjectDescription(project));
+    projectRow.appendChild(addEditButton())
 
     return projectRow;
 }
@@ -88,16 +89,33 @@ function addProjectDescription(project) {
     return descriptionContainer;
 }
 
-function addSkills(skillList) {
+function addEditButton() {
+    const editBtn = document.createElement('button');
+    editBtn.className = 'edit_projects'
+    editBtn.textContent = 'edit'
+    return editBtn;
+}
+
+function createSkill(skill) {
+    let skillsContainer = document.createElement('div');
+    skillsContainer.className = 'skills-container';
+
+    let skillHeading = document.createElement('h3');
+    skillHeading.className = 'skill-heading';
+    skillHeading.textContent = skill.skills_heading;
+    skillsContainer.appendChild(skillHeading);
+
     let list = document.createElement('ul');
     list.className = 'skills-list';
-    skillList.forEach(skill => {
+    let skillList = skill.skills_list;
+    skillList.forEach(entry => {
         let item = document.createElement('li');
-        item.className = 'skills-item'
-        item.textContent= skill
-        list.appendChild(item)
+        item.className = 'skills-item';
+        item.textContent= entry;
+        list.appendChild(item);
     })
-    return list;
+    skillsContainer.appendChild(list);
+    return skillsContainer;
 }
 
 const addTextContent =  content => {
@@ -106,7 +124,7 @@ const addTextContent =  content => {
     userWelcome.textContent = content.user_welcome
     contactPitch.textContent = content.contact_pitch
     emailAnchor.textContent = content.email;
-    emailAnchor.href = content.email;
+    emailAnchor.href = `mailto:${content.email}?subject = Feedback&body = Message`;
     githubAnchor.textContent = content.github_url;
     githubAnchor.href = content.github_url;
     copyrightName.textContent = `- ${content.user_name}`;
