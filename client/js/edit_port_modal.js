@@ -55,8 +55,6 @@ function editColorFont() {
     editColorDiv.style.display = 'block';
 }
 
-
-
 window.onclick = function(event) {
     const editProjectsBtns = document.querySelectorAll('.edit_projects')
 
@@ -66,26 +64,51 @@ window.onclick = function(event) {
             editAboutDiv.style.display = "none";
         } else if (event.target !== editContactBtn && !event.target.closest('.edit_contact_div') && editContactDiv.style.display === "block"){
             editContactDiv.style.display = "none";
+        } else if (event.target !== addProjectBtn && !event.target.closest('.add_project_div') && addProjectDiv.style.display === "block"){
+            addProjectDiv.style.display = "none";
         } 
 
         editProjectsBtns.forEach(prjBtn => { 
-            if (event.target !== prjBtn && !event.target.closest('.edit_project_div') && editProjectsDiv.style.display === "block" ){
-                console.log(event.target);
-            } 
+            if (event.target === prjBtn){
+                console.log(`Enabling the popup ${event.target}`)
+                editProject()
+            }  
+            
+            // else if (event.target !== prjBtn && !event.target.closest('.edit_project_div') && editProjectsDiv.style.display === "block" ){
+            //     console.log(`Disabling the popup ${event.target}`)
+            //     editProjectsDiv.style.display = "none";
+            // } 
         })
 }
 // && !event.target.closest('.edit_project_div') && editProjectsDiv.style.display === "block"
 
+// editProjectsBtns.forEach(prjBtn => { 
+//     prjBtn.addEventListener('click', (e)=>{
+//         if (e.target === prjBtn){
+//             console.log(`Enabling the popup ${e.target}`)
+//             editProject()
+//         }  
+//     })
+// })
+
+// editProjectsBtns.forEach(prjBtn => { 
+//     console.log("btn clicked")
+//     prjBtn.addEventListener('click', ()=>{
+//         editProject()
+//     })
+// })
+
 // listeners for buttons
-projectGridDiv.addEventListener('click', (e)=>{
-    if(e.target.classList.contains('edit_projects')){
-        editProject()
-    }
-})
+// projectGridDiv.addEventListener('click', (e)=>{
+//     if(e.target.classList.contains('edit_projects')){
+//         editProject()
+//     }
+// })
 editLeftColorBtn.addEventListener('click', editColorFont);
 editRightColorBtn.addEventListener('click', editColorFont);
 editAboutMeBtn.addEventListener('click', editAboutMe);
 editContactBtn.addEventListener('click', editContact);
+addProjectBtn.addEventListener('click', addProject);
 
 // -----------------------------------------------------
 //the toogle for the left or right side of the page
