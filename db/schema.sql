@@ -59,10 +59,6 @@ VALUES (
       {
         "skills_heading": "back end",
         "skills_list": ["sinatra", "node", "express", "ruby"]
-      },
-      {
-        "skills_heading": "front-end",
-        "skills_list": ["sinatra", "node", "express", "ruby"]
       }
     ]'
 );
@@ -80,7 +76,10 @@ UPDATE users SET
         jsonb_set(
           skills,
           '{0}',  
-          ('{0}') - ('{0}'),
+          skills - 1,
           false
         )
-    WHERE id=5 returning skills;
+WHERE id=5;
+
+UPDATE users SET skills = json_object_delete_keys(skills, 0);
+
