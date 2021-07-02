@@ -89,12 +89,16 @@ body {
 
 
 
-h2 {
-    background-color: pink;
-    color: red;
+h4 {
+    font-family: FontAwesome, "Roboto", sans-serif;
+    width: fit-content;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: salmon;
+    color: dark-grey;
 }
 
 .error {
-    border: solid red 2px;
-    background-color: rgb(150, 240, 128);
+    border: solid salmon 2px;
+    background-color: rgb(255, 180, 180);
 }
