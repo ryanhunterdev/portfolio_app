@@ -2,6 +2,7 @@ const aboutForm = document.querySelector('.about-form');
 const contactForm = document.querySelector('.contact-form');
 const colorFontPicker = document.querySelector('.color-font-picker');
 const headingColorRight = document.querySelector('.heading-color-right');
+const editProjectForm = document.querySelector('.edit-project-form')
 
 const updateAboutMe = newData => {
     userLocation.textContent = newData.user_location;
@@ -54,3 +55,15 @@ function handleColorChange(event) {
         heading.style.color = event.target.value;
     })
 }
+
+editProjectForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    let index = event.dataset.index
+    let formData = Object.fromEntries(new FormData(editProjectForm));
+    console.log(formData);
+    console.log(index);
+    axios.patch(`/api/portfolios/${portfolioId}/${index}`, formData).then(res => {
+        console.log(res.data);
+    })
+})
