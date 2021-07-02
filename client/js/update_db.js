@@ -44,8 +44,8 @@ contactForm.addEventListener('submit', event => {
     })
 });
 
-headingColorPicker.oninput = handleColorChange;
+headingColorPicker.addEventListener("input", handleColorChange, false)
 
 function handleColorChange(event) {
-    console.log(event);
+    console.log(event.value);
 }
