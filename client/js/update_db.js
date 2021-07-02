@@ -47,5 +47,9 @@ contactForm.addEventListener('submit', event => {
 headingColorPicker.addEventListener("input", handleColorChange, false)
 
 function handleColorChange(event) {
-    console.log(event.value);
+    console.log(event.target.value);
+    headings = document.querySelectorAll('h3', 'h1', 'h2');
+    headings.forEach(heading => {
+        heading.style.color = event.target.value;
+    })
 }
