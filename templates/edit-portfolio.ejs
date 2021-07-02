@@ -19,6 +19,9 @@
 
             <section class="about-me">
 
+            <button class="edit_aboutMe">edit</button>
+            <button class="colorLeftBtn">color</button>
+            
                 <div class="name-location-wrapper">
                     <h1 class="user-name">
                         
@@ -33,6 +36,9 @@
                 </h2>
             </section>
             <section class="contact">
+
+            <button class="edit_contact">edit</button>
+
                 <h2 class="contact-pitch"></h2>
                 <div class="user-links">
                     <div class="user-links-left-column">
@@ -64,6 +70,11 @@
 
         <div class="right-column">
             <section class="projects">
+
+                <button class="edit_projects">edit</button>
+                <button class="colorRightBtn">color</button>
+                <button class="add_projects">add project</button>
+
                 <h2 class="projects-heading">Projects</h2>
                 <div class="projects-grid">
 
@@ -72,6 +83,10 @@
                 </div>
             </section>
             <section class="skills">
+            
+            <button class="edit_skills">edit</button>
+            <button class="add_skills">add skills</button>
+
                 <h2 class="skills-heading">Skills</h2>
                 <div class="skills-grid">
                     <div class="skills-container front-end">
@@ -104,7 +119,7 @@
 <div class="pop-up">
     <!-- ABOUT -->
 
-    <div class="edit-about-div">
+    <div class="edit_about_div">
 
         <form action="/api/portfolio/about" method="put" class="about-form">
 
@@ -116,6 +131,8 @@
 
             <input type="text" placeholder="Contact Pitch" class="user-pitch" name="user-pitch">
 
+            <button>Update</button>
+
 
 
         </form>
@@ -126,7 +143,7 @@
     <!-- CONTACT -->
     
 
-    <div class="edit-contact-div">
+    <div class="edit_contact_div">
 
         <form action="/api/portfolio/contact" method="put" class="contact-form">
 
@@ -149,7 +166,7 @@
     <!-- PROJECT -->
     
 
-    <div class="edit-project-div">
+    <div class="edit_project_div">
 
 
         <form action="/api/portfolio/project" method="put" class="project-form">
@@ -169,7 +186,11 @@
 
         </form>
 
-        <form action="/api/portfolio/project" method="put" class="project-form">
+    </div>
+
+    <div class="add_project_div">
+
+    <form action="/api/portfolio/project" method="put" class="project-form">
 
             <h2 class="heading">Add Project</h2>
 
@@ -184,13 +205,12 @@
             <button>Add</button>
 
         </form>
-
     </div>
 
     <!-- SKILLS -->
     
 
-    <div class="edit-skill-div">
+    <div class="edit_skill_div">
 
         <form action="/api/portfolio/skill" method="put" class="skill-form">
 
@@ -203,8 +223,11 @@
             <button>Delete</button>
             <button>Update</button>
         </form>
+    </div>
 
-        <form action="/api/portfolio/skill" method="post" class="skill-form">
+    <div class="add_skills_div">
+
+    <form action="/api/portfolio/skill" method="post" class="skill-form">
 
             <h2 class="heading">Add Skills</h2>
 
@@ -216,14 +239,20 @@
         </form>
     </div>
 
-    <div class="font-color-modal">
+    <div class="edit_fontsColors_div">
     
     <form action="/api/portfolio/skill" method="patch" class="">
 
-            <h2 class="heading">color and fonts</h2>
+            <h2 class="heading">Color and Fonts</h2>
 
             <label for="heading-font">Heading Fonts</label>
+
             <select name="heading-font" class="modal-dropDown dropDown-hf">
+
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
             
             </select>
 
@@ -231,16 +260,26 @@
 
             <select name="paragraph-font" class="modal-dropDown dropDown-pf">
 
+            <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Times New Roman">Times New Roman</option>
 
             </select>
-
+            
+            <h3>Left / Right</h3>
+            <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+            </label>
+            
+            
             <h3>Heading Colour</h3>
             <input type="color">
             <h3>Paragraph Colour</h3>
             <input type="color">
-
-
-            
+            <h3>Background Colour</h3>
+            <input type="color">
 
             <button>Add</button>
         </form>
@@ -250,16 +289,7 @@
     </div>
 </div>
 
-back ground color left/right
 
-font color:
-headings
-para 
-links (stretch)
-
-font style:
-4 selection heading
-4 selection para
 
 
 
