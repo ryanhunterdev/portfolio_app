@@ -66,3 +66,21 @@ VALUES (
       }
     ]'
 );
+
+UPDATE 
+users 
+SET skills = skills(value, '{0}', (value->'playersContainer'->'players')
+ - 
+ (select position-1 from testing, jsonb_array_elements(value->'playersContainer'->'players') with ordinality arr(elem, position) 
+ 
+ WHERE elem->>'id' = '2')::int );
+
+UPDATE users SET
+      skills = 
+        jsonb_set(
+          skills,
+          '{0}',  
+          ('{0}') - ('{0}'),
+          false
+        )
+    WHERE id=5 returning skills;

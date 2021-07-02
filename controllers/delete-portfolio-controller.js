@@ -6,7 +6,7 @@ router.patch('/api/portfolios/:id/:index', (req, res) =>{
     let user_id = Number(req.params.id)
     let index = Number(req.params.index)
     Portfolio
-      .updateProject(req.body.project_year, req.body.project_heading, req.body.project_description, req.body.project_url, user_id, index)
+      .deleteProject(req.body.project_year, req.body.project_heading, req.body.project_description, req.body.project_url, user_id, index)
       .then(dbRes => {
         res.status(201).json({
           message: "project was successfully edited",
@@ -25,7 +25,7 @@ router.patch('/api/skills/:id/:index', (req, res) =>{
     let JSONskills = JSON.stringify(skills_array)
 
     Portfolio
-      .updateSkills(req.body.skills_heading, JSONskills, user_id, index)
+      .deleteSkills(req.body.skills_heading, JSONskills, user_id, index)
       .then(dbRes => {
         res.status(201).json({
           message: "project was successfully edited",
