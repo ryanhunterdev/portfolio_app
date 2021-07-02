@@ -90,6 +90,11 @@ editContactBtn.addEventListener('click', editContact);
 addProjectBtn.addEventListener('click', addProject);
 editSkillsBtn.addEventListener('click', editSkills);
 addSkillsBtn.addEventListener('click', addSkill);
+window.onclick = function(event) {
+    if (editAboutDiv.style.display == 'block') {
+        editAboutDiv.style.display = "none";
+    }
+}
 
 
 // -----------------------------------------------------
