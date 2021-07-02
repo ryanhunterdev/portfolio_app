@@ -10,8 +10,13 @@ const instagram = document.querySelector('.instagram');
 const twitter = document.querySelector('.twitter');
 const projectsGrid = document.querySelector('.projects-grid');
 const skillsGrid = document.querySelector('.skills-grid');
+const url = window.location.pathname;
 
-axios.get(`/api/portfolios/1`).then(res => {
+portfolioId = url.slice(url.indexOf('o/') + 2)
+
+console.log(portfolioId);
+
+axios.get(`/api/portfolios/${portfolioId}`).then(res => {
     let portfolio = res.data;
 
     populatePage(portfolio);
