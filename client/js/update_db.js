@@ -1,5 +1,3 @@
-const { default: axios } = require("axios");
-
 const aboutForm = document.querySelector('.about-form');
 const contactForm = document.querySelector('.contact-form');
 const colorFontPicker = document.querySelector('.color-font-picker');
