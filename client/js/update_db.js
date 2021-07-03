@@ -102,7 +102,7 @@ editProjectForm.addEventListener("submit", event => {
             console.log(res)
             editProjectsDiv.style.display = "none";
             editProjectForm.reset();
-            let newData = res.data;
+            let newData = res.data.allProjects.project_list;
             updateProject(newData);
         })
 })
@@ -115,22 +115,10 @@ function removeAllChildNodes(parent) {
 }
 
 function updateProject(newData) {
-    let allProjects = newData.allProjects.project_list;
+    let allProjects = newData
     removeAllChildNodes(projectsGrid);
 
     allProjects.forEach((project, index) => {
         projectsGrid.appendChild(createProject(project, index))
     });
 }
-
-addProjectForm.addEventListener("click", event => {
-    event.preventDefault();
-    let formData = getFormData(editProjectForm);
-
-    axios
-        .post(`/api/portfolios/${portfolioId}/${projectIndex}`, formData)
-        .then(res => {
-            
-        })
-
-})
