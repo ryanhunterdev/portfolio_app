@@ -9,7 +9,7 @@ router.patch('/api/portfolios/add/projects/:id', (req, res) =>{
     .then(dbRes => {
       res.status(201).json({
         message: "project was successfully added",
-        project: dbRes.rows[0].project_list[dbRes.rows[0].project_list.length-1]
+        project: dbRes.rows[0].project_list
       })
     })
 })
