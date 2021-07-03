@@ -68,7 +68,7 @@ function addProjectTitle(project, index) {
     heading.classList.add('right-heading');
     heading.textContent = project.project_heading;
     projectTitle.appendChild(heading);
-    projectTitle.appendChild(addEditButton())
+    projectTitle.appendChild(addProjectEditButton())
 
     return projectTitle;
 }
@@ -91,7 +91,7 @@ function addProjectDescription(project) {
     return descriptionContainer;
 }
 
-function addEditButton() {
+function addProjectEditButton() {
     const editBtn = document.createElement('button');
     editBtn.className = 'edit_projects'
     editBtn.classList.add('page-edit-btn')
@@ -99,17 +99,22 @@ function addEditButton() {
     return editBtn;
 }
 
-function createSkill(skill) {
-    let skillsContainer = document.createElement('div');
-    skillsContainer.className = 'skills-container';
+function addSkillEditButton() {
+    const editBtn = document.createElement('button');
+    editBtn.className = 'skill-edit-btn'
+    editBtn.textContent = 'edit'
+    return editBtn;
+}
 
+function createSkillHeading(skill) {
     let skillHeading = document.createElement('h3');
     skillHeading.className = 'skill-heading';
     skillHeading.classList.add('right-heading')
     skillHeading.textContent = skill.skills_heading;
+    return skillHeading;
+}
 
-    skillsContainer.appendChild(skillHeading);
-
+function createSkillList(skill) {
     let list = document.createElement('ul');
     list.className = 'skills-list';
     let skillList = skill.skills_list;
@@ -119,7 +124,21 @@ function createSkill(skill) {
         item.textContent= entry;
         list.appendChild(item);
     })
-    skillsContainer.appendChild(list);
+    return list;
+}
+
+function createSkill(skill) {
+    const skillsContainer = document.createElement('div');
+    skillsContainer.className = 'skills-container';
+
+    const skillHeadingContainer = document.createElement('div');
+    skillHeadingContainer.className = 'skill-heading-container'
+    skillHeadingContainer.appendChild(createSkillHeading(skill));
+    skillHeadingContainer.appendChild(addSkillEditButton());
+
+    skillsContainer.appendChild(skillHeadingContainer);
+
+    skillsContainer.appendChild(createSkillList(skill));
     return skillsContainer;
 }
 

@@ -73,6 +73,8 @@ window.onclick = function(event) {
             editContactDiv.style.display = "none";
         } else if (event.target !== addProjectBtn && !event.target.closest('.add_project_div') && addProjectDiv.style.display === "block"){
             addProjectDiv.style.display = "none";
+        } else if (event.target !== addSkillsBtn && !event.target.closest('.add_skills_div') && addSkillsDiv.style.display === "block"){
+            addSkillsDiv.style.display = "none";
         }
  }
 
@@ -97,6 +99,7 @@ editRightColorBtn.addEventListener('click', editRightColorFont);
 editAboutMeBtn.addEventListener('click', editAboutMe);
 editContactBtn.addEventListener('click', editContact);
 addProjectBtn.addEventListener('click', addProject);
+addSkillsBtn.addEventListener('click', addSkill);
 
 
 function headingFonts() {
