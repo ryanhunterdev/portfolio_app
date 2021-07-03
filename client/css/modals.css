@@ -21,8 +21,18 @@
     display: none;
 }
 
+.edit_skill_div, .edit_about_div, .edit_contact_div, .edit_project_div, .add_project_div, .edit_skill_div, .add_skills_div, .edit_fontsColors_div, .edit_fontsColors_div {
+    position: relative;
+    z-index: 1;
+    background: hsl(27, 91%, 58%);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgb(200, 124, 24), 0 5px 5px 0 rgba(200, 124, 24); 
+}
 
-form {
+/* form {
     position: relative;
     z-index: 1;
     background: hsl(27, 91%, 58%);
@@ -31,7 +41,7 @@ form {
     padding: 45px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgb(200, 124, 24), 0 5px 5px 0 rgba(200, 124, 24);
-}
+} */
 
 form input {
     font-family: FontAwesome, "Roboto", sans-serif;

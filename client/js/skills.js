@@ -1,5 +1,7 @@
 const addSkillForm = document.querySelector('.add-skill-form');
 const editSkillForm = document.querySelector('.edit-skill-form');
+const deleteSkillForm = document.querySelector('.delete-skill-form');
+
 let skillIndex;
 
 skillsGrid.addEventListener('click', event => {
@@ -40,6 +42,20 @@ addSkillForm.addEventListener('submit', event => {
             let skills = res.data.skill
             updateSkills(skills)
         })   
+})
+
+
+deleteSkillForm.addEventListener('submit', event => {
+    event.preventDefault();
+
+    axios
+        .patch(`/api/portfolios/delete/skills/${portfolioId}/${skillIndex}`)
+        .then(res => {
+            editSkillsDiv.style.display = "none";
+            editSkillForm.reset();
+            let skills = res.data.remainingSkillsList.skills;
+            updateSkills(skills);
+        })
 })
 
 
