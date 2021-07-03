@@ -25,6 +25,8 @@ axios.get(`/api/portfolios/${portfolioId}`).then(res => {
 })
 
 function populatePage(data) {
+    updateAboutInputs()
+    
     console.log(data.message);
     let content = data.results[0]
     addTextContent(content);

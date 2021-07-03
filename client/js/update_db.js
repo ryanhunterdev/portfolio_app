@@ -19,6 +19,7 @@ const updateAboutMe = newData => {
     userLocation.textContent = newData.user_location;
     userWelcome.textContent = newData.user_welcome;
     contactPitch.textContent = newData.contact_pitch;
+    updateAboutInputs()
 }
 
 const updateContact = newData => {
