@@ -28,6 +28,7 @@ const editRightColorDiv = document.querySelector('.right-edit')
 
 const exitBtn = document.querySelector('.exit')
 
+
 function editAboutMe() {
     editAboutDiv.style.display = "block";
     updateAboutModalInputs()
