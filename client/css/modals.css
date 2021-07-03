@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=BioRhyme:wght@200;800&family=Crimson+Text:wght@400;700&family=IBM+Plex+Sans:wght@100;300&family=Playfair+Display:ital,wght@0,400;1,600&display=swap');
 
 /* body {
     background-color: blanchedalmond;
@@ -115,8 +116,25 @@ form button:active {
     font-size: 14px;
     border-radius:10px;
     cursor: pointer;
-
 }
+
+.edit_fontsColors_div .B612 {
+    font-family:'B612', sans-serif;
+}
+.edit_fontsColors_div .IBM_Plex {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.edit_fontsColors_div .Crimson_Text {
+    font-family: 'Crimson Text', serif;
+}
+.edit_fontsColors_div .Playfair_Display {
+    font-family: 'Playfair Display', serif;
+}
+.edit_fontsColors_div .BioRhyme {
+    font-family: 'BioRhyme', serif;
+}
+
+
 /* -------------------------------------------------------- */
 
 
