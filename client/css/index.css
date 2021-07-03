@@ -73,34 +73,6 @@ body {
     margin: 0 auto 100px;
     padding: 45px;
     text-align: center;
-<<<<<<< HEAD
-}
-
-.signup-form .login-form input {
-    font-family: FontAwesome, "Roboto", sans-serif;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-    border-radius:10px;
-}
-
-
-.signup-form .login-form button:hover,.form button:focus {
-    background: hsl(27, 66%, 50%);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-4px);
-}
-
-.signup-form .login-form button:active {
-    transform: translateY(2px);
-    box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
-=======
->>>>>>> 2286020 (jaz)
 }
 
 .form input {
@@ -116,8 +88,6 @@ body {
     border-radius:10px;
 }
 
-<<<<<<< HEAD
-=======
 
 .form input {
     font-family: FontAwesome, "Roboto", sans-serif;
@@ -132,7 +102,6 @@ body {
     border-radius:10px;
 }
 
->>>>>>> 2286020 (jaz)
 .form button {
     font-family: "Titillium Web", sans-serif;
     font-size: 14px;
@@ -179,11 +148,7 @@ h4 {
 
 .heading {
     font-family: 'Work Sans', sans-serif;
-<<<<<<< HEAD
     color: white;
-=======
-    color: rgb(255, 255, 255);
->>>>>>> 2286020 (jaz)
     font-size: 60px;
 }
 
@@ -194,5 +159,11 @@ h2 {
     background-color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     color: white;
     text-align: center;
+}
+
+h2:hover,h2:focus {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    box-shadow: 0 5px 10px rgb(255, 255, 255);
+    transform: translateY(-4px);
 }
 
