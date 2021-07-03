@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="/css/modals.css">
     <link rel="stylesheet" href="/css/edit_portfolio.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=BioRhyme:wght@200;800&family=Crimson+Text:wght@400;700&family=IBM+Plex+Sans:wght@100;300&family=Playfair+Display:ital,wght@0,400;1,600&display=swap" rel="stylesheet"></link>
+
     <title>My Portfolio</title>
 </head>
 <body>
@@ -45,30 +49,30 @@
             
                 <div class="pitch-container">
                     <h2 class="contact-pitch left-heading"></h2>
-                    <button class="edit_contact page-edit-btn">edit section</button>
+                    <button class="edit_contact page-edit-btn font">edit section</button>
                 </div>
                 <div class="user-links">
                     <div class="user-links-left-column">
                         <div class="email-github-container">
-                            <h3 class="links-heading left-heading">email:</h3>
-                            <a href="#" class="links-anchor email-anchor">
+                            <h3 class="links-heading left-heading font">email:</h3>
+                            <a href="#" class="links-anchor email-anchor font">
                                 
                             </a>
                             
                         </div>
-                        <div class="copyright-container">
-                            &copy 2021 <span class="copyright-name"></span> 
+                        <div class="copyright-container font">
+                            &copy 2021 <span class="copyright-name font"></span> 
                         </div>
                     </div>       
                     <div class="user-links-right-column">
                         <div class="email-github-container">
                             <h2 class="links-heading left-heading">github:</h2>
-                            <a href="#" class="links-anchor github-anchor"></a> 
+                            <a href="#" class="links-anchor github-anchor font"></a> 
                         </div>
                         <div class="socials-container">
-                            <a href="#" class="linkedin">LinkedIn</a>
-                            <a href="#" class="instagram">Instagram</a>
-                            <a href="#" class="twitter">Twitter</a>
+                            <a href="#" class="linkedin font">LinkedIn</a>
+                            <a href="#" class="instagram font">Instagram</a>
+                            <a href="#" class="twitter font">Twitter</a>
                         </div>
                     </div>  
                 </div>
@@ -77,7 +81,7 @@
 
         <div class="right-column">
             <section class="projects">
-                <button class="colorRightBtn page-edit-btn">colors/fonts</button>
+                <button class="colorRightBtn page-edit-btn font">colors/fonts</button>
 
                 <h2 class="projects-heading right-heading">Projects</h2>
                 <div class="projects-grid">
@@ -85,18 +89,18 @@
                     <!-- projects generate here -->
 
                 </div>
-                <button class="add_projects page-edit-btn">add project</button>
+                <button class="add_projects page-edit-btn font">add project</button>
             </section>
             <section class="skills">
                 <header class="skills-header">
                     <h2 class="skills-heading right-heading">Skills</h2>
-                    <button class="add_skills page-edit-btn">add skill</button>
+                    <button class="add_skills page-edit-btn font">add skill</button>
                 </header>
                 <div class="skills-grid">
                     
                 </div>
             </section>
-        <button class="finished-portfolio final-portfolio-btn"><a target="_blank" href="/portfolios/<%=user_id%>">Go to your finished portfolio</a></button>
+        <button class="finished-portfolio final-portfolio-btn font"><a target="_blank" href="/portfolios/<%=user_id%>">Go to your finished portfolio</a></button>
         </div>
 </div>
 
@@ -302,6 +306,7 @@
 <script src="/js/modal_values.js"></script>
 <script src="/js/projects.js"></script>
 <script src="/js/skills.js"></script>
+<script src="/js/change_font.js"></script>
 
 </body>
 </html>
