@@ -19,7 +19,6 @@ const updateAboutMe = newData => {
     userLocation.textContent = newData.user_location;
     userWelcome.textContent = newData.user_welcome;
     contactPitch.textContent = newData.contact_pitch;
-    updateAboutModalInputs()
 }
 
 const updateContact = newData => {
@@ -28,7 +27,6 @@ const updateContact = newData => {
     linkedin.href = newData.linkedin_url;
     instagram.href = newData.instagram_url;
     twitter.href = newData.twitter_url;
-    updateContactModalInputs()
 }
 
 aboutForm.addEventListener('submit', event => {
@@ -84,7 +82,6 @@ projects
 let projectIndex;
 
 projectsGrid.addEventListener("click", event => {
-    console.log(event)
     projectIndex = event.target.parentElement.dataset.index;
 })
 

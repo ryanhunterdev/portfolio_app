@@ -30,10 +30,12 @@ const exitBtn = document.querySelector('.exit')
 
 function editAboutMe() {
     editAboutDiv.style.display = "block";
+    updateAboutModalInputs()
 }
 
 function editContact() {
     editContactDiv.style.display = "block";
+    updateContactModalInputs()
 }
 
 function editProject() {
@@ -78,8 +80,9 @@ window.onclick = function(event) {
 window.addEventListener('click', (e)=>{
     const editProjectsBtns = document.querySelectorAll('.edit_projects')
     if(e.target.classList.contains('edit_projects') && (editProjectsDiv.style.display === "" || editProjectsDiv.style.display === "none")){
-        console.log("updated")
+        let index = e.target.parentElement.dataset.index
         editProject()
+        updateProjectModalInputs(index)
     } else {
         editProjectsBtns.forEach(prjBtn => { 
             if (e.target !== prjBtn && !e.target.closest('.edit_project_div') && editProjectsDiv.style.display === "block" ){
