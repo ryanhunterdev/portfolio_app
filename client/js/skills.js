@@ -1,5 +1,12 @@
 const addSkillForm = document.querySelector('.add-skill-form');
 
+function updateSkills(skills) {
+    removeAllChildNodes(skillsGrid);
+    skills.forEach(skill => {
+        skillsGrid.appendChild(createSkill(skill))
+    })
+}
+
 addSkillForm.addEventListener('submit', event => {
     event.preventDefault();
 
@@ -10,7 +17,7 @@ addSkillForm.addEventListener('submit', event => {
         .then(res => {
             addSkillsDiv.style.display = "none";
             addSkillForm.reset();
-            let newData = res.data
-            console.log(`add skill response`,  newData);
+            let skills = res.data.skill
+            updateSkills(skills)
         })   
 })
