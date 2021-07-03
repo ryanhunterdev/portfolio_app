@@ -46,7 +46,7 @@ router.patch('/api/skills/:id/:index', (req, res) =>{
     let user_id = Number(req.params.id)
     let index = Number(req.params.index)
 
-    let skills_array = req.body.skills_list.split(", ")
+    let skills_array = req.body.skills_list.split(",")
     let JSONskills = JSON.stringify(skills_array)
 
     Portfolio
