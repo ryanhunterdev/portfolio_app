@@ -11,6 +11,6 @@ addSkillForm.addEventListener('submit', event => {
             addSkillsDiv.style.display = "none";
             addSkillForm.reset();
             let newData = res.data
-            console.log(newData);
+            console.log(`add skill response`,  newData);
         })   
 })
