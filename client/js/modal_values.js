@@ -9,21 +9,20 @@ let userTwitterURL = document.querySelector('.user-pitch')
 
 // un-hard code the user id here 
 
-function updateAboutInputs(){
+function updateAboutModalInputs(){
     axios.get(`/api/portfolios/5`).then(res => {
-        console.log(res.data.results[0])
         userLocationInput.value = res.data.results[0].user_location
         userWelcomeInput.value = res.data.results[0].user_welcome
         userPitchInput.value = res.data.results[0].contact_pitch
     })
 }
 
-function updateContactInputs(){
+function updateContactModalInputs(){
     axios.get(`/api/portfolios/5`).then(res => {
-        console.log(res.data.results[0])
         
-        userLocationInput.value = res.data.results[0].user_location
-        userWelcomeInput.value = res.data.results[0].user_welcome
-        userPitchInput.value = res.data.results[0].contact_pitch
+        userGitHubURL.value = res.data.results[0].github_url
+        userLinkedInURL.value = res.data.results[0].linkedin_url
+        userInstagramURL.value = res.data.results[0].instagram_url
+        userTwitterURL.value = res.data.results[0].twitter_url
     })
 }
