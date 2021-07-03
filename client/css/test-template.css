@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #fff4f5;
+	font-size: 16px; /*1em = 16px*/
+	color: #35302d;
+}
+
+main {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+footer {
+	font-size: 3em;
+	text-align: center;
+	margin: 2em auto 1em auto;
+}
+
+.wrapper {
+	background: rgba(255,255,255,0.55);
+	margin: 2.5em 2.5em 10em 2.5em;
+	padding: 3em;
+}
+
+/* Text Styles  */
+
+header {
+	background-color: #fff4f5;
+	background-image: url(../images/baking_littlebitheart_pattern1.png);
+	height: 100vh;
+}
+
+h1, h2 {
+	font-family: 'Roboto', sans-serif;
+	color: #505050;
+	text-align: center;
+}
+
+h3, h4, h5, footer {
+	font-family: 'Roboto', sans-serif;
+	color: #6cc5c7;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 5em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 1.5em;
+	text-align: center;
+	margin:2em auto 2em auto;
+}
+
+h5 {
+	font-size: 1em;
+	text-align: left;
+}
+
+
+p {
+	font-family: 'Raleway', sans-serif;
+	text-align: justify;
+	line-height: 1.5em;
+	padding-bottom: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	font-weight: 700;
+	margin: 0 .5em 1em 0.5em;
+}
+
+a:hover {
+	color: #505050;
+	/* border-bottom: 1px solid #505050; */
+}
+
+span#funfact h4 {
+	padding: .4em 0;
+	margin: 0 auto 1em auto;
+}
+
+
+/* List Styles */
+
+ul {
+	color: #505050;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	padding: 1em;
+	letter-spacing: 0.3em;
+	text-align: left;
+	list-style-type: none;
+}
+
+li {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	text-transform: none;
+	letter-spacing: 0.1em;
+}
+
+/* Navigation */
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #505050;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+a,
+a:after,
+a:before {
+  transition: all .5s;
+}
+
+nav ul li a:hover {
+  color: #000;
+}
+
+nav {
+	display: flex;
+	background-color: rgba(255,255,251,1);
+	justify-content: flex-end;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 25px;
+}
+
+nav ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+.hidden {
+	display: none;
+}
+
+
+/* Header  */
+
+div.text-box {
+	background-color: rgba(255,255,251,.9);
+}
+
+.heading-primary {
+	margin-top: 18%;
+	padding: 0.4em 0.1em;
+}
+
+.heading-primary-main {
+  display: block;
+  letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 6px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+}
+
+/* .btn:hover span {display:none}
+.btn:hover:before {
+	content:"I'm available for hire!";
+} */
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 25px 60px;
+  display: inline-block;
+  border-radius: 10px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+	font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+	border: 3px solid #6cc5c7;
+  color: #505050;
+	font-size: 20px;
+	letter-spacing: 6px;
+	font-weight: 400;
+	margin: 3em;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #6cc5c7;
+	color: #6cc5c7;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+/* Portfolio */
+
+.singleproject {
+	width: 90%;
+	margin: 1em auto 3em auto;
+	padding: 2em;
+	text-align: center;
+	background: rgba(255,255,255,0.66);
+	display: flex;
+	align-items: center;
+}
+
+.singleproject p {
+	width: 80%;
+	margin: 1em auto;
+	padding: 0;
+}
+
+.singleproject img {
+	max-width: 420px;
+	display: block;
+}
+
+.singleproject h4 {
+	color: #505050;
+	margin: .5em auto;
+	font-size: 1.3em;
+}
+
+.singleproject h5 {
+	width: 80%;
+	margin: .5em auto 0 auto;
+}
+
+.singleproject ul {
+	width: 80%;
+	margin: 0 auto;
+	list-style-type: none;
+}
+
+.singleproject a {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	line-height: 1.2em;
+	font-size: .8em;
+	color: #505050;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.singleproject a:hover {
+	color: #505050;
+	border-bottom: 1px solid #505050;
+}
+
+.assistive-text {
+	height: 1px;
+	width: 1px;
+	position: absolute;
+	overflow: hidden;
+	top: -10px;
+}
+
+	/* About */
+
+span.email a {
+	display: block;
+	margin-bottom: 1em;
+	/* font-size: 1.5em; */
+	color: #505050;
+}
+
+#contact p, i {
+	text-align: center;
+	font-size: 1.5em;
+	color: #6cc5c7;
+}
+
+#contact i:hover {
+	color: #505050;
+}
+
+.about {
+	padding: 2em;
+	width: 65%;
+	display: block;
+	margin: 0 auto;
+}
+
+.resume {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.skills {
+	padding: 1em 10em 1em 0em;
+	width: 40%;
+	display: flex;
+}
+
+.skills-list {
+	margin: 0 2em;
+}
+
+.skills h5 {
+	margin-left: 1em;
+}
+
+.wrapper h3 {
+	font-size: 3em;
+	display: inline-block;
+	margin: 1em auto;
+}
+
+/* Footer */
+
+.icons {
+margin: 1em .2em 1em .2em;
+}
+
+.bowl {
+	animation-name: dancebowl;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+.spoon {
+	transform: rotate(175deg);
+	animation-name: dancespoon;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+.measuring {
+	transform: scaleX(-1);
+	animation-name: dance;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+
+/* Keyframes */
+
+@keyframes dancebowl {
+  0% {
+    transform: rotate(-15deg);
+  }
+
+	50% {
+		transform: rotate(15deg);
+	}
+
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes dancespoon {
+  0% {
+    transform: rotate(15deg);
+  }
+
+	50% {
+		transform: rotate(-15deg);
+	}
+
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes dance {
+  0% {
+    transform: rotate(45deg);
+  }
+
+	50% {
+		transform: rotate(-45deg);
+	}
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+/* Media Queries */
+
+@media only screen and (min-width:1800px) {
+	p {
+		font-size: 1.5em;
+	}
+
+	div.portfolio-wrapper {
+		width: 1280px;
+		margin: auto;
+		}
+}
+
+@media only screen and (max-width:1024px) {
+	.about {
+		width: 90%;
+	}
+
+	.singleproject {
+		display: block;
+		width: 100%;
+	}
+
+	.singleproject img {
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width:1024px) {
+	.about {
+		width: 90%;
+	}
+
+	.singleproject {
+		display: block;
+		width: 90%;
+	}
+
+	.singleproject img {
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width:636px) {
+
+	.singleproject {
+		display: block;
+		/* width: 100%; */
+	}
+
+	.wrapper {
+		padding: 0;
+		margin: 0;
+	}
+
+	.skills-list {
+		margin: 0;
+	}
+}
+
+@media only screen and (max-width:530px) {
+	a {
+		text-align: center;
+	}
+
+	btn-white {
+		font-size: .5em;
+	}
+
+	ul {
+		font-weight: 800;
+		font-size: 1em;
+	}
+
+	li {
+		display: block;
+	}
+
+	li:nth-of-type(1) {
+		display: none;
+	}
+}
+
+@media only screen and (max-width:438px) {
+	.skills {
+		padding: 0;
+		width: auto;
+		display: block;
+	}
+
+	.about {
+		padding: 1em;
+	}
+
+	a {
+		margin: 0 .2em 1em 0.2em;
+	}
+
+	.singleproject {
+		width: 100%;
+		padding: 1em 0;
+	}
+}

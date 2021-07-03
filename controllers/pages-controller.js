@@ -24,5 +24,10 @@ router.get('/portfolios/:id', (req, res) => {
     res.render('finished_portfolio', { user_id: user_id})
 })
 
+router.get('/test/:id', (req, res) => {
+    let user_id = Number(req.params.id)
+    console.log(req.session)
+    res.render('test-template', { user_id: user_id})
+})
 
 module.exports = router
