@@ -1,14 +1,26 @@
-.page-edit-btn {
+.page-edit-btn,
+.skill-edit-btn {
     border: none;
     background: none;
     width: fit-content;
     cursor: pointer;
-    float: right;
     text-decoration: underline;
+    height: fit-content;
+    transition: 0.3s ease;
 }
 
-.page-edit-btn:hover {
+.page-edit-btn {
+    float: right;
+}
+
+.skill-edit-btn {
+    padding-left: 1em;
+}
+
+.page-edit-btn:hover,
+.skill-edit-btn:hover {
     color: red;
+    transition: 0.3s;
 }
 
 .name-column,
@@ -35,4 +47,15 @@
 
 .edit_projects {
     padding-top: 1em;
+}
+
+.skills-header {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.skill-heading-container {
+    display: flex;
 }
