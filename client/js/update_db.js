@@ -1,7 +1,12 @@
 const aboutForm = document.querySelector('.about-form');
 const contactForm = document.querySelector('.contact-form');
 const colorFontPicker = document.querySelector('.color-font-picker');
-const headingColorRight = document.querySelector('.heading-color-right');
+const headingColorLeft = document.querySelector('.heading-color-left');
+const paragraphColorLeft = document.querySelector('.paragraph-color-left');
+const backgroundColorLeft = document.querySelector('.background-color-left');
+const headingColorRight = document.querySelector('.heading-color-left');
+const paragraphColorRight = document.querySelector('.paragraph-color-left');
+const backgroundColorRight = document.querySelector('.background-color-left');
 const editProjectForm = document.querySelector('.edit-project-form');
 const addProjectForm = document.querySelector('.add-project-form');
 const deleteProjectForm = document.querySelector('.delete-project-form');
@@ -64,11 +69,16 @@ color - font changing
 
 *****************************/
 
+headingColorLeft.addEventListener("input", handleColorChange, false)
 headingColorRight.addEventListener("input", handleColorChange, false)
+paragraphColorLeft.addEventListener("input", handleColorChange, false)
+paragraphColorRight.addEventListener("input", handleColorChange, false)
+backgroundColorLeft.addEventListener("input", handleColorChange, false)
+backgroundColorRight.addEventListener("input", handleColorChange, false)
 
 function handleColorChange(event) {
-    console.log(event.target.value);
-    headings = document.querySelectorAll('.right-heading');
+    console.log(event.target.className);
+    headings = document.querySelectorAll('.left-heading');
     headings.forEach(heading => {
         heading.style.color = event.target.value;
     })
