@@ -197,28 +197,28 @@
 
     <div class="edit_skill_div edit_div">
 
-        <form action="/api/portfolio/skill" method="put" class="skill-form">
+        <form  method="patch" class="edit-skill-form">
 
             <h2 class="heading">Edit Skills</h2>
 
-            <input type="text" placeholder="Skill Heading" class="skills" name="skills">
+            <input type="text" placeholder="Skill Heading" class="skills-heading" name="skills_heading">
             <h3>enter your skills seperated by commas</h3>
-            <input type="text" placeholder="Skills" class="skills" name="skills">
+            <input type="text" placeholder="Skills" class="skills-list" name="skills_list">
 
-            <button>Delete</button>
             <button>Update</button>
+            <button>Delete</button>
         </form>
     </div>
 
     <div class="add_skills_div edit_div">
 
-    <form method="patch" class="skill-form">
+    <form method="patch" class="add-skill-form">
 
             <h2 class="heading">Add Skills</h2>
 
-            <input type="text" placeholder="Skill Heading" class="skills" name="skills">
+            <input type="text" placeholder="Skill Heading" class="skills-heading" name="skills_heading">
             <h3>enter your skills seperated by commas</h3>
-            <input type="text" placeholder="Skills" class="skills" name="skills">
+            <input type="text" placeholder="Skills" class="skills-list" name="skills_list">
 
             <button>Add</button>
         </form>
