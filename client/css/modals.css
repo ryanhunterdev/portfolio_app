@@ -13,55 +13,13 @@
     position: absolute;
 }
 
-.edit_about_div {
+.edit_div {
     width: 360px;
     padding: 8% 0 0;
     margin: auto;
     display: none;
 }
 
-.edit_contact_div {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
-    display: none;
-}
-
-
-.edit_project_div {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
-    display: none;
-}
-
-.add_project_div {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
-    display: none;
-}
-
-.edit_skill_div {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
-    display: none;
-}
-
-.add_skills_div {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
-    display: none;
-}
-
-.edit_fontsColors_div {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
-    display: none;
-}
 
 form {
     position: relative;
@@ -125,11 +83,44 @@ form button:active {
     font-family: "Titillium Web", sans-serif;
 }
 
+.edit_fontsColors_div h2 {
+    font-size: 25px;
+    font-family: "Titillium Web", sans-serif;
+    color: white;
+    padding-bottom: 25px;
+}
 
+.edit_fontsColors_div .modal-dropDown {
+    border-radius:30px;
+    padding: 7px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.edit_fontsColors_div h3 {
+    padding: 20px;
+}
+
+.edit_fontsColors_div input {
+    font-family: FontAwesome, "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 70%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius:10px;
+    cursor: pointer;
+
+}
 /* -------------------------------------------------------- */
 
 
-.switch {
+/* .switch {
     position: relative;
     display: inline-block;
     width: 60px;
@@ -189,4 +180,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-}
+} */

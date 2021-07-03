@@ -22,9 +22,9 @@ const addSkillsDiv = document.querySelector('.add_skills_div')
 
 // edit color and fonts
 const editLeftColorBtn = document.querySelector('.colorLeftBtn')
-const editLeftColorDiv = document.querySelector('.edit_fontsColors_left_div')
+const editLeftColorDiv = document.querySelector('.left-edit')
 const editRightColorBtn = document.querySelector('.colorRightBtn')
-const editRightColorDiv = document.querySelector('.edit_fontsColors_right_div')
+const editRightColorDiv = document.querySelector('.right-edit')
 
 const exitBtn = document.querySelector('.exit')
 
