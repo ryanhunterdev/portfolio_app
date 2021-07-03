@@ -36,6 +36,7 @@ function populatePage(data) {
     })
 
     let skills = content.skills
+    console.log('load skills: ', skills);
     skills.forEach(skill => {
         skillsGrid.appendChild(createSkill(skill))
     })
