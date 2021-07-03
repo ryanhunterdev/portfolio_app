@@ -11,7 +11,7 @@ const editAboutMeBtn = document.querySelector('.edit_aboutMe')
 const editContactBtn = document.querySelector('.edit_contact')
 const editContactDiv = document.querySelector('.edit_contact_div')
 const editProjectsDiv = document.querySelector('.edit_project_div')
-// const editSkillsBtn = document.querySelector('.edit_skills')
+const editSkillsBtn = document.querySelector('.edit_skills')
 const editSkillsDiv = document.querySelector('.edit_skill_div')
 
 // add 
@@ -62,6 +62,11 @@ function editRightColorFont() {
     editRightColorDiv.style.display = 'block';
 }
 
+
+
+
+
+
 window.onclick = function(event) {
         if (event.target !== editLeftColorBtn && !event.target.closest('.left-edit') && editLeftColorDiv.style.display === "block") {
             editLeftColorDiv.style.display = "none";
@@ -76,7 +81,7 @@ window.onclick = function(event) {
         } else if (event.target !== addSkillsBtn && !event.target.closest('.add_skills_div') && addSkillsDiv.style.display === "block"){
             addSkillsDiv.style.display = "none";
         }
- }
+}
 
 // listeners for buttons
 window.addEventListener('click', (e)=>{
@@ -93,13 +98,38 @@ window.addEventListener('click', (e)=>{
             } 
         }) 
     }
+
 })
+
+window.addEventListener('click', (e)=>{
+    const editSkillsBtns = document.querySelectorAll('.skill-edit-btn')
+    if(e.target.classList.contains('skill-edit-btn') && (editSkillsDiv.style.display === "" || editSkillsDiv.style.display === "none")){
+        // let index = e.target.parentElement.dataset.index
+        editSkills()
+        // updateProjectModalInputs(index)
+    } 
+    else {
+        editSkillsBtns.forEach(prjBtn => { 
+            if (e.target !== prjBtn && !e.target.closest('.edit_project_div') && editSkillsDiv.style.display === "block" ){
+                console.log(`Disabling the popup ${e.target}`)
+                editSkillsDiv.style.display = "none";
+            } 
+        }) 
+    }
+})
+
 editLeftColorBtn.addEventListener('click', editLeftColorFont);
 editRightColorBtn.addEventListener('click', editRightColorFont);
 editAboutMeBtn.addEventListener('click', editAboutMe);
 editContactBtn.addEventListener('click', editContact);
 addProjectBtn.addEventListener('click', addProject);
 addSkillsBtn.addEventListener('click', addSkill);
+
+
+
+
+
+
 
 
 function headingFonts() {
