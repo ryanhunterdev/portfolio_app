@@ -1,6 +1,14 @@
 const addSkillForm = document.querySelector('.add-skill-form');
 const editSkillForm = document.querySelector('.edit-skill-form');
 
+let skillIndex;
+
+skillsGrid.addEventListener('click', event => {
+    skillIndex = event.target.parentElement.dataset.index;
+    console.log(skillIndex);
+
+})
+
 function updateSkills(skills) {
     removeAllChildNodes(skillsGrid);
     skills.forEach(skill => {
@@ -22,14 +30,6 @@ addSkillForm.addEventListener('submit', event => {
             console.log(skills);
             updateSkills(skills)
         })   
-})
-
-let skillIndex;
-
-skillsGrid.addEventListener('click', event => {
-   
-    skillIndex = event.target.parentElement.dataset.index;
-
 })
 
 editSkillForm.addEventListener('submit', event => {
