@@ -37,8 +37,8 @@ function populatePage(data) {
 
     let skills = content.skills
     console.log('load skills: ', skills);
-    skills.forEach(skill => {
-        skillsGrid.appendChild(createSkill(skill))
+    skills.forEach((skill, index) => {
+        skillsGrid.appendChild(createSkill(skill, index))
     })
 }
 
@@ -128,14 +128,16 @@ function createSkillList(skill) {
     return list;
 }
 
-function createSkill(skill) {
+function createSkill(skill, index) {
     const skillsContainer = document.createElement('div');
     skillsContainer.className = 'skills-container';
+    
 
     const skillHeadingContainer = document.createElement('div');
     skillHeadingContainer.className = 'skill-heading-container'
     skillHeadingContainer.appendChild(createSkillHeading(skill));
     skillHeadingContainer.appendChild(addSkillEditButton());
+    skillHeadingContainer.dataset.index = index;
 
     skillsContainer.appendChild(skillHeadingContainer);
 
