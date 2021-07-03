@@ -47,9 +47,9 @@ function updateProjectModalInputs(index){
 }
 
 function updateSkillsModalInputs(index){
-    console.log(index)
     axios.get(`/api/portfolios/${portfolioId}`).then(res => {
-        userSkillsHeading.value = res.data.results[0].project_list[index].skills_heading
-        userSkillsHeadingList.value = res.data.results[0].project_list[index].skills_list
+        console.log(res)
+        userSkillsHeading.value = res.data.results[0].skills[index].skills_heading
+        userSkillsHeadingList.value = res.data.results[0].skills[index].skills_list
     })
 }
