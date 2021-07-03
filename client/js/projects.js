@@ -49,3 +49,18 @@ addProjectForm.addEventListener("submit", event => {
             updateProject(newData);
         })
 });
+
+deleteProjectForm.addEventListener("submit", event => {
+    event.preventDefault();
+    
+    axios
+    .patch(`/api/portfolios/delete/projects/${portfolioId}/${projectIndex}`)
+    .then(res => {
+        console.log(res)
+        editProjectsDiv.style.display = "none";
+        editProjectForm.reset();
+        deleteProjectForm.reset();
+        let newData = res.data.remainingProjects.project_list;
+        updateProject(newData);
+    })
+})

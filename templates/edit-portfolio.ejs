@@ -147,6 +147,7 @@
             <button>Update</button>
 
         </form> 
+
     </div> 
 
     <!-- PROJECT -->
@@ -168,29 +169,33 @@
             <input type="text" placeholder="Project URL" class="project-url" name="project_url">
 
             <button>Update</button>
-            <button>Delete</button>
 
+        </form>
+
+        <form method="patch" class="delete-project-form">
+            <button>Delete</button>
         </form>
 
     </div>
 
     <div class="add_project_div edit_div">
 
-    <form  method="patch" class="add-project-form">
+        <form  method="patch" class="add-project-form">
+                <h2 class="heading">Add Project</h2>
 
-            <h2 class="heading">Add Project</h2>
+                <input type="text" placeholder="Project Heading" class="project_heading" name="project_heading">
 
-            <input type="text" placeholder="Project Heading" class="project_heading" name="project_heading">
+                <input type="text" placeholder="Project Year" class="project_year" name="project_year">
 
-            <input type="text" placeholder="Project Year" class="project_year" name="project_year">
+                <input type="text" placeholder="Project Description" class="project_description" name="project_description">
 
-            <input type="text" placeholder="Project Description" class="project_description" name="project_description">
+                <input type="text" placeholder="Project URL" class="project-url" name="project_url">
 
-            <input type="text" placeholder="Project URL" class="project-url" name="project_url">
-
-            <button>Add</button>
-
+                <button>Add</button>
         </form>
+
+
+
     </div>
 
     <!-- SKILLS -->
