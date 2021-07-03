@@ -1,67 +1,110 @@
-//Font Changing
-//--------------------------------------------------------------------------------
-
-// B612 = font-family: 'B612', sans-serif;
-// IBM Plex = Sans font-family: 'IBM Plex Sans', sans-serif;
-// Crimson Text = font-family: 'Crimson Text', serif;
-// Playfair Display = font-family: 'Playfair Display', serif;
-// BioRhyme = font-family: 'BioRhyme', serif;
 
 
-//link
-
-// {/* <link rel="preconnect" href="https://fonts.googleapis.com">
-// <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-// <link href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=BioRhyme:wght@200;800&family=Crimson+Text:wght@400;700&family=IBM+Plex+Sans:wght@100;300&family=Playfair+Display:ital,wght@0,400;1,600&display=swap" rel="stylesheet"></link>  */}
-
-//style
-
-// {/* <style>
-// @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=BioRhyme:wght@200;800&family=Crimson+Text:wght@400;700&family=IBM+Plex+Sans:wght@100;300&family=Playfair+Display:ital,wght@0,400;1,600&display=swap');
+// font-family: 'B612', sans-serif;
+// font-family: 'BioRhyme', serif;
+// font-family: 'Crimson Text', serif;
+// font-family: 'IBM Plex Sans', sans-serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Raleway', sans-serif;
 
 
 
-let headingDropDown = document.querySelector('.dropDown-hf');
-let paragraphDropDown = document.querySelector('.dropDown-pf');
-let leftHeading = document.querySelector('.left-heading');
-let rightHeading = document.querySelector('.right-heading');
-let paragraph = document.querySelector('.font');
+
+const leftHeadingDropDown = document.querySelector('.dropDown-hf-left');
+const rightHeadingDropDown = document.querySelector('.dropDown-hf-right');
+const leftParagraphDropDowns = document.querySelector('.dropDown-pf-left');
+const rightParagraphDropDowns = document.querySelector('.dropDown-pf-right');
+const paragraphs = document.querySelectorAll('.para');
+const headings = document.querySelectorAll('.headingfont');
 
 
-const fonts = ['B612', 'IBM Plex', 'Crimson Text', 'Playfair Display', 'BioRhyme', 'Raleway'];
 
+addDropDownFonts(leftHeadingDropDown)
+addDropDownFonts(rightHeadingDropDown)
+addDropDownFonts(leftParagraphDropDowns)
+addDropDownFonts(rightParagraphDropDowns)
 
-fonts.forEach(font => {
+selectParagraphFont(leftParagraphDropDowns)
+selectParagraphFont(rightParagraphDropDowns)
+selectHeadingFont(leftHeadingDropDown)
+selectHeadingFont(rightHeadingDropDown)
 
-    let option = document.createElement("option");
+function addDropDownFonts(position) {
+    let fonts = ['B612', 'IBM Plex', 'Crimson Text', 'Playfair Display', 'BioRhyme', 'Raleway', 'Defult'];
+    
+    fonts.forEach(font => {
 
-    option.text = font
-    option.value = font
-    paragraphDropDown.add(option)
-    headingDropDown.add(option)
+        let option = document.createElement("option");
 
-});
+        option.text = font
+        option.value = font
+        position.add(option);
+    });
+}
 
-document.addEventListener('change', function(font) {
+function addFontPara(font) {
+    paragraphs.forEach( paragraph => {
+        paragraph.style.fontFamily = font
+    })
+}
 
-    if (font.target.value === 'B612') {
-        paragraph = `'B612', sans-serif`
+function addFontHeading(font) {
+    headings.forEach( heading => {
+        heading.style.fontFamily = font
+    })
+}
 
-    } else if (font.target.value === 'IBM Plex') {
-        paragraph = `'IBM Plex Sans', sans-serif;`
+function selectParagraphFont(position) {
+    position.addEventListener('change', function() {
+        console.log(position.value);
 
-    } else if (font.target.value === 'Crimson Text') {
-        paragraph = `'Crimson Text', serif`
+        if (position.value === 'B612') {
+            addFontPara(`'B612', sans-serif`)
 
-    } else if (font.target.value === 'Playfair Display') {
-        paragraph = `'Playfair Display', serif`
+        } else if (position.value === 'IBM Plex') {
+            addFontPara(`'IBM Plex Sans', sans-serif`)
 
-    } else if (font.target.value === 'BioRhyme') {
-        paragraph = `'BioRhyme', serif`
+        } else if (position.value === 'Crimson Text') {
+            addFontPara(`'Crimson Text', serif`)
 
-    } else if (font.target.value === 'Raleway') {
-        paragraph = `'Raleway', sans-serif;`
-    }
-});
+        } else if (position.value === 'Playfair Display') {
+            addFontPara(`'Playfair Display', serif`)
 
+        } else if (position.value === 'BioRhyme') {
+            addFontPara(`'BioRhyme', serif`)
+
+        } else if (position.value === 'Raleway') {
+            addFontPara(`'Raleway', sans-serif`)
+        } else if (position.value === 'Defult') {
+            addFontPara(`Arial, Helvetica, sans-serif`)
+        }
+    });
+}
+
+function selectHeadingFont(position) {
+    position.addEventListener('change', function() {
+        console.log(position.value);
+
+        if (position.value === 'B612') {
+            addFontHeading(`'B612', sans-serif`)
+
+        } else if (position.value === 'IBM Plex') {
+            addFontHeading(`'IBM Plex Sans', sans-serif`)
+
+        } else if (position.value === 'Crimson Text') {
+            addFontHeading(`'Crimson Text', serif`)
+
+        } else if (position.value === 'Playfair Display') {
+            addFontHeading(`'Playfair Display', serif`)
+
+        } else if (position.value === 'BioRhyme') {
+            addFontHeading(` 'BioRhyme', serif `)
+
+        } else if (position.value === 'Raleway') {
+            addFontHeading(`'Raleway', sans-serif`)
+        } else if (position.value === 'Defult') {
+            addFontHeading(`Arial, Helvetica, sans-serif`)
+        }
+    });
+}
 
