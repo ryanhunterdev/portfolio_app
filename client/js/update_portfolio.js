@@ -131,7 +131,6 @@ function createSkillList(skill) {
 function createSkill(skill, index) {
     const skillsContainer = document.createElement('div');
     skillsContainer.className = 'skills-container';
-    
 
     const skillHeadingContainer = document.createElement('div');
     skillHeadingContainer.className = 'skill-heading-container'

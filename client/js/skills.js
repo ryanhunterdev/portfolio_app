@@ -1,6 +1,5 @@
 const addSkillForm = document.querySelector('.add-skill-form');
 const editSkillForm = document.querySelector('.edit-skill-form');
-
 let skillIndex;
 
 skillsGrid.addEventListener('click', event => {
@@ -11,10 +10,24 @@ skillsGrid.addEventListener('click', event => {
 
 function updateSkills(skills) {
     removeAllChildNodes(skillsGrid);
-    skills.forEach(skill => {
-        skillsGrid.appendChild(createSkill(skill))
+    skills.forEach((skill, index) => {
+        skillsGrid.appendChild(createSkill(skill, index))
     })
 }
+
+editSkillForm.addEventListener('submit', event => {
+    event.preventDefault();
+
+    formData = getFormData(editSkillForm);
+    axios
+        .patch(`/api/skills/${portfolioId}/${skillIndex}`, formData)
+        .then(res => {
+            editSkillsDiv.style.display = "none";
+            editSkillForm.reset();
+            let skills = res.data.allSkillss.skills;
+            updateSkills(skills);
+        })
+})
 
 addSkillForm.addEventListener('submit', event => {
     event.preventDefault();
@@ -32,17 +45,5 @@ addSkillForm.addEventListener('submit', event => {
         })   
 })
 
-editSkillForm.addEventListener('submit', event => {
-    event.preventDefault();
 
-    formData = getFormData(editSkillForm);
-    axios
-        .patch(`/api/skills/${portfolioId}/${skillIndex}`, formData)
-        .then(res => {
-            editSkillsDiv.style.display = "none";
-            editSkillForm.reset();
-            let skills = res.data.allSkillss.skills;
-            console.log(skills);
-            updateSkills(skills);
-        })
-})
+
