@@ -12,6 +12,9 @@ let userProjectDescription = document.querySelector('.project_description')
 let userProjectYear = document.querySelector('.project_year')
 let userProjectURL = document.querySelector('.project-url')
 
+let userSkillsHeading = document.querySelector('.skills-heading')
+let userSkillsHeadingList = document.querySelector('.skills-list')
+
 portfolioId = url.slice(url.indexOf('t/') + 2)
 
 function updateAboutModalInputs(){
@@ -40,5 +43,13 @@ function updateProjectModalInputs(index){
         userProjectURL.value = res.data.results[0].project_list[index].project_url
 
         
+    })
+}
+
+function updateSkillsModalInputs(index){
+    console.log(index)
+    axios.get(`/api/portfolios/${portfolioId}`).then(res => {
+        userSkillsHeading.value = res.data.results[0].project_list[index].skills_heading
+        userSkillsHeadingList.value = res.data.results[0].project_list[index].skills_list
     })
 }

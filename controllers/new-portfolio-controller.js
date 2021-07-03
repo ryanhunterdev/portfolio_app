@@ -16,7 +16,7 @@ router.patch('/api/portfolios/add/projects/:id', (req, res) =>{
 
 router.patch('/api/portfolios/add/skills/:id', (req, res) =>{
   let user_id = Number(req.params.id)
-  let skills_array = req.body.skills_list.split(", ")
+  let skills_array = req.body.skills_list.split(",")
   let JSONskills = JSON.stringify(skills_array)
   Portfolio
     .addSkill(req.body.skills_heading, JSONskills, user_id)
