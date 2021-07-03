@@ -2,6 +2,7 @@ let projectIndex;
 
 projectsGrid.addEventListener("click", event => {
     projectIndex = event.target.parentElement.dataset.index;
+    console.log(projectIndex);
 })
 
 editProjectForm.addEventListener("submit", event => {
