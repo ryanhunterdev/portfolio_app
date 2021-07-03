@@ -12,7 +12,7 @@ let userProjectDescription = document.querySelector('.project_description')
 let userProjectYear = document.querySelector('.project_year')
 let userProjectURL = document.querySelector('.project-url')
 
-let userSkillsHeading = document.querySelector('.skills-heading')
+let userSkillsHeading = document.querySelector('.skills-list-heading')
 let userSkillsHeadingList = document.querySelector('.skills-list')
 
 portfolioId = url.slice(url.indexOf('t/') + 2)
