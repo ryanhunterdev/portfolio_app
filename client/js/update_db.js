@@ -10,6 +10,12 @@ const backgroundColorRight = document.querySelector('.background-color-left');
 const editProjectForm = document.querySelector('.edit-project-form');
 const addProjectForm = document.querySelector('.add-project-form');
 const deleteProjectForm = document.querySelector('.delete-project-form');
+const leftHeadings = document.querySelectorAll('.left-headings');
+const rightHeadings = document.querySelectorAll('.right-headings');
+const leftParagraphs = document.querySelectorAll('.left-paragraphs');
+const rightParagraphs = document.querySelectorAll('.right-paragraphs');
+const leftColumn = document.querySelector('.left-column');
+const rightColumn = document.querySelector('.left-column');
 
 function getFormData(form) {
     return Object.fromEntries(new FormData(form));
@@ -75,6 +81,7 @@ paragraphColorLeft.addEventListener("input", handleColorChange, false)
 paragraphColorRight.addEventListener("input", handleColorChange, false)
 backgroundColorLeft.addEventListener("input", handleColorChange, false)
 backgroundColorRight.addEventListener("input", handleColorChange, false)
+
 
 function handleColorChange(event) {
     console.log(event.target.className);
