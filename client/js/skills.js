@@ -4,8 +4,6 @@ let skillIndex;
 
 skillsGrid.addEventListener('click', event => {
     skillIndex = event.target.parentElement.dataset.index;
-    console.log(skillIndex);
-
 })
 
 function updateSkills(skills) {
@@ -40,7 +38,6 @@ addSkillForm.addEventListener('submit', event => {
             addSkillsDiv.style.display = "none";
             addSkillForm.reset();
             let skills = res.data.skill
-            console.log(skills);
             updateSkills(skills)
         })   
 })
