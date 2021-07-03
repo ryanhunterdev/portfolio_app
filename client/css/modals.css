@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=BioRhyme:wght@200;800&family=Crimson+Text:wght@400;700&family=IBM+Plex+Sans:wght@100;300&family=Playfair+Display:ital,wght@0,400;1,600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=BioRhyme:wght@200;800&family=Crimson+Text:wght@400;700&family=IBM+Plex+Sans:wght@100;300&family=Playfair+Display:ital,wght@0,400;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+
 /* body {
     background-color: blanchedalmond;
     background-repeat: no-repeat;
@@ -23,6 +28,7 @@
 
 .edit_skill_div, .edit_about_div, .edit_contact_div, .edit_project_div, .add_project_div, .edit_skill_div, .add_skills_div, .edit_fontsColors_div, .edit_fontsColors_div {
     position: relative;
+    border-radius: 30px;
     z-index: 1;
     background: hsl(27, 91%, 58%);
     max-width: 360px;
@@ -32,8 +38,9 @@
     box-shadow: 0 0 20px 0 rgb(200, 124, 24), 0 5px 5px 0 rgba(200, 124, 24); 
 }
 
-/* form {
+/* .form {
     position: relative;
+    border-radius: 30px;
     z-index: 1;
     background: hsl(27, 91%, 58%);
     max-width: 360px;
@@ -43,7 +50,7 @@
     box-shadow: 0 0 20px 0 rgb(200, 124, 24), 0 5px 5px 0 rgba(200, 124, 24);
 } */
 
-form input {
+.form input {
     font-family: FontAwesome, "Roboto", sans-serif;
     outline: 0;
     background: #f2f2f2;
@@ -57,7 +64,7 @@ form input {
     
 }
 
-form button {
+.form button {
     font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     font-weight: bold;
@@ -77,13 +84,13 @@ form button {
 
 }
 
-form button:hover,.form button:focus {
+.form button:hover,.form button:focus {
     background: hsl(27, 66%, 50%);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgb(255, 255, 255);
     transform: translateY(-4px);
 }
 
-form button:active {
+.form button:active {
     transform: translateY(2px);
     box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
 }
@@ -128,21 +135,6 @@ form button:active {
     cursor: pointer;
 }
 
-.edit_fontsColors_div .B612 {
-    font-family:'B612', sans-serif;
-}
-.edit_fontsColors_div .IBM_Plex {
-    font-family: 'IBM Plex Sans', sans-serif;
-}
-.edit_fontsColors_div .Crimson_Text {
-    font-family: 'Crimson Text', serif;
-}
-.edit_fontsColors_div .Playfair_Display {
-    font-family: 'Playfair Display', serif;
-}
-.edit_fontsColors_div .BioRhyme {
-    font-family: 'BioRhyme', serif;
-}
 
 
 /* -------------------------------------------------------- */

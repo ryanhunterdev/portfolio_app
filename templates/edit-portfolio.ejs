@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="/css/modals.css">
     <link rel="stylesheet" href="/css/edit_portfolio.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612&family=BioRhyme:wght@200;700&family=Crimson+Text:ital@0;1&family=IBM+Plex+Sans:wght@100&family=Playfair+Display:ital@0;1&family=Raleway:wght@100&display=swap" rel="stylesheet">
+
     <title>My Portfolio</title>
 </head>
 <body>
@@ -22,21 +26,21 @@
             
                 <div class="name-location-wrapper">
                     <div class="name-column">
-                        <h1 class="user-name left-heading">
+                        <h1 class="user-name left-heading headingfont">
                             
                         </h1>
-                        <button class="colorLeftBtn page-edit-btn">colors/fonts</button>
+                        <button class="colorLeftBtn page-edit-btn para left-para">colors/fonts</button>
                     </div>
                     <div class="location-column">
-                        <h2 class="user-location  left-heading">
+                        <h2 class="user-location  left-heading headingfont">
                             
                         </h2>
-                    <button class="edit_aboutMe page-edit-btn">edit section</button>
+                    <button class="edit_aboutMe page-edit-btn para left-para">edit section</button>
                     
                     </div>
                 </div>
 
-                <h2 class="user-welcome left-heading">
+                <h2 class="user-welcome left-heading headingfont">
                     
                 </h2>
             </section>
@@ -44,31 +48,31 @@
 
             
                 <div class="pitch-container">
-                    <h2 class="contact-pitch left-heading"></h2>
-                    <button class="edit_contact page-edit-btn">edit section</button>
+                    <h2 class="contact-pitch left-heading headingfont"></h2>
+                    <button class="edit_contact page-edit-btn para left-para">edit section</button>
                 </div>
                 <div class="user-links">
                     <div class="user-links-left-column">
                         <div class="email-github-container">
-                            <h3 class="links-heading left-heading">email:</h3>
-                            <a href="#" class="links-anchor email-anchor">
+                            <h3 class="links-heading left-heading headingfont">email:</h3>
+                            <a href="#" class="links-anchor email-anchor para left-para">
                                 
                             </a>
                             
                         </div>
-                        <div class="copyright-container">
-                            &copy 2021 <span class="copyright-name"></span> 
+                        <div class="copyright-container para left-para">
+                            &copy 2021 <span class="copyright-name para left-para"></span> 
                         </div>
                     </div>       
                     <div class="user-links-right-column">
                         <div class="email-github-container">
-                            <h2 class="links-heading left-heading">github:</h2>
-                            <a href="#" class="links-anchor github-anchor"></a> 
+                            <h2 class="links-heading left-heading headingfont">github:</h2>
+                            <a href="#" class="links-anchor github-anchor para left-para"></a> 
                         </div>
                         <div class="socials-container">
-                            <a href="#" class="linkedin">LinkedIn</a>
-                            <a href="#" class="instagram">Instagram</a>
-                            <a href="#" class="twitter">Twitter</a>
+                            <a href="#" class="linkedin para left-para">LinkedIn</a>
+                            <a href="#" class="instagram para left-para">Instagram</a>
+                            <a href="#" class="twitter para left-para">Twitter</a>
                         </div>
                     </div>  
                 </div>
@@ -77,26 +81,26 @@
 
         <div class="right-column">
             <section class="projects">
-                <button class="colorRightBtn page-edit-btn">colors/fonts</button>
+                <button class="colorRightBtn page-edit-btn para right-para">colors/fonts</button>
 
-                <h2 class="projects-heading right-heading">Projects</h2>
+                <h2 class="projects-heading right-heading headingfont">Projects</h2>
                 <div class="projects-grid">
 
                     <!-- projects generate here -->
 
                 </div>
-                <button class="add_projects page-edit-btn">add project</button>
+                <button class="add_projects page-edit-btn para right-para">add project</button>
             </section>
             <section class="skills">
                 <header class="skills-header">
-                    <h2 class="skills-heading right-heading">Skills</h2>
-                    <button class="add_skills page-edit-btn">add skill</button>
+                    <h2 class="skills-heading right-heading headingfont">Skills</h2>
+                    <button class="add_skills page-edit-btn para right-para">add skill</button>
                 </header>
                 <div class="skills-grid">
                     
                 </div>
             </section>
-        <button class="finished-portfolio final-portfolio-btn"><a target="_blank" href="/portfolios/<%=user_id%>">Go to your finished portfolio</a></button>
+        <button class="finished-portfolio final-portfolio-btn para right-para"><a target="_blank" href="/portfolios/<%=user_id%>">Go to your finished portfolio</a></button>
         </div>
 </div>
 
@@ -108,7 +112,7 @@
 
     <div class="edit_about_div edit_div">
 ​
-        <form method="patch" class="about-form">
+        <form method="patch" class="about-form form ">
 ​
             <h2 class="heading"> About You</h2>
 ​
@@ -131,7 +135,7 @@
 
     <div class="edit_contact_div edit_div">
 
-        <form method="patch" class="contact-form">
+        <form method="patch" class="contact-form form ">
 
             <h2 class="heading">Your Contacts</h2>
 
@@ -156,7 +160,7 @@
     <div class="edit_project_div edit_div">
 
 
-        <form method="patch" class="edit-project-form">
+        <form class="edit-project-form form " method="patch" >
 
             <h2 class="heading">Edit Project</h2>
 
@@ -172,7 +176,7 @@
 
         </form>
 
-        <form method="patch" class="delete-project-form">
+        <form class="edit-project-form form" method="patch" >
             <button>Delete</button>
         </form>
 
@@ -180,7 +184,7 @@
 
     <div class="add_project_div edit_div">
 
-        <form  method="patch" class="add-project-form">
+        <form  method="patch" class="add-project-form form">
                 <h2 class="heading">Add Project</h2>
 
                 <input type="text" placeholder="Project Heading" class="project_heading" name="project_heading">
@@ -202,7 +206,8 @@
     
 
     <div class="edit_skill_div edit_div">
-        <form  method="patch" class="edit-skill-form">
+
+        <form  method="patch" class="edit-skill-form form">
 
             <h2 class="heading">Edit Skills</h2>
 
@@ -212,14 +217,14 @@
 
             <button>Update</button>
         </form>
-        <form  method="patch" class="delete-skill-form">
+        <form  method="patch" class="delete-skill-form form">
             <button>Delete</button>
         </form>
     </div>
 
     <div class="add_skills_div edit_div">
 
-    <form method="patch" class="add-skill-form">
+    <form method="patch" class="add-skill-form form">
 
         <h2 class="heading">Add Skills</h2>
 
@@ -236,17 +241,17 @@
 
     <div class="edit_fontsColors_div left-edit edit_div">
     
-        <form method="patch" class="color-font-picker">
+        <form method="patch" class="color-font-picker form">
 
             <h2 class="heading">Left Color and Fonts</h2>
 
             <h3 for="heading-font">Heading Fonts</h3>
-            <select name="heading-font" class="modal-dropDown dropDown-hf">
+            <select name="heading-font" class="modal-dropDown dropDown-hf-left">
                 <option value="select">Select Font</option>
             </select>
 
             <h3 for="paragraph-font">Paragraph Font</h3>
-            <select name="paragraph-font" class="modal-dropDown dropDown-pf">
+            <select name="paragraph-font" class="modal-dropDown dropDown-pf-left">
                 <option value="select">Select Font</option>
             </select>
             
@@ -264,17 +269,17 @@
 
     <div class="edit_fontsColors_div right-edit edit_div">
     
-        <form method="patch" class="color-font-picker">
+        <form method="patch" class="color-font-picker form">
 
             <h2 class="heading">Right Color and Fonts</h2>
 
             <h3 for="heading-font">Heading Fonts</h3>
-            <select name="heading-font" class="modal-dropDown dropDown-hf">
+            <select name="heading-font" class="modal-dropDown dropDown-hf-right">
                 <option value="select">Select Font</option>
             </select>
 
             <h3 for="paragraph-font">Paragraph Font</h3>
-            <select name="paragraph-font" class="modal-dropDown dropDown-pf">
+            <select name="paragraph-font" class="modal-dropDown dropDown-pf-right">
                 <option value="select">Select Font</option>
             </select>
             
@@ -302,6 +307,7 @@
 <script src="/js/modal_values.js"></script>
 <script src="/js/projects.js"></script>
 <script src="/js/skills.js"></script>
-
+<script src="/js/change_font.js"></script>
+<script src="/js/color_change.js"></script>
 </body>
 </html>
