@@ -111,7 +111,7 @@ window.addEventListener('click', (e)=>{
     } 
     else {
         editSkillsBtns.forEach(prjBtn => { 
-            if (e.target !== prjBtn && !e.target.closest('.edit_project_div') && editSkillsDiv.style.display === "block" ){
+            if (e.target !== prjBtn && !e.target.closest('.edit_skill_div') && editSkillsDiv.style.display === "block" ){
                 console.log(`Disabling the popup ${e.target}`)
                 editSkillsDiv.style.display = "none";
             } 
