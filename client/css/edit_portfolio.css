@@ -6,7 +6,6 @@
     cursor: pointer;
     text-decoration: underline;
     height: fit-content;
-    transition: 0.3s ease;
 }
 
 .page-edit-btn {
@@ -20,7 +19,6 @@
 .page-edit-btn:hover,
 .skill-edit-btn:hover {
     color: red;
-    transition: 0.3s;
 }
 
 .name-column,
