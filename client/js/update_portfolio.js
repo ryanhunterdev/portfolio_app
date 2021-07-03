@@ -25,8 +25,9 @@ axios.get(`/api/portfolios/${portfolioId}`).then(res => {
 })
 
 function populatePage(data) {
-    updateAboutInputs()
-    
+    updateAboutModalInputs()
+    updateContactModalInputs()
+
     console.log(data.message);
     let content = data.results[0]
     addTextContent(content);
@@ -47,17 +48,17 @@ function createProject(project, index) {
     let projectRow = document.createElement('div');
     projectRow.className = 'project-row';
 
-    projectRow.appendChild(addProjectTitle(project));
+    projectRow.appendChild(addProjectTitle(project, index));
     projectRow.appendChild(addProjectDescription(project));
-    projectRow.dataset.index = index;
     return projectRow;
 }
 
 
 
-function addProjectTitle(project) {
+function addProjectTitle(project, index) {
     let projectTitle = document.createElement('div')
     projectTitle.className = 'project-title'
+    projectTitle.dataset.index = index;
 
     let year = document.createElement('p');
     year.className = 'project-year';
