@@ -8,6 +8,7 @@ const pagesController = require('./controllers/pages-controller.js')
 const portfolioController = require('./controllers/portfolios-controller.js')
 const editPortfolioController = require('./controllers/edit-portfolio-controller.js')
 const newPortfolioController = require('./controllers/new-portfolio-controller.js')
+const deletePortfolioController = require('./controllers/delete-portfolio-controller')
 const usersController = require('./controllers/users-controller.js')
 
 app.set('view engine', 'ejs')
@@ -40,5 +41,7 @@ app.use('/', portfolioController)
 app.use('/', editPortfolioController)
 
 app.use('/', newPortfolioController)
+
+app.use('/', deletePortfolioController)
 
 app.use('/', usersController)

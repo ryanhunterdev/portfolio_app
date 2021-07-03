@@ -131,9 +131,26 @@ const Portfolio = {
           }',
           false
         )
-    WHERE id=${userID} returning skills;`
+      WHERE id=${userID} returning skills;`
       return db.query(sql)
+    },
+
+    deleteProject(index, userID){
+      const sql = `UPDATE users SET project_list = (
+        SELECT project_list ::jsonb - ${index} FROM users WHERE id = ${userID}
+      )
+      WHERE id=${userID} returning project_list;`
+      return  db.query(sql)
+    },
+
+    deleteSkills(index, userID){
+      const sql = `UPDATE users SET skills = (
+        SELECT skills ::jsonb - ${index} FROM users WHERE id = ${userID}
+      )
+      WHERE id=${userID} returning skills;`
+      return  db.query(sql)
     }
+
 }
 
 
