@@ -21,6 +21,16 @@
     color: red;
 }
 
+.final-portfolio-btn{
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: underline;
+    height: fit-content;
+    float: right;
+    text-align: right;
+}
+
 .name-column,
 .location-column,
 .pitch-container {

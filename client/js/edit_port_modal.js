@@ -105,9 +105,10 @@ window.addEventListener('click', (e)=>{
 window.addEventListener('click', (e)=>{
     const editSkillsBtns = document.querySelectorAll('.skill-edit-btn')
     if(e.target.classList.contains('skill-edit-btn') && (editSkillsDiv.style.display === "" || editSkillsDiv.style.display === "none")){
-        // let index = e.target.parentElement.dataset.index
+        console.log(e)
+        let index = e.target.parentElement.dataset.index
         editSkills()
-        // updateProjectModalInputs(index)
+        updateSkillsModalInputs(index)
     } 
     else {
         editSkillsBtns.forEach(prjBtn => { 

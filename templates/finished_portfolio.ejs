@@ -4,37 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test portfolio</title>
+
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/finished-portfolio.css">
+    <link rel="stylesheet" href="/css/modals.css">
+    <link rel="stylesheet" href="/css/edit_portfolio.css">
+
+    <title>My Portfolio</title>
 </head>
 <body>
-    
-    <div class="portfolio-wrapper">
+
+<div class="portfolio-wrapper">
 
         <div class="left-column">
 
             <section class="about-me">
-
+            
                 <div class="name-location-wrapper">
-                    <h1 class="user-name">
-                        
-                    </h1>
-                    <h2 class="user-location">
-                        
-                    </h2>
+                    <div class="name-column">
+                        <h1 class="user-name left-heading">
+                            
+                        </h1>
+                    </div>
+                    <div class="location-column">
+                        <h2 class="user-location  left-heading">
+                            
+                        </h2>                    
+                    </div>
                 </div>
 
-                <h2 class="user-welcome">
+                <h2 class="user-welcome left-heading">
                     
                 </h2>
             </section>
             <section class="contact">
-                <h2 class="contact-pitch"></h2>
+
+            
+                <div class="pitch-container">
+                    <h2 class="contact-pitch left-heading"></h2>
+                </div>
                 <div class="user-links">
                     <div class="user-links-left-column">
                         <div class="email-github-container">
-                            <h3 class="links-heading">email:</h3>
+                            <h3 class="links-heading left-heading">email:</h3>
                             <a href="#" class="links-anchor email-anchor">
                                 
                             </a>
@@ -46,7 +58,7 @@
                     </div>       
                     <div class="user-links-right-column">
                         <div class="email-github-container">
-                            <h2 class="links-heading">github:</h2>
+                            <h2 class="links-heading left-heading">github:</h2>
                             <a href="#" class="links-anchor github-anchor"></a> 
                         </div>
                         <div class="socials-container">
@@ -61,7 +73,8 @@
 
         <div class="right-column">
             <section class="projects">
-                <h2 class="projects-heading">Projects</h2>
+
+                <h2 class="projects-heading right-heading">Projects</h2>
                 <div class="projects-grid">
 
                     <!-- projects generate here -->
@@ -69,15 +82,30 @@
                 </div>
             </section>
             <section class="skills">
-                <h2 class="skills-heading">Skills</h2>
+                <header class="skills-header">
+                    <h2 class="skills-heading right-heading">Skills</h2>
+                </header>
                 <div class="skills-grid">
                     
                 </div>
             </section>
         </div>
-    </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/js/finished_portfolio.js"></script>
+
+
+
+
+    
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/finished_portfolio.js"></script>
+<script src="/js/projects.js"></script>
+<script src="/js/skills.js"></script>
+
 </body>
 </html>
