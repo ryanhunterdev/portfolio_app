@@ -12,8 +12,5 @@ addSkillForm.addEventListener('submit', event => {
             addSkillForm.reset();
             let newData = res.data
             console.log(newData);
-            newData.forEach(skill => {
-                skillsGrid.appendChild(createSkill(skill))
-            })
         })   
 })
