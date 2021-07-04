@@ -25,14 +25,16 @@
 .edit_skill_div, .edit_about_div, .edit_contact_div, .edit_project_div, .add_project_div, .edit_skill_div, .add_skills_div, .edit_fontsColors_div, .edit_fontsColors_div {
     position: absolute;
     z-index: 1;
-    background: hsl(27, 91%, 58%);
+    background: rgba(255,255,255);
     max-width: 360px;
     margin: 40px auto 100px;
     padding: 45px;
     text-align: center;
-    box-shadow: 0 0 20px 0 rgb(200 124 24), 0 5px 5px 0 rgb(200 124 24);
+    /* box-shadow: 0 0 20px 0 rgb(200 124 24), 0 5px 5px 0 rgb(200 124 24); */
     left: 0;
     right: 0;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 form input {
@@ -82,14 +84,14 @@ form input {
 
 
 .heading {
-    color: #FFFFFF;
+    color: black;
     font-family: "Titillium Web", sans-serif;
 }
 
 .edit_fontsColors_div h2 {
     font-size: 25px;
     font-family: "Titillium Web", sans-serif;
-    color: white;
+    color: Black;
     padding-bottom: 25px;
 }
 
@@ -98,7 +100,8 @@ form input {
     padding: 7px;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: 0;
+    border: 1px solid black;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -118,6 +121,10 @@ form input {
     font-size: 14px;
     border-radius:10px;
     cursor: pointer;
+}
+
+.color-picker {
+    height: 50px;
 }
 
 

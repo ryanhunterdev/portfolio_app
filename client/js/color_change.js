@@ -31,30 +31,30 @@ function handleColorChange(event) {
 
     console.log(event.target.className);
 
-    if (event.target.className === 'heading-color-left') {
+    if (event.target.className === 'heading-color-left color-picker') {
 
         leftHeadings.forEach(heading => {
             heading.style.color = event.target.value;
         })
 
-    } else if (event.target.className === 'paragraph-color-left') {
+    } else if (event.target.className === 'paragraph-color-left color-picker') {
 
         changeClassColor("left-para", event);
 
-    } else if (event.target.className === 'background-color-left') {
+    } else if (event.target.className === 'background-color-left color-picker') {
 
         leftBackground.style.backgroundColor = event.target.value;
 
         
-    } else if (event.target.className === 'heading-color-right') {
+    } else if (event.target.className === 'heading-color-right color-picker') {
 
         changeClassColor("right-heading", event)
         
-    } else if (event.target.className === 'paragraph-color-right') {
+    } else if (event.target.className === 'paragraph-color-right color-picker') {
 
         changeClassColor("right-para", event);
         
-    } else if (event.target.className === 'heading-color-right') {
+    } else if (event.target.className === 'heading-color-right color-picker') {
         
         rightBackground.style.backgroundColor = event.target.value;
 
