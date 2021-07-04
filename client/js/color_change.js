@@ -1,16 +1,3 @@
-const colorFontPicker = document.querySelector('.color-font-picker');
-const headingColorLeft = document.querySelector('.heading-color-left');
-const paragraphColorLeft = document.querySelector('.paragraph-color-left');
-const backgroundColorLeft = document.querySelector('.background-color-left');
-const headingColorRight = document.querySelector('.heading-color-right');
-const paragraphColorRight = document.querySelector('.paragraph-color-right');
-const backgroundColorRight = document.querySelector('.background-color-right');
-
-
-const leftHeadings = document.querySelectorAll('.left-heading');
-const leftBackground = document.querySelector('.left-column')
-const rightBackground = document.querySelector('.right-column')
-
 // live dom from input
 headingColorLeft.addEventListener("input", handleColorChange, false)
 headingColorRight.addEventListener("input", handleColorChange, false)

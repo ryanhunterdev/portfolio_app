@@ -1,24 +1,3 @@
-
-
-// font-family: 'B612', sans-serif;
-// font-family: 'BioRhyme', serif;
-// font-family: 'Crimson Text', serif;
-// font-family: 'IBM Plex Sans', sans-serif;
-// font-family: 'Playfair Display', serif;
-// font-family: 'Raleway', sans-serif;
-
-
-
-
-const leftHeadingDropDown = document.querySelector('.dropDown-hf-left');
-const rightHeadingDropDown = document.querySelector('.dropDown-hf-right');
-const leftParagraphDropDowns = document.querySelector('.dropDown-pf-left');
-const rightParagraphDropDowns = document.querySelector('.dropDown-pf-right');
-// const paragraphs = document.querySelectorAll('.para');
-// const headings = document.querySelectorAll('.headingfont');
-
-
-
 addDropDownFonts(leftHeadingDropDown)
 addDropDownFonts(rightHeadingDropDown)
 addDropDownFonts(leftParagraphDropDowns)
@@ -42,74 +21,42 @@ function addDropDownFonts(position) {
     });
 }
 
-function addFontPara(font) {
-    let paragraphs = document.getElementsByClassName("para");
-    for (let i = 0; i < paragraphs.length; i++) {
-        let paragraph = paragraphs[i];
-        paragraph.style.fontFamily = font;
-    }
-}
-
-function addFontHeading(font) {
-    let headings = document.getElementsByClassName("headingfont");
-    console.log(headings);
-    for (let i = 0; i < headings.length; i++) {
-        let heading = headings[i];
-        heading.style.fontFamily = font;
-    }
-}
-
 function selectParagraphFont(position) {
     position.addEventListener('change', function() {
-        console.log(position.value);
-
-        if (position.value === 'B612') {
-            addFontPara(`'B612', sans-serif`)
-
-        } else if (position.value === 'IBM Plex') {
-            addFontPara(`'IBM Plex Sans', sans-serif`)
-
-        } else if (position.value === 'Crimson Text') {
-            addFontPara(`'Crimson Text', serif`)
-
-        } else if (position.value === 'Playfair Display') {
-            addFontPara(`'Playfair Display', serif`)
-
-        } else if (position.value === 'BioRhyme') {
-            addFontPara(`'BioRhyme', serif`)
-
-        } else if (position.value === 'Raleway') {
-            addFontPara(`'Raleway', sans-serif`)
-        } else if (position.value === 'Defult') {
-            addFontPara(`Arial, Helvetica, sans-serif`)
+        let font = position.value;
+        let reqObj = {
+            paragraph_font: font
         }
+        axios
+        .patch(`/api/portfolios/styles/paragraph-font/${portfolioId}`, reqObj)
+        .then(res => {
+            let responseFont = res.data.allStyles.styles.paragraph_font
+            let paragraphs = document.getElementsByClassName("para");
+            for (let i = 0; i < paragraphs.length; i++) {
+                let paragraph = paragraphs[i];
+                paragraph.style.fontFamily = responseFont;
+            }
+        })
     });
 }
 
+
 function selectHeadingFont(position) {
     position.addEventListener('change', function() {
-        console.log(position.value);
-
-        if (position.value === 'B612') {
-            addFontHeading(`'B612', sans-serif`)
-
-        } else if (position.value === 'IBM Plex') {
-            addFontHeading(`'IBM Plex Sans', sans-serif`)
-
-        } else if (position.value === 'Crimson Text') {
-            addFontHeading(`'Crimson Text', serif`)
-
-        } else if (position.value === 'Playfair Display') {
-            addFontHeading(`'Playfair Display', serif`)
-
-        } else if (position.value === 'BioRhyme') {
-            addFontHeading(` 'BioRhyme', serif `)
-
-        } else if (position.value === 'Raleway') {
-            addFontHeading(`'Raleway', sans-serif`)
-        } else if (position.value === 'Defult') {
-            addFontHeading(`Arial, Helvetica, sans-serif`)
+        let font = position.value;
+        let reqObj = {
+            paragraph_font: font
         }
+        axios
+        .patch(`/api/portfolios/styles/heading-font/${portfolioId}`, reqObj)
+        .then(res => {
+            let responseFont = res.data.allStyles.styles.heading_font
+            let headings = document.getElementsByClassName("headingfont");
+            for (let i = 0; i < headings.length; i++) {
+                let heading = headings[i];
+                heading.style.fontFamily = responseFont;
+            }
+        })
     });
 }
 

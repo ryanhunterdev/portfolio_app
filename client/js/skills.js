@@ -1,7 +1,3 @@
-const addSkillForm = document.querySelector('.add-skill-form');
-const editSkillForm = document.querySelector('.edit-skill-form');
-const deleteSkillForm = document.querySelector('.delete-skill-form');
-
 let skillIndex;
 
 skillsGrid.addEventListener('click', event => {
