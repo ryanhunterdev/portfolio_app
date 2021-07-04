@@ -62,6 +62,7 @@ function addProjectTitle(project, index) {
     let year = document.createElement('p');
     year.className = 'project-year';
     year.classList.add('para');
+    year.classList.add('right-para');
     year.textContent = project.project_year
     projectTitle.appendChild(year)
 
@@ -82,13 +83,15 @@ function addProjectDescription(project) {
 
     let projectDescription = document.createElement('p');
     projectDescription.className = 'project-description';
-    projectDescription.classList.add('para')
+    projectDescription.classList.add('para');
+    projectDescription.classList.add('right-para');
     projectDescription.textContent = project.project_description;
     descriptionContainer.appendChild(projectDescription);
 
     let repoLink = document.createElement('a');
     repoLink.className = 'repo-link';
     repoLink.classList.add('para');
+    repoLink.classList.add('right-para');
     repoLink.textContent = 'github';
     repoLink.href = project.project_url;
     descriptionContainer.appendChild(repoLink);
@@ -100,7 +103,6 @@ function addProjectEditButton() {
     const editBtn = document.createElement('button');
     editBtn.className = 'edit_projects'
     editBtn.classList.add('page-edit-btn')
-    editBtn.classList.add('para')
     editBtn.textContent = 'edit project'
     return editBtn;
 }
@@ -108,7 +110,6 @@ function addProjectEditButton() {
 function addSkillEditButton() {
     const editBtn = document.createElement('button');
     editBtn.className = 'skill-edit-btn'
-    editBtn.classList.add('para')
     editBtn.textContent = 'edit'
     return editBtn;
 }
@@ -130,6 +131,7 @@ function createSkillList(skill) {
         let item = document.createElement('li');
         item.className = 'skills-item';
         item.classList.add('para');
+        item.classList.add('right-para');
         item.textContent= entry;
         list.appendChild(item);
     })

@@ -8,9 +8,6 @@ var backgroundColorRight = document.querySelector('.background-color-right');
 
 
 var leftHeadings = document.querySelectorAll('.left-heading');
-var rightHeadings = document.querySelectorAll('.right-heading');
-var leftParas = document.querySelectorAll('.right-para');
-var rightParas = document.querySelectorAll('.left-para');
 var leftBackground = document.querySelector('.left-column')
 var rightBackground = document.querySelector('.right-column')
 
@@ -22,6 +19,13 @@ paragraphColorRight.addEventListener("input", handleColorChange, false)
 backgroundColorLeft.addEventListener("input", handleColorChange, false)
 backgroundColorRight.addEventListener("input", handleColorChange, false)
 
+function changeClassColor(className, event) {
+    let elements = document.getElementsByClassName(className);
+        for (let i = 0; i < elements.length; i++) {
+            let element = elements[i];
+            element.style.color = event.target.value;
+        }
+}
 
 function handleColorChange(event) {
 
@@ -35,9 +39,7 @@ function handleColorChange(event) {
 
     } else if (event.target.className === 'paragraph-color-left') {
 
-        leftParas.forEach(para => {
-            para.style.color = event.target.value;
-        })
+        changeClassColor("left-para", event);
 
     } else if (event.target.className === 'background-color-left') {
 
@@ -46,15 +48,11 @@ function handleColorChange(event) {
         
     } else if (event.target.className === 'heading-color-right') {
 
-        rightHeadings.forEach(heading => {
-            heading.style.color = event.target.value;
-        })
+        changeClassColor("right-heading", event)
         
-    } else if (event.target.className === 'heading-color-right') {
+    } else if (event.target.className === 'paragraph-color-right') {
 
-        rightParas.forEach(para => {
-            para.style.color = event.target.value;
-        })
+        changeClassColor("right-para", event);
         
     } else if (event.target.className === 'heading-color-right') {
         
