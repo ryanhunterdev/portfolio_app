@@ -22,10 +22,7 @@ function populatePage(data) {
         skillsGrid.appendChild(createSkill(skill, index))
     })
 
-    let styles = content.styles;
-    console.log('styles', styles);
-
-    addStyles(styles);
+    addStyles(content.styles);
 }
 
 function createProject(project, index) {
@@ -39,7 +36,7 @@ function createProject(project, index) {
 }
 
 function addStyles(styles) {
-
+    console.log('styles', styles);
 }
 
 function addProjectTitle(project, index) {

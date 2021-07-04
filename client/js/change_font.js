@@ -42,6 +42,7 @@ function selectParagraphFont(position) {
 
 
 function selectHeadingFont(position) {
+    console.log(position.value);
     position.addEventListener('change', function() {
         let font = position.value;
         let reqObj = {
