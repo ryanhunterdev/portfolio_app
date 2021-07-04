@@ -15,6 +15,7 @@ const rightHeadings = document.querySelectorAll('.right-heading');
 const leftHeadings = document.querySelectorAll('.left-heading');
 const leftBackground = document.querySelector('.left-column');
 const rightBackground = document.querySelector('.right-column');
+const leftPara = document.querySelectorAll('.left-para');
 
 portfolioId = url.slice(url.indexOf('s/') + 2)
 
@@ -59,6 +60,9 @@ function addStyles(styles) {
     console.log('styles', styles);
     leftHeadings.forEach(heading => {
         heading.style.color = styles.left_heading_color
+    });
+    leftPara.forEach(para => {
+        para.style.color = styles.left_para_color
     });
     rightHeadings.forEach(heading => {
         heading.style.color = styles.right_heading_color
