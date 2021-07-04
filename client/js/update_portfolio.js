@@ -100,7 +100,7 @@ function addProjectDescription(project, styles) {
     let repoLink = document.createElement('a');
     repoLink.className = 'repo-link';
     repoLink.classList.add('para');
-    repoLink.classList.add('right-para');
+    repoLink.classList.add('right-heading');
     repoLink.textContent = 'github';
     repoLink.href = project.project_url;
     repoLink.style.color = styles.right_para_color;

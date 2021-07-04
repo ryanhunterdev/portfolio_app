@@ -17,7 +17,8 @@
     line-height: 1.42;
     padding: 0.6em 1.6em;
     border-width: 2px;
-    background: transparent;
+    background: white;
+    color: black;
     border-radius: 1.46em;
     cursor: pointer;
     font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
@@ -31,30 +32,18 @@
 }
 
 
-.left_btn {
-    color: rgb(235, 235, 234);
-    border-color: rgb(235, 235, 234);
-    font-size: 10px;
-}
-.right_btn, .skill-edit-btn, .skill-edit-btn {
-    color: #4c4c4db6;
+.left_btn,
+.right_btn {
+    color: black;
+    border-color: black;
     font-size: 10px;
 }
 
-.left_btn:hover {
-    background-color:rgb(235, 235, 234); 
-    border-color: rgb(235, 235, 234);
-    color: #4c4c4db6;
-}
-
-.right_btn:hover {
-    background-color: #4c4c4db6;
-    color: rgb(235, 235, 234);
-}
-
+.right_btn:hover,
+.left_btn:hover,
 .skill-edit-btn:hover {
     background-color: #4c4c4db6;
-    color: rgb(235, 235, 234);    
+    color: rgb(235, 235, 234);
 }
 
 .edit_projects:hover {
@@ -76,12 +65,9 @@
     letter-spacing: .1em;
     outline: 0;
     border: 0;
-    /* font-size: inherit; */
     line-height: 1.42;
-    /* padding: 0.6em 1.6em; */
     border-width: 2px;
-    background: transparent;
-    /* border-radius: 1.46em; */
+    background: white;
     cursor: pointer;
     font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
     user-select: none;
@@ -90,7 +76,7 @@
     border-style: solid;
     overflow: hidden;
     transition: background-color 0.3s, color 0.3s;
-    color: #4c4c4db6;
+    color: black;
     font-size: 10px;
 }
 
@@ -104,7 +90,7 @@
     line-height: 1.42;
     padding: 0.6em 1.6em;
     border-width: 2px;
-    background: transparent;
+    background: white;
     border-radius: 1.46em;
     cursor: pointer;
     font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
@@ -114,18 +100,10 @@
     border-style: solid;
     overflow: hidden;
     transition: background-color 0.3s, color 0.3s;
-    color: #4c4c4db6;
+    color: black;
     margin: 10px;
     margin-left: 60%;
     font-size: 13px;
-}
-
-
-
-.final-portfolio-btn:hover {
-    background-color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    color: rgb(235, 235, 234);
-    
 }
 
 .edit_contact {
@@ -173,4 +151,13 @@
 
 .skill-heading-container {
     display: flex;
+}
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add_projects_btn {
+    margin-left: 2em;
 }
