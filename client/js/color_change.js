@@ -11,13 +11,57 @@ var leftHeadings = document.querySelectorAll('.left-heading');
 var leftBackground = document.querySelector('.left-column')
 var rightBackground = document.querySelector('.right-column')
 
-
+// live dom from input
 headingColorLeft.addEventListener("input", handleColorChange, false)
 headingColorRight.addEventListener("input", handleColorChange, false)
 paragraphColorLeft.addEventListener("input", handleColorChange, false)
 paragraphColorRight.addEventListener("input", handleColorChange, false)
 backgroundColorLeft.addEventListener("input", handleColorChange, false)
 backgroundColorRight.addEventListener("input", handleColorChange, false)
+
+// db from change
+headingColorLeft.addEventListener("change", function(event) {
+    console.log(event.target.value);
+})
+
+headingColorRight.addEventListener("change", function(event) {
+    console.log(event.target.value);
+})
+
+paragraphColorLeft.addEventListener("change", function(event) {
+    console.log(event.target.value);
+})
+
+paragraphColorRight.addEventListener("change", function(event) {
+    console.log(event.target.value);
+})
+
+backgroundColorLeft.addEventListener("change", function(event) {
+    let reqObj = {
+        background_color_left: event.target.value
+    }
+    axios
+        .patch(`/api/portfolios/styles/left-background/${portfolioId}`, reqObj)
+        .then(res => {
+            let responseColor = res.data.bgColorLeft;
+            backgroundColorLeft.style.backgroundColor = responseColor;
+            console.log('db color response: ', responseColor);
+        })
+})
+
+backgroundColorRight.addEventListener("change", function(event) {
+    let reqObj = {
+        background_color_right: event.target.value
+    }
+    axios
+        .patch(`/api/portfolios/styles/right-background/${portfolioId}`, reqObj)
+        .then(res => {
+            let responseColor = res.data.bgColorRight;
+            backgroundColorRight.style.backgroundColor = responseColor;
+            console.log('db color response: ', responseColor);
+        })
+    
+})
 
 function changeClassColor(className, event) {
     let elements = document.getElementsByClassName(className);
@@ -28,8 +72,6 @@ function changeClassColor(className, event) {
 }
 
 function handleColorChange(event) {
-
-    console.log(event.target.className);
 
     if (event.target.className === 'heading-color-left color-picker') {
 
@@ -54,7 +96,7 @@ function handleColorChange(event) {
 
         changeClassColor("right-para", event);
         
-    } else if (event.target.className === 'heading-color-right color-picker') {
+    } else if (event.target.className === 'background-color-right color-picker') {
         
         rightBackground.style.backgroundColor = event.target.value;
 

@@ -2,7 +2,6 @@ const aboutForm = document.querySelector('.about-form');
 const contactForm = document.querySelector('.contact-form');
 const editProjectForm = document.querySelector('.edit-project-form');
 const addProjectForm = document.querySelector('.add-project-form');
-const deleteProjectForm = document.querySelector('.delete-project-form');
 
 function getFormData(form) {
     return Object.fromEntries(new FormData(form));
@@ -32,6 +31,7 @@ aboutForm.addEventListener('submit', event => {
     event.preventDefault();
 
     let formData = getFormData(aboutForm);
+    console.log(formData);
 
     axios.patch(`/api/portfolios/about/${portfolioId}`, formData).then(res => {
         console.log(res.data.message);
