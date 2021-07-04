@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+=======
+let userLocationInput = document.querySelector('.user_location')
+let userWelcomeInput = document.querySelector('.user_welcome')
+let userPitchInput = document.querySelector('.user-pitch')
+
+let userGitHubURL = document.querySelector('.github-url')
+let userLinkedInURL = document.querySelector('.linkedin-url')
+let userInstagramURL = document.querySelector('.instagram-url')
+let userTwitterURL = document.querySelector('.twitter-url')
+
+let userProjectHeading = document.querySelector('.project_heading')
+let userProjectDescription = document.querySelector('.project_description')
+let userProjectYear = document.querySelector('.project_year')
+let userProjectURL = document.querySelector('.project-url')
+
+let userSkillsHeading = document.querySelector('.skills-list-heading')
+let userSkillsHeadingList = document.querySelector('.skills-list')
+
+>>>>>>> read me
 portfolioId = url.slice(url.indexOf('t/') + 2)
 
 function updateAboutModalInputs(){
