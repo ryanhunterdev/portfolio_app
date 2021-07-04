@@ -14,7 +14,7 @@ router.post('/api/portfolios/signup', (req, res) => {
       Portfolio
       .createUser(req.body.email, req.body.name, req.body.password)
       .then(dbRes => {
-        
+        Portfolio.createStyles(dbRes.rows[0].id)
         res.status(201).redirect(`/portfolios/edit/${dbRes.rows[0].id}`)
       })
     }

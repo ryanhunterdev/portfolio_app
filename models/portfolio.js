@@ -69,6 +69,24 @@ const Portfolio = {
       return db.query(sql)
     },
 
+    createStyles(id){
+      const sql = `UPDATE users
+      SET styles = '
+          {
+            "left_background_color": "rgb(255, 255, 255)",
+            "right_background_color": "rgb(235, 235, 234);",
+            "left_heading_color": "rgb(0,0,0)",
+            "right_heading_color": "rgb(0,0,0)",
+            "left_para_color": "rgb(0,0,0)",
+            "right_para_color": "rgb(0,0,0)",
+            "heading_font": "Arial, Helvetica, sans-serif",
+            "paragraph_font": "Arial, Helvetica, sans-serif"
+          }
+        '
+      WHERE id = $1;`
+      db.query(sql, [id])
+    },
+
     addProject(projectYear, projectHeading, projectDescription, projectURL, userID){
       const sql = `UPDATE users SET project_list = project_list || 
       '{
