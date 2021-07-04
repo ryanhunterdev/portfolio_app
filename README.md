@@ -14,8 +14,8 @@ This web application is for users to create and customise their portfolios.
 
 #### Dummy User ####
 
-Email Address:
-Password:
+Email Address: sophie@gmail.com
+Password: password123
 
 ## Techniques ##
 
