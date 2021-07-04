@@ -14,8 +14,8 @@ This web application is for users to create and customise their portfolios.
 
 #### Dummy User ####
 
-Email Address:
-Password:
+Email Address: sophie@gmail.com
+Password: password123
 
 ## Techniques ##
 
@@ -26,6 +26,7 @@ jgrs Portfolios was built using Javascript, HTML, CSS, Node.js and our own API.
  
 - Add more templates
 - URL generates with the user's username
+- Email user a link with their URL
 
 ### Schema ###
 
