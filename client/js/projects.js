@@ -30,10 +30,12 @@ function removeAllChildNodes(parent) {
 
 function updateProject(newData) {
     let allProjects = newData
+    console.log(newData);
     removeAllChildNodes(projectsGrid);
 
     allProjects.forEach((project, index) => {
-        projectsGrid.appendChild(createProject(project, index))
+        projectsGrid.appendChild(createProject(project, index, pageStyles))
+        console.log(project);
     });
 }
 

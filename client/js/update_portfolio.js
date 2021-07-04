@@ -1,7 +1,11 @@
 portfolioId = url.slice(url.indexOf('t/') + 2)
 
+let pageStyles;
+
 axios.get(`/api/portfolios/${portfolioId}`).then(res => {
     let portfolio = res.data;
+    pageStyles = portfolio.results[0].styles
+    console.log(pageStyles);
     populatePage(portfolio);
 
 })
@@ -36,15 +40,19 @@ function createProject(project, index, styles) {
 }
 
 function addStyles(styles) {
-    console.log('styles', styles);
+
     leftHeadings.forEach(heading => {
         heading.style.color = styles.left_heading_color
+    });
+    leftPara.forEach(para => {
+        para.style.color = styles.left_para_color
     });
     rightHeadings.forEach(heading => {
         heading.style.color = styles.right_heading_color
     });
     leftBackground.style.backgroundColor = styles.left_background_color
     rightBackground.style.backgroundColor = styles.right_background_color
+
 }
 
 function addProjectTitle(project, index, styles) {

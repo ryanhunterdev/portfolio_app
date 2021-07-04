@@ -51,13 +51,6 @@ contactForm.addEventListener('submit', event => {
     })
 });
 
-function changeClassColor(className, event) {
-    let elements = document.getElementsByClassName(className);
-        for (let i = 0; i < elements.length; i++) {
-            let element = elements[i];
-            element.style.color = event.target.value;
-        }
-}
 
 
 
