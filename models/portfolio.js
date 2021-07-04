@@ -149,6 +149,14 @@ const Portfolio = {
       )
       WHERE id=${userID} returning skills;`
       return  db.query(sql)
+    },
+
+    updateLeftBGColour(index, userID){
+      const sql = `UPDATE users SET skills = (
+        SELECT skills ::jsonb - ${index} FROM users WHERE id = ${userID}
+      )
+      WHERE id=${userID} returning skills;`
+      return  db.query(sql)
     }
 
 }

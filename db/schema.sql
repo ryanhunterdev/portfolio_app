@@ -13,7 +13,8 @@ CREATE TABLE users (
   instagram_url TEXT,
   twitter_url TEXT,
   project_list JSONB,
-  skills JSONB
+  skills JSONB, 
+  styles JSONB
 );
 
 INSERT INTO users(
@@ -63,3 +64,34 @@ VALUES (
     ]'
 );
 
+UPDATE users
+SET styles = '
+    {
+      "left_background_color": "rgb(255, 255, 255)",
+      "right_background_color": "rgb(235, 235, 234);",
+      "left_heading_color": "rgb(0,0,0)",
+      "right_heading_color": "rgb(0,0,0)",
+      "left_para_color": "rgb(0,0,0)",
+      "right_para_color": "rgb(0,0,0)",
+      "heading_font": "Arial, Helvetica, sans-serif",
+      "heading_font": "Arial, Helvetica, sans-serif"
+    }
+  '
+WHERE id = 4;
+
+UPDATE users SET
+styles = 
+  jsonb_set(
+    styles,
+    '{0}',  
+    '{
+        "skills_list": ${skillsList},
+        "skills_heading": "${skillsHeading}"
+    }',
+    false
+  )
+WHERE id=${userID} returning skills;
+
+UPDATE users
+SET styles = jsonb_set(styles, '{left_background_color}', '"rgb(255, 255, 255)"', false)
+WHERE id = 4;
