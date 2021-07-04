@@ -22,6 +22,7 @@ function addDropDownFonts(position) {
 }
 
 function selectParagraphFont(position) {
+    console.log(position.value);
     position.addEventListener('change', function() {
         let font = position.value;
         let reqObj = {
