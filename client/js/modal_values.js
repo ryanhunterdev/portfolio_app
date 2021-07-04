@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 let userLocationInput = document.querySelector('.user_location')
 let userWelcomeInput = document.querySelector('.user_welcome')
 let userPitchInput = document.querySelector('.user-pitch')
@@ -17,7 +15,6 @@ let userProjectURL = document.querySelector('.project-url')
 let userSkillsHeading = document.querySelector('.skills-list-heading')
 let userSkillsHeadingList = document.querySelector('.skills-list')
 
->>>>>>> read me
 portfolioId = url.slice(url.indexOf('t/') + 2)
 
 function updateAboutModalInputs(){

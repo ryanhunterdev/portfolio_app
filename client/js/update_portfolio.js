@@ -37,6 +37,14 @@ function createProject(project, index) {
 
 function addStyles(styles) {
     console.log('styles', styles);
+    leftHeadings.forEach(heading => {
+        heading.style.color = styles.left_heading_color
+    });
+    
+    leftBackground.style.backgroundColor = styles.left_background_color
+    rightBackground.style.backgroundColor = styles.right_background_color
+
+
 }
 
 function addProjectTitle(project, index) {
