@@ -1,7 +1,5 @@
 const aboutForm = document.querySelector('.about-form');
 const contactForm = document.querySelector('.contact-form');
-const colorFontPicker = document.querySelector('.color-font-picker');
-const headingColorRight = document.querySelector('.heading-color-right');
 const editProjectForm = document.querySelector('.edit-project-form');
 const addProjectForm = document.querySelector('.add-project-form');
 const deleteProjectForm = document.querySelector('.delete-project-form');
@@ -57,22 +55,6 @@ contactForm.addEventListener('submit', event => {
         editContactDiv.style.display = "none";
     })
 });
-
-/****************************
-
-color - font changing
-
-*****************************/
-
-// headingColorRight.addEventListener("input", handleColorChange, false)
-
-// function handleColorChange(event) {
-//     console.log(event.target.value);
-//     headings = document.querySelectorAll('.right-heading');
-//     headings.forEach(heading => {
-//         heading.style.color = event.target.value;
-//     })
-// }
 
 
 

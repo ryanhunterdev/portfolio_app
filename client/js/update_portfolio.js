@@ -61,12 +61,14 @@ function addProjectTitle(project, index) {
 
     let year = document.createElement('p');
     year.className = 'project-year';
+    year.classList.add('para');
     year.textContent = project.project_year
     projectTitle.appendChild(year)
 
     let heading = document.createElement('h3');
     heading.className = 'project-heading';
     heading.classList.add('right-heading');
+    heading.classList.add('headingfont');
     heading.textContent = project.project_heading;
     projectTitle.appendChild(heading);
     projectTitle.appendChild(addProjectEditButton())
@@ -80,11 +82,13 @@ function addProjectDescription(project) {
 
     let projectDescription = document.createElement('p');
     projectDescription.className = 'project-description';
+    projectDescription.classList.add('para')
     projectDescription.textContent = project.project_description;
     descriptionContainer.appendChild(projectDescription);
 
     let repoLink = document.createElement('a');
     repoLink.className = 'repo-link';
+    repoLink.classList.add('para');
     repoLink.textContent = 'github';
     repoLink.href = project.project_url;
     descriptionContainer.appendChild(repoLink);
@@ -96,6 +100,7 @@ function addProjectEditButton() {
     const editBtn = document.createElement('button');
     editBtn.className = 'edit_projects'
     editBtn.classList.add('page-edit-btn')
+    editBtn.classList.add('para')
     editBtn.textContent = 'edit project'
     return editBtn;
 }
@@ -103,6 +108,7 @@ function addProjectEditButton() {
 function addSkillEditButton() {
     const editBtn = document.createElement('button');
     editBtn.className = 'skill-edit-btn'
+    editBtn.classList.add('para')
     editBtn.textContent = 'edit'
     return editBtn;
 }
@@ -111,6 +117,7 @@ function createSkillHeading(skill) {
     let skillHeading = document.createElement('h3');
     skillHeading.className = 'skill-heading';
     skillHeading.classList.add('right-heading')
+    skillHeading.classList.add('headingfont')
     skillHeading.textContent = skill.skills_heading;
     return skillHeading;
 }
@@ -122,6 +129,7 @@ function createSkillList(skill) {
     skillList.forEach(entry => {
         let item = document.createElement('li');
         item.className = 'skills-item';
+        item.classList.add('para');
         item.textContent= entry;
         list.appendChild(item);
     })
