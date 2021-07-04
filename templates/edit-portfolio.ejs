@@ -30,7 +30,7 @@
                         <h1 class="user-name left-heading headingfont">
                             
                         </h1>
-                        <button class="colorLeftBtn page-edit-btn">colors/fonts</button>
+                        <button class="colorLeftBtn page-edit-btn">colors</button>
                     </div>
                     <div class="location-column">
                         <h2 class="user-location  left-heading headingfont">
@@ -82,7 +82,8 @@
 
         <div class="right-column">
             <section class="projects">
-                <button class="colorRightBtn page-edit-btn">colors/fonts</button>
+                <button class="colorRightBtn page-edit-btn">colors</button>
+                <button class="fontsBtn page-edit-btn">fonts</button>
 
                 <h2 class="projects-heading right-heading headingfont">Projects</h2>
                 <div class="projects-grid">
@@ -236,7 +237,25 @@
         <button>Add</button>
     </form>
 
+    </div>
 
+    <div class="edit_fonts_div edit_div">
+
+        <form method="patch" class="color-font-picker form">
+
+            <h2 class="heading">Fonts</h2>
+
+            <h3 for="heading-font">Heading Fonts</h3>
+            <select name="heading-font" class="modal-dropDown dropDown-hf-right">
+                <option value="select">Select Font</option>
+            </select>
+
+            <h3 for="paragraph-font">Paragraph Font</h3>
+            <select name="paragraph-font" class="modal-dropDown dropDown-pf-right">
+                <option value="select">Select Font</option>
+            </select>
+
+        </form>
 
     </div>
 
@@ -246,17 +265,7 @@
         
             <form method="patch" class="color-font-picker form">
 
-                <h2 class="heading">Right Color and Fonts</h2>
-
-                <h3 for="heading-font">Heading Fonts</h3>
-                <select name="heading-font" class="modal-dropDown dropDown-hf-right">
-                    <option value="select">Select Font</option>
-                </select>
-
-                <h3 for="paragraph-font">Paragraph Font</h3>
-                <select name="paragraph-font" class="modal-dropDown dropDown-pf-right">
-                    <option value="select">Select Font</option>
-                </select>
+                <h2 class="heading">Right Colors</h2>
                 
                 <h3>Heading Colour</h3>
                 <input type="color" class="heading-color-right color-picker">
@@ -273,17 +282,7 @@
         
             <form method="patch" class="color-font-picker form">
 
-                <h2 class="heading">Left Color and Fonts</h2>
-
-                <h3 for="heading-font">Heading Fonts</h3>
-                <select name="heading-font" class="modal-dropDown dropDown-hf-left">
-                    <option value="select">Select Font</option>
-                </select>
-
-                <h3 for="paragraph-font">Paragraph Font</h3>
-                <select name="paragraph-font" class="modal-dropDown dropDown-pf-left">
-                    <option value="select">Select Font</option>
-                </select>
+                <h2 class="heading">Left Colors</h2>
                 
                 <h3>Heading Colour</h3>
                 <input type="color" class="heading-color-left color-picker">

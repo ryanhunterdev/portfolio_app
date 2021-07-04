@@ -38,9 +38,9 @@ function editRightColorFont() {
     editRightColorDiv.style.display = 'block';
 }
 
-
-
-
+function editFont() {
+    editFontDiv.style.display = 'block';
+}
 
 
 window.onclick = function(event) {
@@ -56,6 +56,8 @@ window.onclick = function(event) {
             addProjectDiv.style.display = "none";
         } else if (event.target !== addSkillsBtn && !event.target.closest('.add_skills_div') && addSkillsDiv.style.display === "block"){
             addSkillsDiv.style.display = "none";
+        } else if (event.target !== editFontsBtn && !event.target.closest('.edit_fonts_div') && editFontDiv.style.display === "block"){
+            editFontDiv.style.display = "none";
         }
 }
 
@@ -80,7 +82,6 @@ window.addEventListener('click', (e)=>{
 window.addEventListener('click', (e)=>{
     const editSkillsBtns = document.querySelectorAll('.skill-edit-btn')
     if(e.target.classList.contains('skill-edit-btn') && (editSkillsDiv.style.display === "" || editSkillsDiv.style.display === "none")){
-        console.log(e)
         let index = e.target.parentElement.dataset.index
         editSkills()
         updateSkillsModalInputs(index)
@@ -101,18 +102,4 @@ editAboutMeBtn.addEventListener('click', editAboutMe);
 editContactBtn.addEventListener('click', editContact);
 addProjectBtn.addEventListener('click', addProject);
 addSkillsBtn.addEventListener('click', addSkill);
-
-
-
-
-
-
-
-
-function headingFonts() {
-
-}
-
-function paragraphFonts() {
-
-}
+editFontsBtn.addEventListener('click', editFont)

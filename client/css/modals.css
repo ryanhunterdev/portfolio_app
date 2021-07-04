@@ -22,7 +22,7 @@
     display: none;
 }
 
-.edit_skill_div, .edit_about_div, .edit_contact_div, .edit_project_div, .add_project_div, .edit_skill_div, .add_skills_div {
+.edit_skill_div, .edit_about_div, .edit_contact_div, .edit_project_div, .add_project_div, .edit_skill_div, .add_skills_div, .edit_fonts_div {
     position: absolute;
     z-index: 1;
     background: rgba(255,255,255);
@@ -144,7 +144,21 @@ form input {
     cursor: pointer;
 }
 
+.edit_fonts_div .modal-dropDown {
+    border-radius:30px;
+    padding: 7px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .edit_fontsColors_div h3 {
+    padding: 20px;
+}
+
+.edit_fonts_div h3 {
     padding: 20px;
 }
 
