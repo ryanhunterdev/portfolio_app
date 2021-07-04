@@ -2,59 +2,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=B612&family=BioRhyme:wght@200;700&family=Crimson+Text:ital@0;1&family=IBM+Plex+Sans:wght@100&family=Playfair+Display:ital@0;1&family=Raleway:wght@100&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
-.page-edit-btn,
-.skill-edit-btn {
 
+
+
+.page-edit-btn, .skill-edit-btn {
     width: fit-content;
-    cursor: pointer;
     height: fit-content;
-    font-family: "Titillium Web", sans-serif;
-    font-size: 14px;
     letter-spacing: .1em;
     outline: 0;
-    background: hsl(0, 0%, 44%);
     border: 0;
-    border-radius:15px;
-    padding: 10px;
-    color: #FFFFFF;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
+    font-size: inherit;
+    line-height: 1.42;
+    padding: 0.6em 1.6em;
+    border-width: 2px;
+    background: transparent;
+    border-radius: 1.46em;
     cursor: pointer;
-    transition: all 0.2s;
+    font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
+    user-select: none;
+    vertical-align: bottom;
+    position: relative;
+    border-style: solid;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 10px;
 }
 
+
+.left_btn {
+    color: rgb(235, 235, 234);
+    border-color: rgb(235, 235, 234);
+    font-size: 10px;
+}
+.right_btn, .skill-edit-btn, .skill-edit-btn {
+    color: #4c4c4db6;
+    font-size: 10px;
+}
+
+.left_btn:hover {
+    background-color:rgb(235, 235, 234); 
+    border-color: rgb(235, 235, 234);
+    color: #4c4c4db6;
+}
+
+.right_btn:hover {
+    background-color: #4c4c4db6;
+    color: rgb(235, 235, 234);
+}
+
+.skill-edit-btn:hover {
+    background-color: #4c4c4db6;
+    color: rgb(235, 235, 234);    
+}
+
+.edit_projects:hover {
+    background-color: #4c4c4db6;
+    color: rgb(235, 235, 234);    
+}
 
 .page-edit-btn {
     float: right;
 }
 
 .skill-edit-btn {
-    padding-left: 1em;
+    margin-left: 1em;
 }
 
-.page-edit-btn:hover,
-.skill-edit-btn:hover {
-    color: hsl(27, 66%, 50%);
+.edit_projects {
+    width: fit-content;
+    height: fit-content;
+    letter-spacing: .1em;
+    outline: 0;
+    border: 0;
+    /* font-size: inherit; */
+    line-height: 1.42;
+    /* padding: 0.6em 1.6em; */
+    border-width: 2px;
+    background: transparent;
+    /* border-radius: 1.46em; */
+    cursor: pointer;
+    font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
+    user-select: none;
+    vertical-align: bottom;
+    position: relative;
+    border-style: solid;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    color: #4c4c4db6;
+    font-size: 10px;
 }
 
 .final-portfolio-btn{
     width: fit-content;
-    cursor: pointer;
     height: fit-content;
-    font-family: "Titillium Web", sans-serif;
-    font-size: 14px;
     letter-spacing: .1em;
     outline: 0;
-    background: hsl(0, 0%, 44%);
     border: 0;
-    border-radius:15px;
-    padding: 10px;
-    color: #FFFFFF;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
+    font-size: inherit;
+    line-height: 1.42;
+    padding: 0.6em 1.6em;
+    border-width: 2px;
+    background: transparent;
+    border-radius: 1.46em;
     cursor: pointer;
-    transition: all 0.2s;
+    font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
+    user-select: none;
+    vertical-align: bottom;
+    position: relative;
+    border-style: solid;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    color: #4c4c4db6;
+    margin: 10px;
+    margin-left: 60%;
+    font-size: 13px;
+}
+
+
+
+.final-portfolio-btn:hover {
+    background-color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    color: rgb(235, 235, 234);
+    
+}
+
+.edit_contact {
+    margin-left: 10px;
 }
 
 .name-column,
