@@ -5,7 +5,7 @@ selectParagraphFont(rightParagraphDropDowns)
 selectHeadingFont(rightHeadingDropDown)
 
 function addDropDownFonts(position) {
-    let fonts = ['B612', 'IBM Plex', 'Crimson Text', 'Playfair Display', 'BioRhyme', 'Raleway', 'Work Sans', 'Roboto', 'Yomogi', 'Default'];
+    let fonts = ['B612', 'IBM Plex', 'Crimson Text', 'Playfair Display', 'BioRhyme', 'Raleway', 'Defult'];
     
     fonts.forEach(font => {
 
