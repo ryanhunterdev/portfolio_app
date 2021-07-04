@@ -27,7 +27,7 @@ router.get('/portfolios/:id', (req, res) => {
 router.get('/api/portfolios/test/:id', (req, res) => {
     let user_id = Number(req.params.id)
     console.log(req.session)
-    res.render('test-template', { user_id: user_id})
+    res.render('test-template', { user_id: user_id })
 })
 
 module.exports = router

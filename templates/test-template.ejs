@@ -17,14 +17,11 @@
     <link rel="stylesheet" href="/css/test-template.css">
     <link rel="stylesheet" href="/css/modals.css">
     <link rel="stylesheet" href="/css/edit_portfolio.css">
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/typeit.min.js"></script>
-	<script src="js/main.js"></script>
 
 </head>
 
 <body>
-	<div class="portfolio-wrapper">
+	<div class="main">
 
 
 
@@ -39,7 +36,8 @@
 			<div class="text-box">
           <h1 class="heading-primary">
             <span class="user-name">Taryn Ewens</span>
-            <span class="user-welcome ">front end web developer / creative in Sydney, Australia</span>
+            <span class="user-welcome">front end web developer / creative in Sydney, Australia</span>
+            <span class="user-location"></span>
             <span class="contact-pitch"></span>
           </h1>
 			</div>
@@ -53,97 +51,73 @@
 				<h4 class="project-heading">Featured Projects</h4>
 			</div>
 			<div id="portfolio" class="wrapper clearfix">
+                <div class="projects-grid">
+                    <div class="singleproject">
+                        <div class="project-row">
+                            <h4 class="project-heading">"CheesePets"</h4>
+                            <p class="project-description">The final project of my web development bootcamp. I wanted to bring my dev story full circle back to the reason I taught myself HTML as a kid: virtual pets. You can sign up, adopt a pet, play a game to win pieces of cheese, and then use that cheese to purchase items to care for your pet!</p>
+                            <p><strong>Please note:</strong> This project is not yet mobile responsive - I'm working on it!</p>
+                            <h5>Technologies used:</h5>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>React.js</li>
+                                    <li>Ruby on Rails</li>
+                                    <li>Material UI</li>
+                                </ul>
+                            <a href="https://github.com/tarynelise/project3-client" target="_blank" rel="noopener" alt="CheesePets code on Github" class="repo-link">Github</a> | <a href="https://cheesepets.herokuapp.com/" target="_blank" rel="noopener" alt="CheesePets Live Demo">Live Demo</a>
+                        </div>
+                    </div>
 
-				<div class="singleproject">
+                
+                    <div class="singleproject">
+                        <div class="project-row">
+                            <h4 class="project-heading">"EarBuddies"</h4>
+                            <p class="project-description">A group project where we created a social media platform allowing users to find events, live chat with others attending, see who's attending and "match" with a friend. Third project of my web development bootcamp. </p>
+                            <h5>Technologies used:</h5>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>React.js</li>
+                                    <li>Ruby on Rails</li>
+                                    <li>Bootstrap</li>
+                                    <li>Material UI</li>
+                                </ul>
+                            <a href="https://github.com/mradinoff/EarBuddies-Front" target="_blank" rel="noopener" alt="EarBuddies code on Github" class="repo-link">Github</a> | <a href="https://earbuddies-react.herokuapp.com/" target="_blank" rel="noopener" alt="EarBuddies Live Demo">Live Demo</a>
+                        </div>
+                    </div>
 
-					<div class="project-img">
-						<a href="https://github.com/tarynelise/project3-client" target="_blank" rel="noopener">
-							<div class="image-container">
-							<img src="images/cheesepets_react_rubyonrails.jpg" alt="CheesePets - A virtual pet game built in React.js and Ruby on Rails" title="CheesePets - A virtual pet game built in React.js and Ruby on Rails"><span class="assitive-text">"CheesePets" - A virtual pet game built in React.js and Ruby on Rails</span></a>
-							</div>
-					</div>
-					<div class="project-row">
-						<h4 class="project-heading">"CheesePets"</h4>
-						<p class="project-description">The final project of my web development bootcamp. I wanted to bring my dev story full circle back to the reason I taught myself HTML as a kid: virtual pets. You can sign up, adopt a pet, play a game to win pieces of cheese, and then use that cheese to purchase items to care for your pet!</p>
-						<p><strong>Please note:</strong> This project is not yet mobile responsive - I'm working on it!</p>
-						<h5>Technologies used:</h5>
-							<ul>
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>React.js</li>
-								<li>Ruby on Rails</li>
-								<li>Material UI</li>
-							</ul>
-						<a href="https://github.com/tarynelise/project3-client" target="_blank" rel="noopener" alt="CheesePets code on Github" class="repo-link">Github</a> | <a href="https://cheesepets.herokuapp.com/" target="_blank" rel="noopener" alt="CheesePets Live Demo">Live Demo</a>
-					</div>
-				</div>
-
-				<div class="singleproject">
-
-					<div class="project-img">
-						<a href="https://github.com/mradinoff/EarBuddies-Front" target="_blank" rel="noopener">
-							<div class="image-container">
-							<img src="images/earbuddies_react_rubyonrails.jpg" alt="EarBuddies - A social media built in React.js and Ruby on Rails" title="EarBuddies - A social media built in React.js and Ruby on Rails"><span class="assistive-text">EarBuddies - A social media built in React.js and Ruby on Rails</span></a>
-							</div>
-					</div>
-					<div class="project-row">
-						<h4 class="project-heading">"EarBuddies"</h4>
-						<p class="project-description">A group project where we created a social media platform allowing users to find events, live chat with others attending, see who's attending and "match" with a friend. Third project of my web development bootcamp. </p>
-						<h5>Technologies used:</h5>
-							<ul>
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>React.js</li>
-								<li>Ruby on Rails</li>
-								<li>Bootstrap</li>
-								<li>Material UI</li>
-							</ul>
-						<a href="https://github.com/mradinoff/EarBuddies-Front" target="_blank" rel="noopener" alt="EarBuddies code on Github" class="repo-link">Github</a> | <a href="https://earbuddies-react.herokuapp.com/" target="_blank" rel="noopener" alt="EarBuddies Live Demo">Live Demo</a>
-					</div>
-				</div>
-
-				<div class="singleproject">
-					<div class="project-img">
-						<a href="https://github.com/tarynelise/project1" target="_blank" rel="noopener">
-							<div class="image-container">
-								<img src="images/woofer_rubyonrails.jpg" alt="Twitter for Dogs Ruby on Rails Project" title="Twitter for Dogs Ruby on Rails Project"><span class="assistive-text">Twitter for Dogs Ruby on Rails Project</span></a>
-							</div>
-					</div>
-					<div class="project-row">
-						<h4 class="project-heading">"WOOFER"</h4>
-						<p class="project-description">It's like Twitter... for dogs! Hoping to add more functionality soon and fix some glitches, such as the navigation which is not perfect on mobile devices. Second project of my web development bootcamp.</p>
-						<h5>Technologies used:</h5>
-							<ul>
-								<li>HTML</li>
-								<li>CSS (Sass)</li>
-								<li>Ruby on Rails</li>
-								<li>Bootstrap</li>
-							</ul>
-							<a href="https://github.com/tarynelise/project1" target="_blank" rel="noopener" alt="WOOFER code on Github" class="repo-link">Github</a> | <a href="https://wooferproject.herokuapp.com/" target="_blank" rel="noopener" alt="WOOFER Live Demo">Live Demo</a>
-						</div>
-				</div>
+                    <div class="singleproject">
+                        <div class="project-row">
+                            <h4 class="project-heading">"WOOFER"</h4>
+                            <p class="project-description">It's like Twitter... for dogs! Hoping to add more functionality soon and fix some glitches, such as the navigation which is not perfect on mobile devices. Second project of my web development bootcamp.</p>
+                            <h5>Technologies used:</h5>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS (Sass)</li>
+                                    <li>Ruby on Rails</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                                <a href="https://github.com/tarynelise/project1" target="_blank" rel="noopener" alt="WOOFER code on Github" class="repo-link">Github</a> | <a href="https://wooferproject.herokuapp.com/" target="_blank" rel="noopener" alt="WOOFER Live Demo">Live Demo</a>
+                            </div>
+                    </div>
 
 
-				<div class="singleproject">
-					<div class="project-img">
-						<a href="https://github.com/tarynelise/project0" target="_blank" rel="noopener">
-						<div class="image-container">
-							<img src="images/tictactoe_javascript.jpg" alt="Tic Tac Toe Javascript Project" title="Tic Tac Toe Javascript Project"><span class="assistive-text">Tic Tac Toe Javascript Project</span></a>
-						</div>
-					</div>
-					<div class="project-row">
-						<h4 class="project-heading">Tic Tac Toe</h4>
-						<p class="project-description">My first major project of my bootcamp, a simple tic tac toe game which took about 4 attempts until I felt the logic was right!</p>
-							<h5>Technologies used:</h5>
-								<ul>
-									<li>HTML</li>
-									<li>CSS</li>
-									<li>Javascript</li>
-									<li>jQuery</li>
-								</ul>
-						<a href="https://github.com/tarynelise/project0" target="_blank" rel="noopener" alt="Tic Tac Toe code on Github" class="repo-link">Github</a> | <a href="https://tarynelise.github.io/project0/" target="_blank" rel="noopener" alt="Tic Tac Toe Live Demo">Live Demo</a>
-					</div>
-				</div>
+                    <div class="singleproject">
+                        <div class="project-row">
+                            <h4 class="project-heading">Tic Tac Toe</h4>
+                            <p class="project-description">My first major project of my bootcamp, a simple tic tac toe game which took about 4 attempts until I felt the logic was right!</p>
+                                <h5>Technologies used:</h5>
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Javascript</li>
+                                        <li>jQuery</li>
+                                    </ul>
+                            <a href="https://github.com/tarynelise/project0" target="_blank" rel="noopener" alt="Tic Tac Toe code on Github" class="repo-link">Github</a> | <a href="https://tarynelise.github.io/project0/" target="_blank" rel="noopener" alt="Tic Tac Toe Live Demo">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
 
 
 
@@ -173,7 +147,7 @@
 
 			<div class="about">
 				<h3 class="skills-heading">Skills</h3>
-				<div class="skills text">
+				<div class="skills-grid">
 					<div class="skills-list-container">
 						<h5 class="skill-heading">Front End</h5>
 						<ul class="skills-list">
@@ -219,13 +193,13 @@
 				<h3>Contact</h3>
 				<div class="text">
 
-					<p><span class="links-anchor email-anchor"><a href="mailto:taryn@taryn.codes">taryn@taryn.codes</a></span>
+					<p><span id='email' class="links-anchor email-anchor"><a href="mailto:taryn@taryn.codes">taryn@taryn.codes</a></span>
 
 					<a href="https://instagram.com/tarynewens" target="_blank" rel="noopener"><i class="fab fa-instagram instagram"></i></a>
 					<a href="https://twitter.com/tarynewens" target="_blank" rel="noopener"><i class="fab fa-twitter twitter"></i></a>
 					<a href="https://github.com/tarynelise/" target="_blank" rel="noopener"><i class="fab fa-github link-anchor github-anchor"></i></a>
 					<a href="https://codepen.io/tarynewens/" target="_blank" rel="noopener"><i class="fab fa-codepen"></i></a>
-					<a href="https://www.linkedin.com/in/taryn-ewens-95a41a65/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in likedin"></i></a>
+					<a href="https://www.linkedin.com/in/taryn-ewens-95a41a65/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in linkedin"></i></a>
 					</p>
 				</div>
 			</div>
@@ -236,31 +210,19 @@
 		<footer>
 			<a href="#"><h3>Take it from the top.</h3></a>
             <div class="copyright-container">
-                            &copy 2021 <span class="copyright-name"></span> 
-                        </div>
+                 &copy 2021 <span class="copyright-name"></span> 
+            </div>
 		</footer>
 	</div>
 
-	<!-- Default Statcounter code for Taryn.codes
-	http://taryn.codes -->
-	<script type="text/javascript">
-	var sc_project=11666152;
-	var sc_invisible=1;
-	var sc_security="4da5974d";
-	</script>
-	<script type="text/javascript"
-	src="https://www.statcounter.com/counter/counter.js"
-	async></script>
-	<noscript><div class="statcounter"><a title="Web Analytics"
-	href="http://statcounter.com/" target="_blank" rel="noopener"><img
-	class="statcounter"
-	src="//c.statcounter.com/11666152/0/4da5974d/1/" alt="Web
-	Analytics"></a></div></noscript>
-	<!-- End of Statcounter Code -->
-
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/js/test_finished_portfolio.js"></script>
+    <script src="/js/test_update_portfolio.js"></script>
+    <script src="/js/update_db.js"></script>
+    <script src="/js/edit_port_modal.js"></script>
+    <script src="/js/modal_values.js"></script>
     <script src="/js/projects.js"></script>
     <script src="/js/skills.js"></script>
+    <script src="/js/change_font.js"></script>
+    <script src="/js/color_change.js"></script>
 </body>
 </html>
