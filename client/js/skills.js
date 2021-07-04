@@ -7,7 +7,7 @@ skillsGrid.addEventListener('click', event => {
 function updateSkills(skills) {
     removeAllChildNodes(skillsGrid);
     skills.forEach((skill, index) => {
-        skillsGrid.appendChild(createSkill(skill, index))
+        skillsGrid.appendChild(createSkill(skill, index, pageStyles))
     })
 }
 

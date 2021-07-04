@@ -38,10 +38,13 @@ const headingColorRight = document.querySelector('.heading-color-right');
 const paragraphColorRight = document.querySelector('.paragraph-color-right');
 const backgroundColorRight = document.querySelector('.background-color-right');
 
+
+const leftPara = document.querySelectorAll('.left-para')
 const rightHeadings = document.querySelectorAll('.right-heading');
 const leftHeadings = document.querySelectorAll('.left-heading');
 const leftBackground = document.querySelector('.left-column');
 const rightBackground = document.querySelector('.right-column');
+
 
 const userLocationInput = document.querySelector('.user_location')
 const userWelcomeInput = document.querySelector('.user_welcome')
