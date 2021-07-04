@@ -42,8 +42,8 @@ function selectParagraphFont(position) {
 
 
 function selectHeadingFont(position) {
-    console.log(position.value);
     position.addEventListener('change', function() {
+        console.log(position.value);
         let font = position.value;
         let reqObj = {
             paragraph_font: font
