@@ -14,8 +14,8 @@ const leftHeadingDropDown = document.querySelector('.dropDown-hf-left');
 const rightHeadingDropDown = document.querySelector('.dropDown-hf-right');
 const leftParagraphDropDowns = document.querySelector('.dropDown-pf-left');
 const rightParagraphDropDowns = document.querySelector('.dropDown-pf-right');
-const paragraphs = document.querySelectorAll('.para');
-const headings = document.querySelectorAll('.headingfont');
+// const paragraphs = document.querySelectorAll('.para');
+// const headings = document.querySelectorAll('.headingfont');
 
 
 
@@ -43,15 +43,21 @@ function addDropDownFonts(position) {
 }
 
 function addFontPara(font) {
-    paragraphs.forEach( paragraph => {
+    let paragraphs = document.getElementsByClassName("para");
+    console.log("hi", paragraphs);
+    for (let i = 0; i < paragraphs.length; i++) {
+        let paragraph = paragraphs[i];
         paragraph.style.fontFamily = font
-    })
+    }
 }
 
 function addFontHeading(font) {
-    headings.forEach( heading => {
+    let headings = document.getElementsByClassName("headingfont");
+    console.log(headings);
+    for (let i = 0; i < headings.length; i++) {
+        let heading = headings[i];
         heading.style.fontFamily = font
-    })
+    }
 }
 
 function selectParagraphFont(position) {
