@@ -151,11 +151,10 @@ const Portfolio = {
       return  db.query(sql)
     },
 
-    updateLeftBGColour(index, userID){
-      const sql = `UPDATE users SET skills = (
-        SELECT skills ::jsonb - ${index} FROM users WHERE id = ${userID}
-      )
-      WHERE id=${userID} returning skills;`
+    updateStyles(styleUpdate, keyValue, userID){
+      const sql = `UPDATE users
+      SET styles = jsonb_set(styles, '{${keyValue}}', '"${styleUpdate}"', false)
+      WHERE id = ${userID} returning styles;`
       return  db.query(sql)
     }
 
