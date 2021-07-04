@@ -11,6 +11,10 @@ const twitter = document.querySelector('.twitter');
 const projectsGrid = document.querySelector('.projects-grid');
 const skillsGrid = document.querySelector('.skills-grid');
 const url = window.location.pathname;
+const rightHeadings = document.querySelectorAll('.right-heading');
+const leftHeadings = document.querySelectorAll('.left-heading');
+const leftBackground = document.querySelector('.left-column');
+const rightBackground = document.querySelector('.right-column');
 
 portfolioId = url.slice(url.indexOf('s/') + 2)
 
@@ -28,7 +32,7 @@ function populatePage(data) {
 
     let projectList = content.project_list;
     projectList.forEach(project => {
-        projectsGrid.appendChild(createProject(project))
+        projectsGrid.appendChild(createProject(project, skills))
     })
 
     let skills = content.skills
@@ -36,18 +40,30 @@ function populatePage(data) {
         skillsGrid.appendChild(createSkill(skill))
     })
     
-
+    addStyles(content.styles);
 }
 
-function createProject(project) {
+function createProject(project, skills) {
     
     let projectRow = document.createElement('div');
     projectRow.className = 'project-row';
 
-    projectRow.appendChild(addProjectTitle(project));
-    projectRow.appendChild(addProjectDescription(project));
+    projectRow.appendChild(addProjectTitle(project, skills));
+    projectRow.appendChild(addProjectDescription(project, skills));
 
     return projectRow;
+}
+
+function addStyles(styles) {
+    console.log('styles', styles);
+    leftHeadings.forEach(heading => {
+        heading.style.color = styles.left_heading_color
+    });
+    rightHeadings.forEach(heading => {
+        heading.style.color = styles.right_heading_color
+    });
+    leftBackground.style.backgroundColor = styles.left_background_color
+    rightBackground.style.backgroundColor = styles.right_background_color
 }
 
 function addProjectTitle(project) {
