@@ -117,7 +117,7 @@ function createSkillHeading(skill) {
     let skillHeading = document.createElement('h3');
     skillHeading.className = 'skill-heading';
     skillHeading.classList.add('right-heading')
-    skillHeading.classList.add('heading-font')
+    skillHeading.classList.add('headingfont')
     skillHeading.textContent = skill.skills_heading;
     return skillHeading;
 }

@@ -44,10 +44,9 @@ function addDropDownFonts(position) {
 
 function addFontPara(font) {
     let paragraphs = document.getElementsByClassName("para");
-    console.log("hi", paragraphs);
     for (let i = 0; i < paragraphs.length; i++) {
         let paragraph = paragraphs[i];
-        paragraph.style.fontFamily = font
+        paragraph.style.fontFamily = font;
     }
 }
 
@@ -56,7 +55,7 @@ function addFontHeading(font) {
     console.log(headings);
     for (let i = 0; i < headings.length; i++) {
         let heading = headings[i];
-        heading.style.fontFamily = font
+        heading.style.fontFamily = font;
     }
 }
 
