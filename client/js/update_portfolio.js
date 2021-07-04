@@ -45,7 +45,8 @@ function addStyles(styles) {
         heading.style.color = styles.left_heading_color
         heading.style.fontFamily = styles.heading_font
     });
-    allParagraphs.forEach(para => {
+    leftPara.forEach(para => {
+        para.style.color = styles.left_para_color
         para.style.fontFamily = styles.paragraph_font
     });
     rightHeadings.forEach(heading => {
@@ -54,9 +55,6 @@ function addStyles(styles) {
     });
     leftBackground.style.backgroundColor = styles.left_background_color
     rightBackground.style.backgroundColor = styles.right_background_color
-
-
-
 }
 
 function addProjectTitle(project, index, styles) {
