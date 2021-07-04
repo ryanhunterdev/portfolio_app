@@ -37,6 +37,21 @@ function updateSkillsModalInputs(index){
     })
 }
 
+function updateRightColors(){
+    axios.get(`/api/portfolios/${portfolioId}`).then(res => {
+        headingColorRight.value = res.data.results[0].styles.right_heading_color
+        paragraphColorRight.value = res.data.results[0].styles.right_para_color
+        backgroundColorRight.value = res.data.results[0].styles.right_background_color
+    })
+}
+
+function updateLeftColors(){
+    axios.get(`/api/portfolios/${portfolioId}`).then(res => {
+        headingColorLeft.value = res.data.results[0].styles.left_heading_color
+        paragraphColorLeft.value = res.data.results[0].styles.left_para_color
+        backgroundColorLeft.value = res.data.results[0].styles.left_background_color
+    })
+}
 //fonts and colors
 
 

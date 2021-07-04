@@ -32,10 +32,13 @@ function addSkill() {
 
 function editLeftColorFont() {
     editLeftColorDiv.style.display = 'block';
+    updateLeftColors()
+
 }
 
 function editRightColorFont() {
     editRightColorDiv.style.display = 'block';
+    updateRightColors()
 }
 
 function editFont() {
