@@ -62,20 +62,23 @@ function addProjectTitle(project, index) {
     projectTitle.className = 'project-title'
     projectTitle.dataset.index = index;
 
-    let year = document.createElement('p');
+
+
+    let heading = document.createElement('h4');
+    heading.className = 'project-heading';
+    heading.classList.add('right-heading');
+    heading.classList.add('headingfont');
+    heading.textContent = project.project_heading;
+    projectTitle.appendChild(heading);
+
+        let year = document.createElement('p');
     year.className = 'project-year';
     year.classList.add('para');
     year.classList.add('right-para');
     year.textContent = project.project_year
     projectTitle.appendChild(year)
 
-    let heading = document.createElement('h3');
-    heading.className = 'project-heading';
-    heading.classList.add('right-heading');
-    heading.classList.add('headingfont');
-    heading.textContent = project.project_heading;
-    projectTitle.appendChild(heading);
-    projectTitle.appendChild(addProjectEditButton())
+    // projectTitle.appendChild(addProjectEditButton())
 
     return projectTitle;
 }
@@ -98,6 +101,7 @@ function addProjectDescription(project) {
     repoLink.textContent = 'github';
     repoLink.href = project.project_url;
     descriptionContainer.appendChild(repoLink);
+    projectDescription.appendChild(addProjectEditButton())
 
     return descriptionContainer;
 }

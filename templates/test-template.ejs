@@ -1,23 +1,19 @@
 <html lang="en">
 <head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116364128-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
 
-	  gtag('config', 'UA-116364128-1');
-	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Portfolio of Taryn Ewens - Web Developer & Creative in Sydney, Australia">
-	<title>Taryn Ewens - Front End Web Developer & Creative in Sydney, Australia</title>
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/test-template.css">
     <link rel="stylesheet" href="/css/modals.css">
     <link rel="stylesheet" href="/css/edit_portfolio.css">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612&family=BioRhyme:wght@200;700&family=Crimson+Text:ital@0;1&family=IBM+Plex+Sans:wght@100&family=Playfair+Display:ital@0;1&family=Raleway:wght@100&display=swap" rel="stylesheet">
+
+    <title>My Portfolio</title>
 </head>
 
 <body>
@@ -34,12 +30,17 @@
 					</ul>
 			</nav>
 			<div class="text-box">
-          <h1 class="heading-primary">
-            <span class="user-name">Taryn Ewens</span>
-            <span class="user-welcome">front end web developer / creative in Sydney, Australia</span>
-            <span class="user-location"></span>
-            <span class="contact-pitch"></span>
-          </h1>
+                <h1 class="heading-primary">
+                    <span class="user-name"></span>
+                    <span class="user-welcome">front end web developer / creative in Sydney, Australia</span>
+                    
+                </h1>
+            </div>
+            <div class="text-box">
+                
+                    <p class="user-location"></p>
+                    <p class="contact-pitch"></p>
+                
 			</div>
 			<div class="button-container">
 			  <a href="#contact" class="btn btn-white btn-animated"><span>Contact me</span></a>
@@ -47,83 +48,8 @@
 		</header>
 
 		<main>
-			<div>
-				<h4 class="project-heading">Featured Projects</h4>
-			</div>
-			<div id="portfolio" class="wrapper clearfix">
-                <div class="projects-grid">
-                    <div class="singleproject">
-                        <div class="project-row">
-                            <h4 class="project-heading">"CheesePets"</h4>
-                            <p class="project-description">The final project of my web development bootcamp. I wanted to bring my dev story full circle back to the reason I taught myself HTML as a kid: virtual pets. You can sign up, adopt a pet, play a game to win pieces of cheese, and then use that cheese to purchase items to care for your pet!</p>
-                            <p><strong>Please note:</strong> This project is not yet mobile responsive - I'm working on it!</p>
-                            <h5>Technologies used:</h5>
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>React.js</li>
-                                    <li>Ruby on Rails</li>
-                                    <li>Material UI</li>
-                                </ul>
-                            <a href="https://github.com/tarynelise/project3-client" target="_blank" rel="noopener" alt="CheesePets code on Github" class="repo-link">Github</a> | <a href="https://cheesepets.herokuapp.com/" target="_blank" rel="noopener" alt="CheesePets Live Demo">Live Demo</a>
-                        </div>
-                    </div>
 
-                
-                    <div class="singleproject">
-                        <div class="project-row">
-                            <h4 class="project-heading">"EarBuddies"</h4>
-                            <p class="project-description">A group project where we created a social media platform allowing users to find events, live chat with others attending, see who's attending and "match" with a friend. Third project of my web development bootcamp. </p>
-                            <h5>Technologies used:</h5>
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>React.js</li>
-                                    <li>Ruby on Rails</li>
-                                    <li>Bootstrap</li>
-                                    <li>Material UI</li>
-                                </ul>
-                            <a href="https://github.com/mradinoff/EarBuddies-Front" target="_blank" rel="noopener" alt="EarBuddies code on Github" class="repo-link">Github</a> | <a href="https://earbuddies-react.herokuapp.com/" target="_blank" rel="noopener" alt="EarBuddies Live Demo">Live Demo</a>
-                        </div>
-                    </div>
-
-                    <div class="singleproject">
-                        <div class="project-row">
-                            <h4 class="project-heading">"WOOFER"</h4>
-                            <p class="project-description">It's like Twitter... for dogs! Hoping to add more functionality soon and fix some glitches, such as the navigation which is not perfect on mobile devices. Second project of my web development bootcamp.</p>
-                            <h5>Technologies used:</h5>
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS (Sass)</li>
-                                    <li>Ruby on Rails</li>
-                                    <li>Bootstrap</li>
-                                </ul>
-                                <a href="https://github.com/tarynelise/project1" target="_blank" rel="noopener" alt="WOOFER code on Github" class="repo-link">Github</a> | <a href="https://wooferproject.herokuapp.com/" target="_blank" rel="noopener" alt="WOOFER Live Demo">Live Demo</a>
-                            </div>
-                    </div>
-
-
-                    <div class="singleproject">
-                        <div class="project-row">
-                            <h4 class="project-heading">Tic Tac Toe</h4>
-                            <p class="project-description">My first major project of my bootcamp, a simple tic tac toe game which took about 4 attempts until I felt the logic was right!</p>
-                                <h5>Technologies used:</h5>
-                                    <ul>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>Javascript</li>
-                                        <li>jQuery</li>
-                                    </ul>
-                            <a href="https://github.com/tarynelise/project0" target="_blank" rel="noopener" alt="Tic Tac Toe code on Github" class="repo-link">Github</a> | <a href="https://tarynelise.github.io/project0/" target="_blank" rel="noopener" alt="Tic Tac Toe Live Demo">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-			</div>
-
-			<div class="wrapper">
+            			<div class="wrapper">
 
 				<div class="about">
 
@@ -132,60 +58,47 @@
 					</div>
 
 					<div class="text">
-						<span id="funfact"><h4>Fun Fact: I taught myself to write HTML when I was about 10 years old, so I could build websites about my virtual "dogz"!</h4></span>
-						<p>It wasn't until I'd spent a number of years working in office administration, and then another few years as a pastry chef making handmade confectionery, that I decided to pull my passion for creating websites from side hobby status to the forefront. </p>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, sunt, eos adipisci fugiat repudiandae excepturi illo incidunt placeat voluptatibus saepe alias eum distinctio? Reiciendis qui amet unde aut ducimus dolor. </p>
 
-						<p>After hanging up my apron, I joined General Assembly's full time Web Development Immersive bootcamp, and quickly discovered that learning to code was actually similar to learning a recipe. If you combine the right "ingredients" in the correct way, success! Otherwise, you might end up with a cake wreck on your hands.</p>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod maiores iusto impedit nulla asperiores dolore, deleniti vel velit ab consectetur ratione, quasi earum ad architecto! Explicabo sunt esse hic animi.</p>
 
-						<p>Inspired by beautiful and quirky designs, I love working within a highly creative team who value openness and collaboration.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum culpa nulla ullam minima modi! Laudantium dolore quasi numquam expedita asperiores quos impedit praesentium incidunt dolorem cum unde, corrupti voluptate porro.</p>
 
 						<BR/>
-						<p>If you haven't already, you will quickly discover that fluffy dogs are my all-time favourite thing and yes, I would very much like to show you photos of my furbaby.</p><BR><BR>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, assumenda vel? Dicta totam nostrum, soluta dolor consectetur, aut ipsa quas laboriosam sunt at, quasi numquam veritatis eligendi blanditiis sapiente quia.</p><BR><BR>
 						<!-- <p><a href="other/TarynEwens_Resume.pdf" class="resume"a target="_blank" rel="noopener">Download Resume (PDF)</a></p> -->
 				</div>
 			</div>
 
+			<div>
+				<h4 class="project-heading">Featured Projects</h4>
+			</div>
+			<div id="portfolio" class="wrapper clearfix">
+                <div class="projects-grid">
+                    
+                </div>
+
+
+
+			</div>
+
+
+
 			<div class="about">
 				<h3 class="skills-heading">Skills</h3>
 				<div class="skills-grid">
-					<div class="skills-list-container">
-						<h5 class="skill-heading">Front End</h5>
-						<ul class="skills-list">
-							<li class="skills-item">HTML</li>
-							<li class="skills-item">CSS / SCSS</li>
-							<li class="skills-item">Bootstrap</li>
-							<li class="skills-item">Javascript</li>
-							<li class="skills-item">React.js</li>
-							<li class="skills-item">jQuery</li>
-							<li class="skills-item">Underscore.js</li>
-						</ul>
-					</div>
-					<div class="skills-list-container">
-						<h5>Back End</h5>
-						<ul class="skills-list">
-							<li class="skills-item">Ruby</li>
-							<li class="skills-item">Ruby on Rails</li>
-							<li class="skills-item">SQL</li>
-							<li class="skills-item">PostgresSQL</li>
-							<li class="skills-item">Ajax</li>
-						</ul>
-					</div>
-					<div class="skills-list-container">
-					<h5>Other</h5>
-						<ul class="skills-list">
-							<li class="skills-item">Git</li>
-							<li class="skills-item">Photoshop</li>
-						</ul>
-					</div>
+					
 				</div>
 			</div>
 
 			<div class="about">
 				<h3>Interests</h3>
 				<div class="text">
-					<p>Right now I'm focused on gaining more experience in React.js, as well as learning Node.js.</p>
-					<p>Aside from that, I'm immensely excited by learning how to create HTML & Javascript based games, and am hoping to soon start experimenting with creating images using CSS.</p>
-					<p>Having had a brief introduction to Vue.js, I am interested in exploring this framework further as I feel it could be a simpler solution than React.js for smaller projects.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iste architecto facilis nisi ad enim illum adipisci earum magni similique molestias, possimus ab velit eligendi, sit itaque esse ullam. Molestiae!</p>
+                    
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsum harum quasi doloremque similique odit fugiat quisquam perspiciatis, consectetur, a tenetur. Enim, sequi facere. Doloremque dolorum iste nam libero eveniet.</p>
+					
 				</div>
 			</div>
 
@@ -195,11 +108,11 @@
 
 					<p><span id='email' class="links-anchor email-anchor"><a href="mailto:taryn@taryn.codes">taryn@taryn.codes</a></span>
 
-					<a href="https://instagram.com/tarynewens" target="_blank" rel="noopener"><i class="fab fa-instagram instagram"></i></a>
-					<a href="https://twitter.com/tarynewens" target="_blank" rel="noopener"><i class="fab fa-twitter twitter"></i></a>
-					<a href="https://github.com/tarynelise/" target="_blank" rel="noopener"><i class="fab fa-github link-anchor github-anchor"></i></a>
-					<a href="https://codepen.io/tarynewens/" target="_blank" rel="noopener"><i class="fab fa-codepen"></i></a>
-					<a href="https://www.linkedin.com/in/taryn-ewens-95a41a65/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in linkedin"></i></a>
+					<a href="#" target="_blank" rel="noopener"><i class="fab fa-instagram instagram"></i></a>
+					<a href="#" target="_blank" rel="noopener"><i class="fab fa-twitter twitter"></i></a>
+					<a href="#" target="_blank" rel="noopener"><i class="fab fa-github link-anchor github-anchor"></i></a>
+					<a href="#" target="_blank" rel="noopener"><i class="fab fa-codepen"></i></a>
+					<a href="#" target="_blank" rel="noopener"><i class="fab fa-linkedin-in linkedin"></i></a>
 					</p>
 				</div>
 			</div>
@@ -214,6 +127,196 @@
             </div>
 		</footer>
 	</div>
+
+    <div class="pop-up">
+    <!-- ABOUT -->
+
+    <div class="edit_about_div edit_div">
+​
+        <form method="patch" class="about-form form ">
+​
+            <h2 class="heading"> About You</h2>
+​
+            <input type="text" placeholder="Location" class="user_location" name="user_location">
+​
+            <input type="text" placeholder="Welcome Bio" class="user_welcome" name="user_welcome">
+​
+            <input type="text" placeholder="Contact Pitch" class="user-pitch" name="user_pitch">
+​
+            <button>Update</button>
+​
+        </form>
+​
+​
+    </div>
+
+
+    <!-- CONTACT -->
+    
+
+    <div class="edit_contact_div edit_div">
+
+        <form method="patch" class="contact-form form ">
+
+            <h2 class="heading">Your Contacts</h2>
+
+            <input type="text" placeholder="Git Hub URL" class="github-url" name="github_url">
+
+            <input type="text" placeholder="LinkedIn URL" class="linkedin-url" name="linkedin_url">
+
+            <input type="text" placeholder="Instagram URL" class="instagram-url" name="instagram_url">
+
+            <input type="text" placeholder="Twitter URL" class="twitter-url" name="twitter_url">
+
+
+            <button>Update</button>
+
+        </form> 
+
+    </div> 
+
+    <!-- PROJECT -->
+    
+
+    <div class="edit_project_div edit_div">
+
+
+        <form class="edit-project-form form " method="patch" >
+
+            <h2 class="heading">Edit Project</h2>
+
+            <input type="text" placeholder="Project Heading" class="project_heading" name="project_heading">
+
+            <input type="text" placeholder="Project Year" class="project_year" name="project_year">
+
+            <input type="text" placeholder="Project Description" class="project_description" name="project_description">
+
+            <input type="text" placeholder="Project URL" class="project-url" name="project_url">
+
+            <button>Update</button>
+
+        </form>
+
+        <form class="delete-project-form form" method="patch" >
+            <button>Delete</button>
+        </form>
+
+    </div>
+
+    <div class="add_project_div edit_div">
+
+        <form  method="patch" class="add-project-form form">
+                <h2 class="heading">Add Project</h2>
+
+                <input type="text" placeholder="Project Heading" class="project_heading" name="project_heading">
+
+                <input type="text" placeholder="Project Year" class="project_year" name="project_year">
+
+                <input type="text" placeholder="Project Description" class="project_description" name="project_description">
+
+                <input type="text" placeholder="Project URL" class="project-url" name="project_url">
+
+                <button>Add</button>
+        </form>
+
+
+
+    </div>
+
+    <!-- SKILLS -->
+    
+
+    <div class="edit_skill_div edit_div">
+
+        <form  method="patch" class="edit-skill-form form">
+
+            <h2 class="heading">Edit Skills</h2>
+
+            <input type="text" placeholder="Skill Heading" class="skills-list-heading" name="skills_heading">
+            <h3>enter your skills seperated by commas</h3>
+            <input type="text" placeholder="Skills" class="skills-list" name="skills_list">
+
+            <button>Update</button>
+        </form>
+        <form  method="patch" class="delete-skill-form form">
+            <button>Delete</button>
+        </form>
+    </div>
+
+    <div class="add_skills_div edit_div">
+
+    <form method="patch" class="add-skill-form form">
+
+        <h2 class="heading">Add Skills</h2>
+
+        <input type="text" placeholder="Skill Heading" class="skills-heading" name="skills_heading">
+        <h3>enter your skills seperated by commas</h3>
+        <input type="text" placeholder="Skills" class="skills-list" name="skills_list">
+
+        <button>Add</button>
+    </form>
+
+
+
+    </div>
+
+    <div class="edit_fontsColors_div left-edit edit_div">
+    
+        <form method="patch" class="color-font-picker form">
+
+            <h2 class="heading">Left Color and Fonts</h2>
+
+            <h3 for="heading-font">Heading Fonts</h3>
+            <select name="heading-font" class="modal-dropDown dropDown-hf-left">
+                <option value="select">Select Font</option>
+            </select>
+
+            <h3 for="paragraph-font">Paragraph Font</h3>
+            <select name="paragraph-font" class="modal-dropDown dropDown-pf-left">
+                <option value="select">Select Font</option>
+            </select>
+            
+            <h3>Heading Colour</h3>
+            <input type="color" class="heading-color-left color-picker">
+            <h3>Paragraph Colour</h3>
+            <input type="color" class="paragraph-color-left color-picker">
+            <h3>Background Colour</h3>
+            <input type="color" class="background-color-left color-picker">
+
+            <button>Add</button>
+        </form>
+
+    </div>
+
+    <div class="edit_fontsColors_div right-edit edit_div">
+    
+        <form method="patch" class="color-font-picker form">
+
+            <h2 class="heading">Right Color and Fonts</h2>
+
+            <h3 for="heading-font">Heading Fonts</h3>
+            <select name="heading-font" class="modal-dropDown dropDown-hf-right">
+                <option value="select">Select Font</option>
+            </select>
+
+            <h3 for="paragraph-font">Paragraph Font</h3>
+            <select name="paragraph-font" class="modal-dropDown dropDown-pf-right">
+                <option value="select">Select Font</option>
+            </select>
+            
+            <h3>Heading Colour</h3>
+            <input type="color" class="heading-color-right color-picker">
+            <h3>Paragraph Colour</h3>
+            <input type="color" class="paragraph-color-right color-picker">
+            <h3>Background Colour</h3>
+            <input type="color" class="background-color-right color-picker">
+
+            <!-- <button>Add</button> -->
+        </form>
+
+    </div>
+</div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/test_update_portfolio.js"></script>

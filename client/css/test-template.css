@@ -1,9 +1,13 @@
-/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,700'); */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
 * {
 	padding: 0;
 	margin: 0;
+}
+
+.project-row {
+    max-width: 100%;
 }
 
 body {
@@ -36,7 +40,7 @@ footer {
 header {
 	background-color: #fff4f5;
 	/* background-image: url(../images/baking_littlebitheart_pattern1.png); */
-	height: 100vh;
+	/* height: 100vh; */
 }
 
 h1, h2 {
@@ -92,6 +96,10 @@ span#funfact h4 {
 	padding: .4em 0;
 	margin: 0 auto 1em auto;
 }
+
+/* .user-location {
+    font-size: ;
+} */
 
 
 /* List Styles */
@@ -191,6 +199,16 @@ nav.fill ul li a:hover:after {
 
 .hidden {
 	display: none;
+}
+
+nav.user-name {
+    text-align: left;
+    text-transform: uppercase;
+}
+
+nav.user-location {
+    text-align: left;
+    text-transform: uppercase;
 }
 
 
