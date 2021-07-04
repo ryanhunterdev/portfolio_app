@@ -1,15 +1,15 @@
-var colorFontPicker = document.querySelector('.color-font-picker');
-var headingColorLeft = document.querySelector('.heading-color-left');
-var paragraphColorLeft = document.querySelector('.paragraph-color-left');
-var backgroundColorLeft = document.querySelector('.background-color-left');
-var headingColorRight = document.querySelector('.heading-color-right');
-var paragraphColorRight = document.querySelector('.paragraph-color-right');
-var backgroundColorRight = document.querySelector('.background-color-right');
+const colorFontPicker = document.querySelector('.color-font-picker');
+const headingColorLeft = document.querySelector('.heading-color-left');
+const paragraphColorLeft = document.querySelector('.paragraph-color-left');
+const backgroundColorLeft = document.querySelector('.background-color-left');
+const headingColorRight = document.querySelector('.heading-color-right');
+const paragraphColorRight = document.querySelector('.paragraph-color-right');
+const backgroundColorRight = document.querySelector('.background-color-right');
 
 
-var leftHeadings = document.querySelectorAll('.left-heading');
-var leftBackground = document.querySelector('.left-column')
-var rightBackground = document.querySelector('.right-column')
+const leftHeadings = document.querySelectorAll('.left-heading');
+const leftBackground = document.querySelector('.left-column')
+const rightBackground = document.querySelector('.right-column')
 
 // live dom from input
 headingColorLeft.addEventListener("input", handleColorChange, false)
@@ -21,19 +21,55 @@ backgroundColorRight.addEventListener("input", handleColorChange, false)
 
 // db from change
 headingColorLeft.addEventListener("change", function(event) {
-    console.log(event.target.value);
+    let reqObj = {
+        heading_color_left: event.target.value
+    }
+    axios
+        .patch(`/api/portfolios/styles/left-heading-color/${portfolioId}`, reqObj)
+        .then(res => {
+            let responseColor = res.data.headingColorLeft
+            headingColorLeft.style.color = responseColor;
+            console.log('db color response: ', responseColor);
+        })
 })
 
 headingColorRight.addEventListener("change", function(event) {
-    console.log(event.target.value);
+    let reqObj = {
+        heading_color_right: event.target.value
+    }
+    axios
+        .patch(`/api/portfolios/styles/right-heading-color/${portfolioId}`, reqObj)
+        .then(res => {
+            let responseColor = res.data.headingColorRight
+            headingColorRight.style.color = responseColor;
+            console.log('db color response: ', responseColor);
+        })
 })
 
 paragraphColorLeft.addEventListener("change", function(event) {
-    console.log(event.target.value);
+    let reqObj = {
+        paragraph_color_left: event.target.value
+    }
+    axios
+        .patch(`/api/portfolios/styles/left-paragraph-color/${portfolioId}`, reqObj)
+        .then(res => {
+            let responseColor = res.data.paragraphColorLeft
+            paragraphColorLeft.style.color = responseColor;
+            console.log('db color response: ', responseColor);
+        })
 })
 
 paragraphColorRight.addEventListener("change", function(event) {
-    console.log(event.target.value);
+    let reqObj = {
+        paragraph_color_right: event.target.value
+    }
+    axios
+        .patch(`/api/portfolios/styles/right-paragraph-color/${portfolioId}`, reqObj)
+        .then(res => {
+            let responseColor = res.data.paragraphColorRight
+            paragraphColorRight.style.color = responseColor;
+            console.log('db color response: ', responseColor);
+        })
 })
 
 backgroundColorLeft.addEventListener("change", function(event) {
