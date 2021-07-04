@@ -65,6 +65,7 @@ const projectGridDiv = document.querySelector('.projects-grid')
 //edit   
 const editAboutDiv = document.querySelector('.edit_about_div')
 const editAboutMeBtn = document.querySelector('.edit_aboutMe')
+const editFontsBtn = document.querySelector('.fontsBtn')
 const editContactBtn = document.querySelector('.edit_contact')
 const editContactDiv = document.querySelector('.edit_contact_div')
 const editProjectsDiv = document.querySelector('.edit_project_div')
@@ -82,10 +83,9 @@ const editLeftColorBtn = document.querySelector('.colorLeftBtn')
 const editLeftColorDiv = document.querySelector('.left-edit')
 const editRightColorBtn = document.querySelector('.colorRightBtn')
 const editRightColorDiv = document.querySelector('.right-edit')
+const editFontDiv = document.querySelector('.edit_fonts_div')
 
 const exitBtn = document.querySelector('.exit')
 
-const leftHeadingDropDown = document.querySelector('.dropDown-hf-left');
 const rightHeadingDropDown = document.querySelector('.dropDown-hf-right');
-const leftParagraphDropDowns = document.querySelector('.dropDown-pf-left');
 const rightParagraphDropDowns = document.querySelector('.dropDown-pf-right');

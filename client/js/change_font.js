@@ -1,11 +1,7 @@
-addDropDownFonts(leftHeadingDropDown)
 addDropDownFonts(rightHeadingDropDown)
-addDropDownFonts(leftParagraphDropDowns)
 addDropDownFonts(rightParagraphDropDowns)
 
-selectParagraphFont(leftParagraphDropDowns)
 selectParagraphFont(rightParagraphDropDowns)
-selectHeadingFont(leftHeadingDropDown)
 selectHeadingFont(rightHeadingDropDown)
 
 function addDropDownFonts(position) {

@@ -53,6 +53,12 @@
     right: 25%;
 }
 
+.fontsBtn {
+    position: absolute;
+    top: 2em;
+    right: 19%;
+}
+
 .project-title {
     display: flex;
     flex-direction: column;
