@@ -36,3 +36,21 @@ function updateSkillsModalInputs(index){
         userSkillsHeadingList.value = res.data.results[0].skills[index].skills_list
     })
 }
+
+//fonts and colors
+
+
+
+function updateStylesModalInputs(){
+    axios.get(`/api/portfolios/${portfolioId}`).then(res => {
+        console.log(res)
+        headingColorLeft.value = res.data.results[0].styles.left_heading_color
+        headingColorRight.value = res.data.results[0].styles.right_heading_color
+        paragraphColorLeft.value = res.data.results[0].styles.left_para_color
+        paragraphColorRight.value = res.data.results[0].styles.right_para_color
+        backgroundColorLeft.value = res.data.results[0].styles.right_background_color
+        backgroundColorRight.value = res.data.results[0].styles.left_background_color
+        rightHeadingDropDown.value = res.data.results[0].styles.heading_font
+        rightParagraphDropDowns.value = res.data.results[0].styles.paragraph_font
+    })
+}
