@@ -60,12 +60,15 @@ function addStyles(styles) {
     console.log('styles', styles);
     leftHeadings.forEach(heading => {
         heading.style.color = styles.left_heading_color
+        heading.style.fontFamily = styles.heading_font
     });
     leftPara.forEach(para => {
         para.style.color = styles.left_para_color
+        para.style.fontFamily = styles.paragraph_font
     });
     rightHeadings.forEach(heading => {
         heading.style.color = styles.right_heading_color
+        heading.style.fontFamily = styles.heading_font
     });
     leftBackground.style.backgroundColor = styles.left_background_color
     rightBackground.style.backgroundColor = styles.right_background_color
@@ -79,12 +82,14 @@ function addProjectTitle(project, styles) {
     year.className = 'project-year';
     year.textContent = project.project_year
     year.style.color = styles.right_para_color
+    year.style.fontFamily = styles.paragraph_font
     projectTitle.appendChild(year)
 
     let heading = document.createElement('h3');
     heading.className = 'project-heading';
     heading.textContent = project.project_heading;
     heading.style.color = styles.right_heading_color;
+    heading.style.fontFamily = styles.heading_font;
     projectTitle.appendChild(heading);
 
     return projectTitle;
@@ -98,6 +103,7 @@ function addProjectDescription(project, styles) {
     projectDescription.className = 'project-description';
     projectDescription.textContent = project.project_description;
     projectDescription.style.color = styles.right_para_color;
+    projectDescription.style.fontFamily= styles.paragraph_font;
     descriptionContainer.appendChild(projectDescription);
 
     let repoLink = document.createElement('a');
@@ -105,6 +111,7 @@ function addProjectDescription(project, styles) {
     repoLink.textContent = 'github';
     repoLink.href = project.project_url;
     repoLink.style.color = styles.right_para_color;
+    repoLink.style.fontFamily= styles.paragraph_font;
     descriptionContainer.appendChild(repoLink);
 
     return descriptionContainer;
@@ -118,6 +125,7 @@ function createSkill(skill, styles) {
     skillHeading.className = 'skill-heading';
     skillHeading.textContent = skill.skills_heading;
     skillHeading.style.color = styles.right_heading_color
+    skillHeading.style.fontFamily = styles.heading_font
     skillsContainer.appendChild(skillHeading);
 
     let list = document.createElement('ul');
@@ -128,6 +136,7 @@ function createSkill(skill, styles) {
         item.className = 'skills-item';
         item.textContent= entry;
         item.style.color = styles.right_para_color;
+        item.style.fontFamily = styles.paragraph_font;
         list.appendChild(item);
     })
     skillsContainer.appendChild(list);
