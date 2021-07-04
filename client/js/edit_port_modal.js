@@ -3,31 +3,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 
-const projectGridDiv = document.querySelector('.projects-grid')
-
-//edit   
-const editAboutDiv = document.querySelector('.edit_about_div')
-const editAboutMeBtn = document.querySelector('.edit_aboutMe')
-const editContactBtn = document.querySelector('.edit_contact')
-const editContactDiv = document.querySelector('.edit_contact_div')
-const editProjectsDiv = document.querySelector('.edit_project_div')
-const editSkillsBtn = document.querySelector('.edit_skills')
-const editSkillsDiv = document.querySelector('.edit_skill_div')
-
-// add 
-const addProjectBtn = document.querySelector('.add_projects')
-const addProjectDiv = document.querySelector('.add_project_div')
-const addSkillsBtn = document.querySelector('.add_skills')
-const addSkillsDiv = document.querySelector('.add_skills_div')
-
-// edit color and fonts
-const editLeftColorBtn = document.querySelector('.colorLeftBtn')
-const editLeftColorDiv = document.querySelector('.left-edit')
-const editRightColorBtn = document.querySelector('.colorRightBtn')
-const editRightColorDiv = document.querySelector('.right-edit')
-
-const exitBtn = document.querySelector('.exit')
-
 
 function editAboutMe() {
     editAboutDiv.style.display = "block";

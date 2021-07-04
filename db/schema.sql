@@ -29,8 +29,7 @@ INSERT INTO users(
   instagram_url,
   twitter_url,
   project_list,
-  skills,
-  styles
+  skills
 )
 VALUES (
   'sophie@gmail.com',
