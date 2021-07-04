@@ -86,6 +86,8 @@ backgroundColorRight.addEventListener("change", function(event) {
     
 })
 
+// direct dom change
+
 function changeClassColor(className, event) {
     let elements = document.getElementsByClassName(className);
         for (let i = 0; i < elements.length; i++) {

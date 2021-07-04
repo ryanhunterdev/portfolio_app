@@ -22,10 +22,7 @@ function populatePage(data) {
         skillsGrid.appendChild(createSkill(skill, index))
     })
 
-    let styles = content.styles;
-    console.log('styles', styles);
-
-    addStyles(styles);
+    addStyles(content.styles);
 }
 
 function createProject(project, index) {
@@ -39,6 +36,14 @@ function createProject(project, index) {
 }
 
 function addStyles(styles) {
+    console.log('styles', styles);
+    leftHeadings.forEach(heading => {
+        heading.style.color = styles.left_heading_color
+    });
+    
+    leftBackground.style.backgroundColor = styles.left_background_color
+    rightBackground.style.backgroundColor = styles.right_background_color
+
 
 }
 

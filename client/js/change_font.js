@@ -22,6 +22,7 @@ function addDropDownFonts(position) {
 }
 
 function selectParagraphFont(position) {
+    console.log(position.value);
     position.addEventListener('change', function() {
         let font = position.value;
         let reqObj = {
@@ -35,7 +36,7 @@ function selectParagraphFont(position) {
             for (let i = 0; i < paragraphs.length; i++) {
                 let paragraph = paragraphs[i];
                 paragraph.style.fontFamily = responseFont;
-            }
+            } 
         })
     });
 }
@@ -43,9 +44,10 @@ function selectParagraphFont(position) {
 
 function selectHeadingFont(position) {
     position.addEventListener('change', function() {
+
         let font = position.value;
         let reqObj = {
-            paragraph_font: font
+            heading_font: font
         }
         axios
         .patch(`/api/portfolios/styles/heading-font/${portfolioId}`, reqObj)
