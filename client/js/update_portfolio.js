@@ -43,15 +43,19 @@ function addStyles(styles) {
 
     leftHeadings.forEach(heading => {
         heading.style.color = styles.left_heading_color
+        heading.style.fontFamily = styles.heading_font
     });
-    leftPara.forEach(para => {
-        para.style.color = styles.left_para_color
+    allParagraphs.forEach(para => {
+        para.style.fontFamily = styles.paragraph_font
     });
     rightHeadings.forEach(heading => {
         heading.style.color = styles.right_heading_color
+        heading.style.fontFamily = styles.heading_font
     });
     leftBackground.style.backgroundColor = styles.left_background_color
     rightBackground.style.backgroundColor = styles.right_background_color
+
+
 
 }
 
@@ -66,6 +70,7 @@ function addProjectTitle(project, index, styles) {
     year.classList.add('right-para');
     year.textContent = project.project_year
     year.style.color = styles.right_para_color
+    year.style.fontFamily = styles.paragraph_font
     projectTitle.appendChild(year)
 
     let heading = document.createElement('h3');
@@ -74,6 +79,7 @@ function addProjectTitle(project, index, styles) {
     heading.classList.add('headingfont');
     heading.textContent = project.project_heading;
     heading.style.color = styles.right_heading_color;
+    heading.style.fontFamily = styles.heading_font;
     projectTitle.appendChild(heading);
     projectTitle.appendChild(addProjectEditButton())
 
@@ -90,6 +96,7 @@ function addProjectDescription(project, styles) {
     projectDescription.classList.add('right-para');
     projectDescription.textContent = project.project_description;
     projectDescription.style.color = styles.right_para_color;
+    projectDescription.style.fontFamily = styles.paragraph_font
     descriptionContainer.appendChild(projectDescription);
 
     let repoLink = document.createElement('a');
@@ -99,6 +106,7 @@ function addProjectDescription(project, styles) {
     repoLink.textContent = 'github';
     repoLink.href = project.project_url;
     repoLink.style.color = styles.right_para_color;
+    repoLink.style.fontFamily = styles.paragraph_font
     descriptionContainer.appendChild(repoLink);
 
     return descriptionContainer;
@@ -126,6 +134,7 @@ function createSkillHeading(skill, styles) {
     skillHeading.classList.add('headingfont')
     skillHeading.style.color = styles.right_heading_color
     skillHeading.textContent = skill.skills_heading;
+    skillHeading.style.fontFamily = styles.heading_font
     return skillHeading;
 }
 
@@ -139,6 +148,7 @@ function createSkillList(skill, styles) {
         item.classList.add('para');
         item.classList.add('right-para');
         item.style.color = styles.right_para_color;
+        item.style.fontFamily = styles.heading_font
         item.textContent= entry;
         list.appendChild(item);
     })

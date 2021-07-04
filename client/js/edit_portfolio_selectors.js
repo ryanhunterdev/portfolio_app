@@ -16,6 +16,7 @@ const frontEnd = document.querySelector('.front-end')
 const backEnd = document.querySelector('.back-end')
 const other = document.querySelector('.other')
 const url = window.location.pathname;
+const allParagraphs = document.querySelectorAll('.para')
 
 ////////// forms
 
