@@ -7,7 +7,7 @@
 :root {
     --setup-border: none;
     --heading: clamp(1.5em, 2vw, 2.5em);
-    --main-text: 1.7em;
+    --main-text: 1.5em;
 }
 
 .portfolio-wrapper {
@@ -53,7 +53,7 @@ left-column
 .user-location {
     border: var(--setup-border);
     font-size: var(--main-text);
-    font-weight: 100;
+    font-weight: 500;
 }
 
 .user-welcome{
@@ -173,9 +173,10 @@ right-column
     display: grid;
     grid-template-rows: auto;
     border: var(--setup-border);
-    gap: 5%;
     height: 100%;
+    gap: 2%;
     overflow: scroll;
+    max-width: 700px;
 }
 
 .project-row {
@@ -226,8 +227,6 @@ right-column
 .repo-link {
     border: var(--setup-border);
     font-size: var(--main-text);
-    text-decoration: underline;
-
 }
 
 /************** skills ***************/
@@ -268,4 +267,8 @@ right-column
 
 .skills-item {
     border: var(--setup-border);
+}
+
+a:hover {
+    text-decoration: underline;
 }
