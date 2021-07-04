@@ -26,6 +26,7 @@ jgrs Portfolios was built using Javascript, HTML, CSS, Node.js and our own API.
  
 - Add more templates
 - URL generates with the user's username
+- Email user a link with their URL
 
 ### Schema ###
 
