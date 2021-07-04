@@ -203,18 +203,26 @@ div.text-box {
 	padding: 0.4em 0.1em;
 }
 
-.heading-primary-main {
+.user-name {
   display: block;
   letter-spacing: 5px;
 }
 
-.heading-primary-sub {
+.user-welcome  {
   display: block;
   font-size: 20px;
   letter-spacing: 6px;
 	font-weight: 400;
 	text-align: center;
 }
+
+.contact-pitch {
+    display: block;
+    font-size: 20px;
+    letter-spacing: 6px;
+      font-weight: 400;
+      text-align: center;
+  }
 
 .button-container {
 	display: flex;
@@ -346,7 +354,7 @@ div.text-box {
 
 	/* About */
 
-span.email a {
+span.email-anchor a {
 	display: block;
 	margin-bottom: 1em;
 	/* font-size: 1.5em; */
@@ -381,7 +389,7 @@ span.email a {
 	display: flex;
 }
 
-.skills-list {
+.skills-list-container {
 	margin: 0 2em;
 }
 
