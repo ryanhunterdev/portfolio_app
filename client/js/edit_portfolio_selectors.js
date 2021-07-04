@@ -49,7 +49,7 @@ const userPitchInput = document.querySelector('.user-pitch')
 const userGitHubURL = document.querySelector('.github-url')
 const userLinkedInURL = document.querySelector('.linkedin-url')
 const userInstagramURL = document.querySelector('.instagram-url')
-const userTwitterURL = document.querySelector('.user-pitch')
+const userTwitterURL = document.querySelector('.twitter-url')
 
 const userProjectHeading = document.querySelector('.project_heading')
 const userProjectDescription = document.querySelector('.project_description')
