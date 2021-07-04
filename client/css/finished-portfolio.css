@@ -149,10 +149,10 @@ right-column
 
 .right-column {
     display: grid;
-    grid-template-rows: 2fr 1.5fr;
+    grid-template-rows: 2fr 1fr;
     border: var(--setup-border);
     padding: 2.5em;
-    padding-top: 15%;
+    padding-top: 5%;
     overflow: scroll;
     background-color: rgb(235, 235, 234);
 }
@@ -175,6 +175,7 @@ right-column
     border: var(--setup-border);
     gap: 5%;
     height: 100%;
+    overflow: scroll;
 }
 
 .project-row {
@@ -225,7 +226,7 @@ right-column
 .repo-link {
     border: var(--setup-border);
     font-size: var(--main-text);
-    padding-top: 1em;
+    text-decoration: underline;
 
 }
 

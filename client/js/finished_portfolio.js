@@ -110,7 +110,7 @@ function addProjectDescription(project, styles) {
     repoLink.className = 'repo-link';
     repoLink.textContent = 'github';
     repoLink.href = project.project_url;
-    repoLink.style.color = styles.right_para_color;
+    repoLink.style.color = styles.right_heading_color;
     repoLink.style.fontFamily= styles.paragraph_font;
     descriptionContainer.appendChild(repoLink);
 
