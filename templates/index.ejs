@@ -16,32 +16,36 @@
     <title>Testing</title>
 </head>
 <body>
+    <div class='login-page'>
+        <div class='form'>
     <div class='main'>
 
-        <form action="/portfolios/login" method= "post" class="login-form">
+            <form class="login-form" action="/portfolios/login" method= "post" >
 
-                <h1>JGRS Portfolios</h1>
-                
+                    <h1 class="heading">JGRS Portfolios</h1>
+                    <h2>Create Your Dream Portfolio</h2>
+                    <h4 class="login-error"><%= loginEmailError %></h4>
+
                 <input type="email" name="email" placeholder="email">
-
                 <input type="password" name="password" placeholder="password"> 
-
 
                 <button class="login-btn">Login</button> 
 
-                
-                <h4 class="login-error"><%= loginEmailError %></h4>
-                
-        </form>
-        <form action="/signup" method="get" class="signup-form">
 
+        </form>
+            <form class="login-form" action="/signup" method="get">
             <button class="signUp-btn">Sign Up</button> 
 
-        </form>
+
+         </form>
     </div>
+ 
+
 
 
     <script src="/js/index.js"></script>
 
 </body>
 </html>
+
+</html> 
