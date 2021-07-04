@@ -27,9 +27,25 @@ jgrs Portfolios was built using Javascript, HTML, CSS, Node.js and our own API.
 - Add more templates
 - URL generates with the user's username
 - Email user a link with their URL
+- User can customise spacing and layout of their portfolio
+- Not have the skills input comma seperated
 
 ### Schema ###
 
+  id SERIAL PRIMARY KEY,
+  email TEXT,
+  password VARCHAR(50),
+  user_name TEXT,
+  user_location TEXT,
+  user_welcome TEXT,
+  contact_pitch TEXT,
+  github_url TEXT,
+  linkedin_url TEXT,
+  instagram_url TEXT,
+  twitter_url TEXT,
+  project_list JSONB,
+  skills JSONB, 
+  styles JSONB
 
 ## Screenshots ##
 
