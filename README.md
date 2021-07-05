@@ -4,7 +4,7 @@ Live link: https://jgrs-portfolios.herokuapp.com/
 
 ### Purpose ###
 
-This web application is for users to create and customise their portfolios.
+JGRS Portfolios is a hybrid MPA/SPA for users to create and customise their portfolios. This app was built with a team of developers where we made use of GitHub collaborations.
 
 ![example portfolio](/screenshots/example_portfolio.png)
 
@@ -24,15 +24,21 @@ Password: password123
 ## Techniques ##
 
 ### Technology Used ###
-jgrs Portfolios was built using Javascript, HTML, CSS, Node.js and our own API.
+jgrs Portfolios was built using Javascript, HTML, CSS and Node.js with Express.
+
+## Other tech ##
+- PostgreSQL with JSONB objects for database
+- EJS for templates
+- Express Session for login management
+- Axios for http requests
 
 ### Backlog User Stories ### ##
  
-- Add more templates
+- Add more portfolio templates for users to choose from
 - URL generates with the user's username
 - Email user a link with their URL
-- User can customise spacing and layout of their portfolio
-- Not have the skills input comma seperated
+- Users can customise spacing and layout of their portfolio
+- Not have the skills input and comma seperated
 
 ## Screenshots ##
 Log-in page:
@@ -44,6 +50,11 @@ Edit portfolio page:
 Ryan's Portfolio:
 ![ryans portfolio](/screenshots/ryan_portfolio.png)
 
+Graham's Portfolio:
+![grahams portfolio](/screenshots/graham_portfolio.png)
+
+Sophie's Portfolio:
+![sophies portfolio](/screenshots/sophie_portfolio.png)
 
 ### Schema ###
 
@@ -61,6 +72,10 @@ Ryan's Portfolio:
   project_list JSONB,
   skills JSONB, 
   styles JSONB
+
+JGRS Portfolios would like to thank Ethan Daya for providing the inspiration for our first portfolio template.
+
+https://ethandaya.com/
 
 
 
