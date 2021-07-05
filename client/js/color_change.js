@@ -15,7 +15,7 @@ headingColorLeft.addEventListener("change", function(event) {
         .patch(`/api/portfolios/styles/left-heading-color/${portfolioId}`, reqObj)
         .then(res => {
             let responseColor = res.data.headingColorLeft
-            headingColorLeft.style.color = responseColor;
+            // headingColorLeft.style.color = responseColor;
             console.log('db color response: ', responseColor);
         })
 })
@@ -28,7 +28,7 @@ headingColorRight.addEventListener("change", function(event) {
         .patch(`/api/portfolios/styles/right-heading-color/${portfolioId}`, reqObj)
         .then(res => {
             let responseColor = res.data.headingColorRight
-            headingColorRight.style.color = responseColor;
+            // headingColorRight.style.color = responseColor;
             console.log('db color response: ', responseColor);
         })
 })
@@ -41,7 +41,7 @@ paragraphColorLeft.addEventListener("change", function(event) {
         .patch(`/api/portfolios/styles/left-paragraph-color/${portfolioId}`, reqObj)
         .then(res => {
             let responseColor = res.data.paragraphColorLeft
-            paragraphColorLeft.style.color = responseColor;
+            // paragraphColorLeft.style.color = responseColor;
             console.log('db color response: ', responseColor);
         })
 })
@@ -54,7 +54,7 @@ paragraphColorRight.addEventListener("change", function(event) {
         .patch(`/api/portfolios/styles/right-paragraph-color/${portfolioId}`, reqObj)
         .then(res => {
             let responseColor = res.data.paragraphColorRight
-            paragraphColorRight.style.color = responseColor;
+            // paragraphColorRight.style.color = responseColor;
             console.log('db color response: ', responseColor);
         })
 })
@@ -67,7 +67,7 @@ backgroundColorLeft.addEventListener("change", function(event) {
         .patch(`/api/portfolios/styles/left-background/${portfolioId}`, reqObj)
         .then(res => {
             let responseColor = res.data.bgColorLeft;
-            backgroundColorLeft.style.backgroundColor = responseColor;
+            // backgroundColorLeft.style.backgroundColor = responseColor;
             console.log('db color response: ', responseColor);
         })
 })
@@ -80,7 +80,7 @@ backgroundColorRight.addEventListener("change", function(event) {
         .patch(`/api/portfolios/styles/right-background/${portfolioId}`, reqObj)
         .then(res => {
             let responseColor = res.data.bgColorRight;
-            backgroundColorRight.style.backgroundColor = responseColor;
+            // backgroundColorRight.style.backgroundColor = responseColor;
             console.log('db color response: ', responseColor);
         })
     

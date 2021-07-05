@@ -134,6 +134,13 @@ form input {
     padding-bottom: 25px;
 }
 
+.edit_fonts_div h2 {
+    font-size: 25px;
+    font-family: "Titillium Web", sans-serif;
+    color: Black;
+    padding-bottom: 25px;
+}
+
 .edit_fontsColors_div .modal-dropDown {
     border-radius:30px;
     padding: 7px;
@@ -156,10 +163,12 @@ form input {
 
 .edit_fontsColors_div h3 {
     padding: 20px;
+    font-family: "Titillium Web", sans-serif;
 }
 
 .edit_fonts_div h3 {
     padding: 20px;
+    font-family: "Titillium Web", sans-serif;
 }
 
 .edit_fontsColors_div input {
