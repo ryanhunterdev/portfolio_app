@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 var session = require('express-session')
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 const logger = require('./middlewares/logger');
 const pagesController = require('./controllers/pages-controller.js')
