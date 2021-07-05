@@ -4,6 +4,8 @@
 
 This web application is for users to create and customise their portfolios.
 
+![example portfolio](/screenshots/example_portfolio.png)
+
 ### Use ###
 
     - Sign up or login to create and customise your own porfolio
@@ -30,6 +32,17 @@ jgrs Portfolios was built using Javascript, HTML, CSS, Node.js and our own API.
 - User can customise spacing and layout of their portfolio
 - Not have the skills input comma seperated
 
+## Screenshots ##
+Log-in page:
+![login page](/screenshots/login_screen.png)
+
+Edit portfolio page:
+![edit page](/screenshots/edit_page.png)
+
+Ryan's Portfolio:
+![ryans portfolio](/screenshots/ryan_portfolio.png)
+
+
 ### Schema ###
 
   id SERIAL PRIMARY KEY,
@@ -47,5 +60,5 @@ jgrs Portfolios was built using Javascript, HTML, CSS, Node.js and our own API.
   skills JSONB, 
   styles JSONB
 
-## Screenshots ##
+
 
