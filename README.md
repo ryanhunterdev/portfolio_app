@@ -56,6 +56,9 @@ Graham's Portfolio:
 Sophie's Portfolio:
 ![sophies portfolio](/screenshots/sophie_portfolio.png)
 
+Jazmin's Portfolio:
+![jamzin portfolio](/screenshots/jazmin_portfolio.png)
+
 ### Schema ###
 
 | Column Titles | Data Types         |
