@@ -58,20 +58,22 @@ Sophie's Portfolio:
 
 ### Schema ###
 
-  id SERIAL PRIMARY KEY,
-  email TEXT,
-  password VARCHAR(50),
-  user_name TEXT,
-  user_location TEXT,
-  user_welcome TEXT,
-  contact_pitch TEXT,
-  github_url TEXT,
-  linkedin_url TEXT,
-  instagram_url TEXT,
-  twitter_url TEXT,
-  project_list JSONB,
-  skills JSONB, 
-  styles JSONB
+| Column Titles | Data Types         |
+|---------------|--------------------|
+| id            | serial primary key |
+| email         | text               |
+| password      | varchar(50)        |
+| user_name     | text               |
+| user_location | text               |
+| user_welcome  | text               |
+| contact_pitch | text               |
+| github_url    | text               |
+| linkedin_url  | text               |
+| instagram_url | text               |
+| twitter_url   | text               |
+| project_list  | jsonb              |
+| skills        | jsonb              |
+| styles        | jsonb              |
 
 JGRS Portfolios would like to thank Ethan Daya for providing the inspiration for our first portfolio template.
 
