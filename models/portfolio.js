@@ -1,8 +1,22 @@
 const { Pool } = require('pg')
 
-const db = new Pool({
-  database: 'jgrs_portfolios'
-}) 
+// const db = new Pool({
+//   database: 'jgrs_portfolios'
+// }) 
+
+let pool;
+if (process.env.PRODUCTION) {
+  db = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
+    }
+  })
+} else {
+  db = new Pool({
+    database: 'jgrs_portfolios'
+  })
+}
 
 const Portfolio = {
 
