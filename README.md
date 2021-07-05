@@ -1,5 +1,7 @@
 # jgrs Porfolios #
 
+Live link: https://jgrs-portfolios.herokuapp.com/
+
 ### Purpose ###
 
 This web application is for users to create and customise their portfolios.
